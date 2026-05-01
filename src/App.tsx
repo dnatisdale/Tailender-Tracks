@@ -4,7 +4,12 @@ import {
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
   Share2, MessageCircle, Sun, Moon, User, X
 } from 'lucide-react';
-import { askTailenderTom, getTailenderTomCategories } from './data/tailenderTomBrain';
+import { 
+  askTailenderTom, 
+  getTailenderTomCategories, 
+  getSuggestedTomQuestions,
+  getTomBrainStats 
+} from './data/tailenderTomBrain';
 import './index.css';
 
 // ==========================================
@@ -735,10 +740,25 @@ export default function App() {
   // Tom Chat State
   const [tomFilter, setTomFilter] = useState('All');
   const [tomEasyEnglish, setTomEasyEnglish] = useState<Record<number, boolean>>({});
+  const stats = getTomBrainStats();
   const [tomMessages, setTomMessages] = useState<any[]>([
-    { sender: 'tom', text: 'Howdy! I am Tailender Tom — your offline field recording guide. I have 163 items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!' }
+    { sender: 'tom', text: `Howdy! I am Tailender Tom — your offline field recording guide. I have ${stats.total} items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!` }
   ]);
   const [tomInput, setTomInput] = useState('');
+
+  const handleTomAction = (action: string) => {
+    setShowTomDialog(false);
+    if (action.toLowerCase().includes('heart-language') || action.toLowerCase().includes('consent') || action.toLowerCase().includes('form')) {
+      setActiveView('Forms');
+    } else if (action.toLowerCase().includes('note') || action.toLowerCase().includes('project') || action.toLowerCase().includes('mark')) {
+      setActiveView('Projects');
+    } else if (action.toLowerCase().includes('training') || action.toLowerCase().includes('card')) {
+      setActiveView('Training');
+    } else {
+      // Default fallback
+      setActiveView('Projects');
+    }
+  };
 
   const handleSendTomMessage = (textToSubmit?: string) => {
     const text = typeof textToSubmit === 'string' ? textToSubmit : tomInput;
@@ -855,7 +875,7 @@ export default function App() {
     <>
       {splashState !== 'hidden' && (
         <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
-          <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Logo" className="splash-logo" />
+          <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Logo" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
             <span className="dymo-label dymo-label--splash">TAILENDER</span>
             <span className="dymo-label dymo-label--splash dymo-label--red">TRACKS</span>
@@ -933,7 +953,10 @@ export default function App() {
       {showTomDialog && (
         <Modal title={
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-            <span>Tailender Tom</span>
+            <div className="dymo-label-stack" style={{ gap: 2 }}>
+              <span className="dymo-label" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TAILENDER</span>
+              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TOM</span>
+            </div>
             <select
               value={tomFilter}
               onChange={e => setTomFilter(e.target.value)}
@@ -983,7 +1006,12 @@ export default function App() {
                   {msg.actions && msg.actions.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 4 }}>
                       {msg.actions.map((action: string, j: number) => (
-                        <button key={j} className="btn" style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}>
+                        <button 
+                          key={j} 
+                          className="btn" 
+                          onClick={() => handleTomAction(action)}
+                          style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}
+                        >
                           {action}
                         </button>
                       ))}
@@ -1006,6 +1034,29 @@ export default function App() {
                 </div>
               ))}
             </div>
+
+            {/* Suggested Questions for current stage */}
+            {tomMessages.length < 3 && (
+              <div style={{ marginBottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', marginLeft: 4 }}>Try asking:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {getSuggestedTomQuestions(tomFilter).slice(0, 3).map((q, i) => (
+                    <button 
+                      key={i} 
+                      onClick={() => handleSendTomMessage(q)}
+                      style={{ 
+                        background: 'rgba(128,128,128,0.1)', border: '1px solid var(--border-color)', 
+                        borderRadius: 16, padding: '4px 10px', fontSize: '0.72rem', color: 'var(--text-primary)',
+                        cursor: 'pointer', whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
               <input
                 type="text"
