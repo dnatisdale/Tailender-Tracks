@@ -7,7 +7,7 @@
   --text-secondary: #5a5a5a;
   --border-color: rgba(0, 0, 0, 0.1);
   --nav-height: 70px;
-  --header-height: 190px;
+  --header-height: 110px;
 }
 
 body.dark-theme {
@@ -64,7 +64,7 @@ body {
 }
 
 .header-title img {
-  height: 176px;
+  height: 90px;
   filter: drop-shadow(0 4px 12px var(--accent-glow));
 }
 
