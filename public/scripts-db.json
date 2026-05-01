@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "description": "Offline-ready database of words, commands, phrases, and sentences for field recording.",
+    "supportedLanguages": ["en", "es", "fr", "sw"]
+  },
+  "entries": [
+    {
+      "id": "cmd_001",
+      "category": "commands",
+      "translations": {
+        "en": "Stop",
+        "es": "Alto",
+        "fr": "Arrêtez",
+        "sw": "Acha"
+      }
+    },
+    {
+      "id": "cmd_002",
+      "category": "commands",
+      "translations": {
+        "en": "Play",
+        "es": "Reproducir",
+        "fr": "Jouer",
+        "sw": "Cheza"
+      }
+    },
+    {
+      "id": "phrase_001",
+      "category": "phrases",
+      "translations": {
+        "en": "How are you today?",
+        "es": "¿Cómo estás hoy?",
+        "fr": "Comment allez-vous aujourd'hui?",
+        "sw": "Habari yako leo?"
+      }
+    },
+    {
+      "id": "word_001",
+      "category": "words",
+      "translations": {
+        "en": "Water",
+        "es": "Agua",
+        "fr": "Eau",
+        "sw": "Maji"
+      }
+    },
+    {
+      "id": "sentence_001",
+      "category": "sentences",
+      "translations": {
+        "en": "The quick brown fox jumps over the lazy dog.",
+        "es": "El rápido zorro marrón salta sobre el perro perezoso.",
+        "fr": "Le renard brun rapide saute par-dessus le chien paresseux.",
+        "sw": "Mbweha wa kahawia haraka anaruka juu ya mbwa mvivu."
+      }
+    }
+  ]
+}
