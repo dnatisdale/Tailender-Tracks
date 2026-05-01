@@ -1,0 +1,67 @@
+[
+  {
+    "stage": "Research",
+    "title": "Language & Community Profile",
+    "file": "/forms/01_Language_and_Community_Profile.pdf"
+  },
+  {
+    "stage": "Plan",
+    "title": "Recording Project Plan",
+    "file": "/forms/02_Recording_Project_Plan.pdf"
+  },
+  {
+    "stage": "Plan",
+    "title": "Speaker & Helper Consent Form",
+    "file": "/forms/03_Speaker_and_Helper_Consent_Form.pdf"
+  },
+  {
+    "stage": "Plan",
+    "title": "Script & Content Approval Form",
+    "file": "/forms/04_Script_and_Content_Approval_Form.pdf"
+  },
+  {
+    "stage": "Plan",
+    "title": "Rights & Permissions Form",
+    "file": "/forms/07_Rights_and_Permissions_Form.pdf"
+  },
+  {
+    "stage": "Record",
+    "title": "Recording Session Log",
+    "file": "/forms/05_Recording_Session_Log.pdf"
+  },
+  {
+    "stage": "Record",
+    "title": "Speaker & Helper Consent Form",
+    "file": "/forms/03_Speaker_and_Helper_Consent_Form.pdf"
+  },
+  {
+    "stage": "Program",
+    "title": "Audio Program Form",
+    "file": "/forms/06_Audio_Program_Form.pdf"
+  },
+  {
+    "stage": "Program",
+    "title": "Rights & Permissions Form",
+    "file": "/forms/07_Rights_and_Permissions_Form.pdf"
+  },
+  {
+    "stage": "Submit",
+    "title": "Submission Package Checklist",
+    "file": "/forms/08_Submission_Package_Checklist.pdf"
+  },
+  {
+    "stage": "Submit",
+    "title": "Rights & Permissions Form",
+    "file": "/forms/07_Rights_and_Permissions_Form.pdf"
+  },
+  {
+    "stage": "Share",
+    "title": "Sharing & Distribution Plan",
+    "file": "/forms/09_Sharing_and_Distribution_Plan.pdf"
+  },
+  {
+    "stage": "Share",
+    "title": "Field Feedback Form",
+    "file": "/forms/10_Field_Feedback_Form.pdf"
+  }
+]
