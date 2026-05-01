@@ -11,6 +11,22 @@ function normalize(text: any): string {
     .trim();
 }
 
+function levenshtein(a: string, b: string): number {
+  const tmp = [];
+  for (let i = 0; i <= a.length; i++) tmp[i] = [i];
+  for (let j = 0; j <= b.length; j++) tmp[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      tmp[i][j] = Math.min(
+        tmp[i - 1][j] + 1,
+        tmp[i][j - 1] + 1,
+        tmp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+  }
+  return tmp[a.length][b.length];
+}
+
 function scoreText(queryWords: string[], item: any, stage: string): number {
   const fields = [
     item.question,
@@ -27,9 +43,26 @@ function scoreText(queryWords: string[], item: any, stage: string): number {
     ...(item.tags || [])
   ];
   const haystack = normalize(fields.filter(Boolean).join(' '));
+  const haystackWords = haystack.split(' ').filter(w => w.length > 2);
+  
   let score = 0;
   for (const word of queryWords) {
-    if (haystack.includes(word)) score += 2;
+    // Exact match
+    if (haystack.includes(word)) {
+      score += 2;
+    } else if (word.length > 4) {
+      // Fuzzy match for typos (e.g. langauges -> languages)
+      for (const hWord of haystackWords) {
+        if (Math.abs(hWord.length - word.length) <= 2) {
+          const dist = levenshtein(word, hWord);
+          if (dist <= 1 || (word.length > 6 && dist <= 2)) {
+            score += 1.5;
+            break;
+          }
+        }
+      }
+    }
+
     if (normalize(item.question || '').includes(word)) score += 5;
     if (normalize(item.title || '').includes(word)) score += 4;
     if ((item.tags || []).map(normalize).includes(word)) score += 5;
