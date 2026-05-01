@@ -107,54 +107,29 @@ body {
   user-select: none;
   z-index: 11; /* Above boots */
   
-  /* Dark navy/black tape — authentic DYMO dark color */
-  background: linear-gradient(
-    180deg,
-    #151525 0%,
-    #0a0a15 45%,
-    #0f0f1c 55%,
-    #151525 100%
-  );
-
-  /* Embossed letter effect */
-  text-shadow:
-    0 1px 1px rgba(255,255,255,0.6),
-    0 -1px 1px rgba(0,0,0,0.8),
-    1px 0 0 rgba(255,255,255,0.2),
-    -1px 0 0 rgba(0,0,0,0.4);
-
-  /* Tape edge: sheen on top, shadow on bottom */
-  box-shadow:
-    inset 0 1px 2px rgba(255,255,255,0.2),
+  /* Dark navy/black tape with fractal noise weathering */
+  background: 
+    linear-gradient(180deg, #1a1a2a 0%, #0d0d14 45%, #11111a 55%, #0d0d14 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
+  
+  box-shadow: 
+    inset 0 1px 1px rgba(255,255,255,0.1),
     inset 0 -1px 2px rgba(0,0,0,0.5),
     0 4px 8px rgba(0,0,0,0.4);
 
-  /* Slight tape curl/tilt for retro feel - varied for authenticity */
   transform: rotate(-3.5deg);
   transform-origin: left center;
 }
 
-/* Red tape variant - different angle */
+/* Red tape variant - also weathered */
 .dymo-label--red {
-  background: linear-gradient(
-    180deg,
-    #8b1010 0%,
-    #6a0808 45%,
-    #7a0a0a 55%,
-    #8b1010 100%
-  );
+  background: 
+    linear-gradient(180deg, #8b1010 0%, #6a0808 45%, #7a0a0a 55%, #8b1010 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
   transform: rotate(4.2deg);
   z-index: 9; /* Below boots */
-}
-
-/* Rustic Weathering & Texture Base */
-.dymo-label {
-  /* Added noise and distressed radial gradient for a 'matte/worn' look */
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  background-blend-mode: overlay;
 }
 
 /* White cut line at the end of tape */
@@ -171,41 +146,15 @@ body {
   z-index: 2;
 }
 
-/* Distressed edge/inner shadow */
+/* Plastic sheen / distressed texture */
 .dymo-label::before {
   content: '';
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
+  background: linear-gradient(165deg, rgba(255,255,255,0.08) 0%, transparent 40%, rgba(0,0,0,0.1) 100%);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
   pointer-events: none;
   z-index: 1;
-}
-
-/* White cut line at the end of tape */
-.dymo-label::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 100%;
-  background: rgba(255,255,255,0.15);
-  border-left: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Plastic sheen overlay */
-.dymo-label::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    165deg,
-    rgba(255,255,255,0.08) 0%,
-    rgba(255,255,255,0.03) 40%,
-    rgba(0,0,0,0.02) 50%,
-    rgba(0,0,0,0) 100%
-  );
-  pointer-events: none;
 }
 
 /* Splash screen labels — much bigger */
