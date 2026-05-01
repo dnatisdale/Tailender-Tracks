@@ -1821,8 +1821,8 @@
       "category": "App",
       "intent": "app",
       "question": "The logo is missing. What should I check?",
-      "answer": "Confirm the image is in public/icons/tailender-buckle.png and the app uses /icons/tailender-buckle.png, not a src folder path.",
-      "easyEnglish": "Confirm the image is in public/icons/tailender-buckle. Use the checklist. Ask a trusted helper if you are not sure.",
+      "answer": "Confirm the image is in public/icons/Buckle-icon-1024.png and the app uses /icons/Buckle-icon-1024.png, not a src folder path.",
+      "easyEnglish": "Confirm the image is in public/icons/Buckle-icon-1024.png. Use the checklist. Ask a trusted helper if you are not sure.",
       "actions": [
         "Check logo path"
       ],

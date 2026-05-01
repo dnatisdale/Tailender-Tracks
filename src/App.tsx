@@ -687,7 +687,7 @@ function SettingsView() {
       </div>
       
       <div style={{ textAlign: 'center', marginTop: 32, opacity: 0.5 }}>
-        <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Logo" style={{ height: 40 }} />
+        <img src={`${import.meta.env.BASE_URL}icons/Buckle-icon-1024.png`} alt="Logo" style={{ height: 40 }} />
         <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78 RPM Series</p>
       </div>
     </div>
@@ -891,7 +891,7 @@ export default function App() {
               <ChevronLeft size={24} />
             </button>
           ) : (
-            <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Tailender Tracks Logo" />
+            <img src={`${import.meta.env.BASE_URL}icons/Buckle-icon-1024.png`} alt="Tailender Tracks Logo" />
           )}
           <span>
             {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
