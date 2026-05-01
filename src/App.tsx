@@ -908,6 +908,13 @@ export default function App() {
       <div className="app-container">
         {/* HEADER */}
       <header className="header">
+        <div className="header-boot-trail">
+          <div className="walking-boot">🥾</div>
+          <div className="walking-boot">🥾</div>
+          <div className="walking-boot">🥾</div>
+          <div className="walking-boot">🥾</div>
+          <div className="walking-boot">🥾</div>
+        </div>
         <div className="header-title">
           {isProjectView ? (
             <button className="icon-btn" onClick={goBack} style={{ marginRight: 8 }}>

@@ -67,6 +67,17 @@ body {
   height: 120px;
   filter: drop-shadow(0 4px 12px var(--accent-glow));
   margin-right: 15px;
+  animation: header-pivot 5s ease-in-out;
+}
+
+@keyframes header-pivot {
+  0% { transform: rotate(0) scale(1); }
+  10% { transform: rotate(-5deg) scale(1.05); }
+  25% { transform: rotate(3deg) translateY(-5px); }
+  40% { transform: rotate(-2deg) translateX(-3px); }
+  60% { transform: rotate(1deg) scale(1.02); }
+  80% { transform: rotate(-0.5deg); }
+  100% { transform: rotate(0) scale(1); }
 }
 
 /* DYMO embossed label system */
@@ -75,6 +86,7 @@ body {
   flex-direction: column;
   gap: 6px;
   align-items: flex-start;
+  animation: header-pivot 5s ease-in-out;
 }
 
 .dymo-label {
@@ -176,6 +188,57 @@ body {
 .header-actions {
   display: flex;
   gap: 12px;
+}
+
+/* Header Walking Boots */
+.header-boot-trail {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.walking-boot {
+  position: absolute;
+  font-size: 14px;
+  opacity: 0;
+  animation: boot-walk 12s linear infinite;
+}
+
+/* Stagger the steps */
+.walking-boot:nth-child(1) { animation-delay: 0s; }
+.walking-boot:nth-child(2) { animation-delay: 0.8s; }
+.walking-boot:nth-child(3) { animation-delay: 1.6s; }
+/* Fourth and fifth boots fade away early as requested */
+.walking-boot:nth-child(4) { animation-delay: 2.4s; animation-name: boot-walk-fade; }
+.walking-boot:nth-child(5) { animation-delay: 3.2s; animation-name: boot-walk-fade; }
+
+@keyframes boot-walk {
+  0% { transform: translateX(-50px) translateY(5px) rotate(10deg); opacity: 0; }
+  5% { opacity: 0.8; }
+  10% { transform: translateX(10vw) translateY(-5px) rotate(-10deg); }
+  20% { transform: translateX(25vw) translateY(5px) rotate(10deg); }
+  30% { transform: translateX(40vw) translateY(-5px) rotate(-10deg); }
+  40% { transform: translateX(55vw) translateY(5px) rotate(10deg); }
+  50% { transform: translateX(70vw) translateY(-5px) rotate(-10deg); }
+  60% { transform: translateX(85vw) translateY(5px) rotate(10deg); }
+  70% { transform: translateX(105vw) translateY(-5px) rotate(-10deg); opacity: 0.8; }
+  75%, 100% { transform: translateX(110vw); opacity: 0; }
+}
+
+@keyframes boot-walk-fade {
+  0% { transform: translateX(-50px) translateY(5px) rotate(10deg); opacity: 0; }
+  5% { opacity: 0.8; }
+  10% { transform: translateX(10vw) translateY(-5px) rotate(-10deg); }
+  20% { transform: translateX(25vw) translateY(5px) rotate(10deg); }
+  /* Fades out halfway through the trail */
+  25% { opacity: 0.4; }
+  30% { transform: translateX(40vw) translateY(-5px) rotate(-10deg); opacity: 0; }
+  100% { transform: translateX(110vw); opacity: 0; }
 }
 
 .icon-btn {
@@ -505,6 +568,19 @@ body {
 .tom-fab:hover {
   transform: scale(1.1) translateY(-5px);
   filter: brightness(1.1);
+}
+
+.tom-fab {
+  animation: tom-nudge 10s ease-in-out infinite;
+}
+
+@keyframes tom-nudge {
+  0%, 90% { transform: scale(1) rotate(0); }
+  92% { transform: scale(1.1) rotate(-5deg); }
+  94% { transform: scale(1.1) rotate(5deg); }
+  96% { transform: scale(1.1) rotate(-3deg); }
+  98% { transform: scale(1.1) rotate(3deg); }
+  100% { transform: scale(1) rotate(0); }
 }
 
 /* Utility Classes */
