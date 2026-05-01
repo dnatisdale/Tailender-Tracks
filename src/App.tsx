@@ -875,6 +875,29 @@ export default function App() {
     <>
       {splashState !== 'hidden' && (
         <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
+          <div className="footprint-container">
+            {/* Array of footprints along the trail path */}
+            {[
+              { t: '10%', l: '10%', a: '0.2s', r: '20deg' },
+              { t: '30%', l: '25%', a: '0.6s', r: '-10deg' },
+              { t: '15%', l: '45%', a: '1.0s', r: '15deg' },
+              { t: '40%', l: '60%', a: '1.4s', r: '-5deg' },
+              { t: '25%', l: '80%', a: '1.8s', r: '25deg' },
+              { t: '50%', l: '50%', a: '2.2s', r: '0deg' },
+            ].map((f, i) => (
+              <div 
+                key={i} 
+                className="footprint" 
+                style={{ 
+                  top: f.t, left: f.l, 
+                  animationDelay: f.a, 
+                  transform: `rotate(${f.r})` 
+                }}
+              >
+                👣
+              </div>
+            ))}
+          </div>
           <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Logo" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
             <span className="dymo-label dymo-label--splash">TAILENDER</span>
