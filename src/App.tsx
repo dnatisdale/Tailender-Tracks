@@ -894,7 +894,7 @@ export default function App() {
                   transform: `rotate(${f.r})` 
                 }}
               >
-                👣
+                🥾
               </div>
             ))}
           </div>
