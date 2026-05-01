@@ -7,7 +7,7 @@
   --text-secondary: #5a5a5a;
   --border-color: rgba(0, 0, 0, 0.1);
   --nav-height: 70px;
-  --header-height: 100px;
+  --header-height: 190px;
 }
 
 body.dark-theme {
@@ -64,8 +64,8 @@ body {
 }
 
 .header-title img {
-  height: 88px;
-  filter: drop-shadow(0 3px 8px var(--accent-glow));
+  height: 176px;
+  filter: drop-shadow(0 4px 12px var(--accent-glow));
 }
 
 /* DYMO embossed label style for title */
