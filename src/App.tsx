@@ -4,7 +4,7 @@ import {
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
   Share2, MessageCircle, Sun, Moon, User, X
 } from 'lucide-react';
-import { askTailenderTom } from './data/tailenderTomKb';
+import { askTailenderTom, getTailenderTomCategories } from './data/tailenderTomBrain';
 import './index.css';
 
 // ==========================================
@@ -734,24 +734,24 @@ export default function App() {
 
   // Tom Chat State
   const [tomFilter, setTomFilter] = useState('All');
+  const [tomEasyEnglish, setTomEasyEnglish] = useState<Record<number, boolean>>({});
   const [tomMessages, setTomMessages] = useState<any[]>([
-    { sender: 'tom', text: 'Howdy! I am Tailender Tom. How can I help you with your recording project today?' }
+    { sender: 'tom', text: 'Howdy! I am Tailender Tom — your offline field recording guide. I have 163 items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!' }
   ]);
   const [tomInput, setTomInput] = useState('');
 
   const handleSendTomMessage = (textToSubmit?: string) => {
     const text = typeof textToSubmit === 'string' ? textToSubmit : tomInput;
     if (!text.trim()) return;
-    
     const newMsgs = [...tomMessages, { sender: 'user', text }];
     setTomMessages(newMsgs);
     setTomInput('');
-    
     setTimeout(() => {
-      const response = askTailenderTom(text, { stage: tomFilter === 'All' ? '' : tomFilter });
-      setTomMessages(prev => [...prev, { 
-        sender: 'tom', 
+      const response = askTailenderTom(text, { stage: tomFilter === 'All' ? '' : tomFilter, limit: 8 });
+      setTomMessages(prev => [...prev, {
+        sender: 'tom',
         text: response.answer,
+        easyEnglish: response.easyEnglish,
         actions: response.actions || response.suggestions,
         related: response.related
       }]);
@@ -926,56 +926,71 @@ export default function App() {
         <Modal title={
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <span>Tailender Tom</span>
-            <select 
-              value={tomFilter} 
-              onChange={e => setTomFilter(e.target.value)} 
-              style={{ padding: '2px 8px', borderRadius: 4, width: 'auto', fontSize: '0.8rem', marginRight: 24, fontWeight: 'normal', backgroundColor: 'var(--bg-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}
+            <select
+              value={tomFilter}
+              onChange={e => setTomFilter(e.target.value)}
+              style={{ padding: '2px 8px', borderRadius: 4, width: 'auto', fontSize: '0.75rem', marginRight: 24, fontWeight: 'normal', backgroundColor: 'var(--bg-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}
             >
-              {['All', 'Research', 'Plan', 'Record', 'Program', 'Submit', 'Share', 'Troubleshooting', 'Forms'].map(f => (
+              {getTailenderTomCategories().map((f: string) => (
                 <option key={f} value={f}>{f}</option>
               ))}
             </select>
           </div>
         } onClose={() => setShowTomDialog(false)}>
-          <div style={{ height: 400, display: 'flex', flexDirection: 'column' }}>
-            <div style={{ 
-              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12, 
-              border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12 
+          <div style={{ height: 420, display: 'flex', flexDirection: 'column' }}>
+            <div style={{
+              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12,
+              border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12
             }}>
               {tomMessages.map((msg, i) => (
-                <div key={i} style={{ 
+                <div key={i} style={{
                   alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
                   display: 'flex', flexDirection: 'column',
                   alignItems: msg.sender === 'user' ? 'flex-end' : 'flex-start',
-                  maxWidth: '90%'
+                  maxWidth: '92%'
                 }}>
                   <div style={{
                     backgroundColor: msg.sender === 'user' ? 'var(--accent-color)' : 'var(--surface-color)',
                     color: msg.sender === 'user' ? '#fff' : 'var(--text-primary)',
-                    padding: '8px 12px', borderRadius: 12, fontSize: '0.9rem',
+                    padding: '8px 12px', borderRadius: 12, fontSize: '0.88rem', lineHeight: 1.5,
                     border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
-                    marginBottom: 4
+                    marginBottom: 4, whiteSpace: 'pre-wrap'
                   }}>
-                    {msg.text}
+                    {tomEasyEnglish[i] && msg.easyEnglish ? msg.easyEnglish : msg.text}
                   </div>
+                  {/* Easy English toggle */}
+                  {msg.sender === 'tom' && msg.easyEnglish && msg.easyEnglish !== msg.text && (
+                    <button
+                      onClick={() => setTomEasyEnglish(prev => ({ ...prev, [i]: !prev[i] }))}
+                      style={{
+                        background: 'none', border: '1px solid var(--border-color)', borderRadius: 8,
+                        padding: '2px 8px', fontSize: '0.7rem', cursor: 'pointer',
+                        color: 'var(--text-secondary)', marginBottom: 4, alignSelf: 'flex-start'
+                      }}
+                    >
+                      {tomEasyEnglish[i] ? '📖 Full answer' : '🟢 Easy English'}
+                    </button>
+                  )}
+                  {/* Action buttons */}
                   {msg.actions && msg.actions.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 4 }}>
                       {msg.actions.map((action: string, j: number) => (
-                        <button key={j} className="btn" style={{ padding: '4px 8px', fontSize: '0.75rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}>
+                        <button key={j} className="btn" style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}>
                           {action}
                         </button>
                       ))}
                     </div>
                   )}
+                  {/* Related question chips */}
                   {msg.related && msg.related.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
                       {msg.related.map((rel: any, j: number) => (
-                        <span key={j} onClick={() => handleSendTomMessage(rel.question)} style={{
-                          backgroundColor: 'rgba(128,128,128,0.1)', color: 'var(--text-secondary)',
-                          padding: '4px 8px', borderRadius: 12, fontSize: '0.75rem', cursor: 'pointer',
-                          display: 'inline-block'
+                        <span key={j} onClick={() => handleSendTomMessage(rel.label)} style={{
+                          backgroundColor: 'rgba(122,10,10,0.08)', color: 'var(--accent-color)',
+                          padding: '3px 8px', borderRadius: 12, fontSize: '0.72rem', cursor: 'pointer',
+                          display: 'inline-block', border: '1px solid rgba(122,10,10,0.2)'
                         }}>
-                          {rel.question}
+                          {rel.label}
                         </span>
                       ))}
                     </div>
@@ -984,10 +999,10 @@ export default function App() {
               ))}
             </div>
             <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
-              <input 
-                type="text" 
-                placeholder="Ask Tom a question..." 
-                style={{ margin: 0 }} 
+              <input
+                type="text"
+                placeholder="Ask Tom a question..."
+                style={{ margin: 0 }}
                 value={tomInput}
                 onChange={e => setTomInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && handleSendTomMessage()}

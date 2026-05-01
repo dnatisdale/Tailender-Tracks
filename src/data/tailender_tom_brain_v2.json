@@ -1,0 +1,3057 @@
+{
+  "name": "Tailender Tom Brain",
+  "version": "0.2.0",
+  "created": "2026-05-01T16:31:20.344424Z",
+  "app": "Tailender Tracks",
+  "description": "Expanded offline Q&A, training cards, troubleshooting flows, glossary, and Easy English helper content for Christian field recording teams.",
+  "workflow": [
+    "Research",
+    "Plan",
+    "Record",
+    "Program",
+    "Submit",
+    "Share"
+  ],
+  "counts": {
+    "qa": 123,
+    "trainingCards": 12,
+    "troubleshootingFlows": 8,
+    "glossary": 20,
+    "total": 163
+  },
+  "items": [
+    {
+      "id": "tomqa_0001",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Heart language",
+      "intent": "heart_language",
+      "question": "How do I know this is the right heart language?",
+      "answer": "Check what people use at home, with family, in worship, and when telling stories. Compare outside data with local interviews. A trade language may be useful, but the heart language is usually the language that carries deep meaning and trust.",
+      "easyEnglish": "Check what people use at home, with family, in worship, and when telling stories. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Heart-Language Check",
+        "Add local verification notes"
+      ],
+      "tags": [
+        "heart language",
+        "mother tongue",
+        "dialect"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0002",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Heart language",
+      "intent": "heart_language",
+      "question": "What is the difference between a trade language and a mother tongue?",
+      "answer": "A trade language is used for business, government, school, or communication with outsiders. A mother tongue is the language learned at home and often used for family, feelings, stories, and faith questions.",
+      "easyEnglish": "A trade language is used for business, government, school, or communication with outsiders. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark trade language/mother tongue"
+      ],
+      "tags": [
+        "trade language",
+        "mother tongue"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0003",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Dialect",
+      "intent": "dialect",
+      "question": "What if two villages say they speak the same language but sound different?",
+      "answer": "Treat this as a dialect question. Record short samples or word lists from both places, ask trusted listeners about understanding and acceptability, and write the difference in the Language & Community Profile.",
+      "easyEnglish": "Treat this as a dialect question. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Record word-list sample",
+        "Add dialect note"
+      ],
+      "tags": [
+        "dialect",
+        "village"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0004",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Dialect",
+      "intent": "dialect",
+      "question": "What natural boundaries can affect dialects?",
+      "answer": "Rivers, mountains, roads, migration patterns, marriage patterns, schools, markets, and religious networks can separate or connect speech communities. Do not assume nearby villages understand each other the same way.",
+      "easyEnglish": "Rivers, mountains, roads, migration patterns, marriage patterns, schools, markets, and religious networks can separate or connect speech communities. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add map/location note"
+      ],
+      "tags": [
+        "dialect",
+        "map",
+        "geography"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0005",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Language data",
+      "intent": "language_data",
+      "question": "Can I copy language data from a website?",
+      "answer": "Use websites as a starting point, not the final answer. Copying without field verification can send a team to the wrong people or wrong dialect. Mark web-only information as likely or unknown until confirmed locally.",
+      "easyEnglish": "Use websites as a starting point, not the final answer. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark confidence level",
+        "Add source note"
+      ],
+      "tags": [
+        "research",
+        "website",
+        "verification"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0006",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Language data",
+      "intent": "language_data",
+      "question": "What should I do if websites disagree about a language?",
+      "answer": "Write down the disagreement, record the source names, and verify through local interviews or partner knowledge. Do not hide uncertainty; make it visible so the team can solve it.",
+      "easyEnglish": "Write down the disagreement, record the source names, and verify through local interviews or partner knowledge. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add research question",
+        "Mark Unknown"
+      ],
+      "tags": [
+        "uncertainty",
+        "research"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0007",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Existing resources",
+      "intent": "existing_resources",
+      "question": "How do I know if recordings already exist?",
+      "answer": "Search the organization’s records, partner libraries, Scripture resources, and local churches. Ask whether the recordings are understandable, available, current, and actually being used.",
+      "easyEnglish": "Search the organization’s records, partner libraries, Scripture resources, and local churches. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add existing resource",
+        "Mark usefulness"
+      ],
+      "tags": [
+        "existing recordings",
+        "resources"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0008",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Existing resources",
+      "intent": "existing_resources",
+      "question": "What if an old recording exists but people do not use it?",
+      "answer": "Find out why. It may be the wrong dialect, poor audio, old vocabulary, hard access, weak distribution, or lack of local ownership. A new project may still be needed, but the reason should be clear.",
+      "easyEnglish": "Find out why. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add reason not used",
+        "Open Share notes"
+      ],
+      "tags": [
+        "old recordings",
+        "feedback"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0009",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Local verification",
+      "intent": "local_verification",
+      "question": "Who can verify language information?",
+      "answer": "Use a mix of local believers, community leaders, language helpers, teachers, translators, field workers, and ordinary listeners. One person’s opinion is helpful but not always enough.",
+      "easyEnglish": "Use a mix of local believers, community leaders, language helpers, teachers, translators, field workers, and ordinary listeners. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add verifier contact"
+      ],
+      "tags": [
+        "verification",
+        "contacts"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0010",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Cultural bridges",
+      "intent": "cultural_bridges",
+      "question": "What is a cultural bridge?",
+      "answer": "A cultural bridge is a local story, proverb, object, practice, or experience that helps people understand a message. It should clarify the message without changing biblical truth.",
+      "easyEnglish": "A cultural bridge is a local story, proverb, object, practice, or experience that helps people understand a message. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add Cultural Bridge"
+      ],
+      "tags": [
+        "culture",
+        "script"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0011",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Cultural sensitivity",
+      "intent": "cultural_sensitivity",
+      "question": "What cultural notes should I treat carefully?",
+      "answer": "Treat conflict, shame, family roles, religious identity, political pressure, persecution risk, gender norms, and public naming carefully. Write facts respectfully and avoid gossip.",
+      "easyEnglish": "Treat conflict, shame, family roles, religious identity, political pressure, persecution risk, gender norms, and public naming carefully. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add safety note"
+      ],
+      "tags": [
+        "culture",
+        "safety"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0012",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Research proof",
+      "intent": "research_proof",
+      "question": "What should be complete before Research is done?",
+      "answer": "You should have a language/community profile, local verification notes, dialect confidence, target listener notes, existing resource check, cultural bridge notes, and open questions marked clearly.",
+      "easyEnglish": "You should have a language/community profile, local verification notes, dialect confidence, target listener notes, existing resource check, cultural bridge notes, and open questions marked clearly. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Research readiness"
+      ],
+      "tags": [
+        "research",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; heart-language and local verification principles"
+    },
+    {
+      "id": "tomqa_0013",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Script",
+      "intent": "script",
+      "question": "How do I choose a script?",
+      "answer": "Choose a script that fits the audience, purpose, language ability, time limit, and ministry setting. A children’s lesson, testimony, Gospel story, worship song, or health/help message should not all be planned the same way.",
+      "easyEnglish": "Choose a script that fits the audience, purpose, language ability, time limit, and ministry setting. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Recording Project Plan"
+      ],
+      "tags": [
+        "script",
+        "content",
+        "audience"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0014",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Script",
+      "intent": "script",
+      "question": "Should we translate word-for-word?",
+      "answer": "Usually no. Keep the meaning and biblical truth, but use natural wording in the target language. Ask a local helper how their grandmother or respected elder would say it.",
+      "easyEnglish": "Usually no. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Script & Content Approval"
+      ],
+      "tags": [
+        "translation",
+        "adaptation"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0015",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Script",
+      "intent": "script",
+      "question": "What is back-translation?",
+      "answer": "Back-translation is when someone translates the target-language draft back into a language reviewers understand. It helps catch missing meaning, added ideas, and confusing terms.",
+      "easyEnglish": "Back-translation is when someone translates the target-language draft back into a language reviewers understand. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add back-translation note"
+      ],
+      "tags": [
+        "back translation",
+        "review"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0016",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Script",
+      "intent": "script",
+      "question": "What words may need special care?",
+      "answer": "Words like sin, grace, repent, sacrifice, kingdom, spirit, demon, eternal life, forgive, born again, holy, and Savior may need careful local explanation.",
+      "easyEnglish": "Words like sin, grace, repent, sacrifice, kingdom, spirit, demon, eternal life, forgive, born again, holy, and Savior may need careful local explanation. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add sensitive term"
+      ],
+      "tags": [
+        "Christianese",
+        "terms"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0017",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Theology",
+      "intent": "theology",
+      "question": "How do we protect biblical accuracy?",
+      "answer": "Use Scripture references, theological review, back-translation, local believer review, and careful notes on changed wording. Natural language does not mean loose doctrine.",
+      "easyEnglish": "Use Scripture references, theological review, back-translation, local believer review, and careful notes on changed wording. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark theological review"
+      ],
+      "tags": [
+        "theology",
+        "review"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0018",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Culture",
+      "intent": "culture",
+      "question": "Can we replace Bible animals or objects with local ones?",
+      "answer": "Be careful. A local bridge can help explain, but do not change a biblical detail in a way that changes meaning. If the script mentions a lamb and listeners know goats better, add a clarifying bridge instead of casually rewriting Scripture.",
+      "easyEnglish": "Be careful. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add cultural bridge note",
+        "Request reviewer decision"
+      ],
+      "tags": [
+        "culture",
+        "Bible"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0019",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Permission",
+      "intent": "permission",
+      "question": "When do we need permission?",
+      "answer": "Get permission when using someone else’s script, song, music, photo, video, translation, testimony, name, or voice in ways beyond private practice.",
+      "easyEnglish": "Get permission when using someone else’s script, song, music, photo, video, translation, testimony, name, or voice in ways beyond private practice. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Rights & Permissions"
+      ],
+      "tags": [
+        "permissions",
+        "rights"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0020",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Consent",
+      "intent": "consent",
+      "question": "What should a speaker understand before giving consent?",
+      "answer": "They should understand what will be recorded, who may hear it, whether it can be shared online or offline, whether their name/photo will be used, and whether there are restrictions.",
+      "easyEnglish": "They should understand what will be recorded, who may hear it, whether it can be shared online or offline, whether their name/photo will be used, and whether there are restrictions. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Consent Form"
+      ],
+      "tags": [
+        "consent",
+        "speaker"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0021",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Speaker",
+      "intent": "speaker",
+      "question": "What makes a good speaker?",
+      "answer": "A good speaker is understandable, locally accepted, patient, willing, and natural. Reading ability helps, but a trusted natural storyteller may be better than a stiff reader.",
+      "easyEnglish": "A good speaker is understandable, locally accepted, patient, willing, and natural. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add speaker notes"
+      ],
+      "tags": [
+        "speaker",
+        "helper"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0022",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Helper",
+      "intent": "helper",
+      "question": "What can a language helper do?",
+      "answer": "A helper can translate, explain culture, coach pronunciation, check meaning, recruit speakers, note mistakes, and help the team avoid shame or confusion.",
+      "easyEnglish": "A helper can translate, explain culture, coach pronunciation, check meaning, recruit speakers, note mistakes, and help the team avoid shame or confusion. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add helper role"
+      ],
+      "tags": [
+        "helper",
+        "team"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0023",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Logistics",
+      "intent": "logistics",
+      "question": "What should be planned before recording day?",
+      "answer": "Plan location, time, speakers, helpers, transport, food/water, equipment, power, forms, backup, permissions, quiet space, and a realistic session schedule.",
+      "easyEnglish": "Plan location, time, speakers, helpers, transport, food/water, equipment, power, forms, backup, permissions, quiet space, and a realistic session schedule. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Recording Day Readiness"
+      ],
+      "tags": [
+        "logistics",
+        "recording day"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0024",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Risk",
+      "intent": "risk",
+      "question": "What risks should the team write down?",
+      "answer": "Write down safety concerns, local conflict, weather, travel, power, illness, permission delays, sensitive topics, and risk to believers or speakers.",
+      "easyEnglish": "Write down safety concerns, local conflict, weather, travel, power, illness, permission delays, sensitive topics, and risk to believers or speakers. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add project risk"
+      ],
+      "tags": [
+        "risk",
+        "safety"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0025",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Distribution",
+      "intent": "distribution",
+      "question": "Why plan Share before Record?",
+      "answer": "The final use affects length, format, language, file names, permissions, and follow-up. A recording for radio, WhatsApp, SD card, or listening group may need different decisions.",
+      "easyEnglish": "The final use affects length, format, language, file names, permissions, and follow-up. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Sharing Plan"
+      ],
+      "tags": [
+        "share",
+        "distribution"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0026",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Plan proof",
+      "intent": "plan_proof",
+      "question": "What should be complete before Plan is done?",
+      "answer": "You need a clear purpose, approved content path, speaker/helper plan, permissions plan, theological/local review plan, recording location, equipment checklist, backup plan, and sharing path.",
+      "easyEnglish": "You need a clear purpose, approved content path, speaker/helper plan, permissions plan, theological/local review plan, recording location, equipment checklist, backup plan, and sharing path. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Plan readiness"
+      ],
+      "tags": [
+        "plan",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Planning and scripting guidance; permissions and adaptation"
+    },
+    {
+      "id": "tomqa_0027",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Setup",
+      "intent": "setup",
+      "question": "What is the first thing to do before pressing Record?",
+      "answer": "Make a short test recording and listen with headphones. Check microphone, level, noise, speaker comfort, and room tone before the real take.",
+      "easyEnglish": "Make a short test recording and listen with headphones. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Start test recording"
+      ],
+      "tags": [
+        "test",
+        "setup"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0028",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Room tone",
+      "intent": "room_tone",
+      "question": "How long should room tone be?",
+      "answer": "Capture about 20 to 30 seconds of quiet room tone in the same place, with the same microphone position, before or during the session.",
+      "easyEnglish": "Capture about 20 to 30 seconds of quiet room tone in the same place, with the same microphone position, before or during the session. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark room tone captured"
+      ],
+      "tags": [
+        "room tone",
+        "noise"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0029",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Levels",
+      "intent": "levels",
+      "question": "How loud should the recording be?",
+      "answer": "Record strong but safe. Avoid red peaks or distortion. It is better to have clean audio that is a little low than loud audio that is clipped.",
+      "easyEnglish": "Record strong but safe. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check level meter"
+      ],
+      "tags": [
+        "levels",
+        "clipping"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0030",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Clipping",
+      "intent": "clipping",
+      "question": "What should I do if the audio clips?",
+      "answer": "Stop, lower the input gain or move the microphone slightly away, and retake the section. Clipped audio cannot be fully repaired later.",
+      "easyEnglish": "Stop, lower the input gain or move the microphone slightly away, and retake the section. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark retake",
+        "Lower gain"
+      ],
+      "tags": [
+        "clipping",
+        "retake"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0031",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Noise",
+      "intent": "noise",
+      "question": "What noise should I watch for?",
+      "answer": "Fans, fridges, generators, wind, rain, traffic, animals, phones, bracelets, chairs, papers, echo, and people outside can all hurt a recording.",
+      "easyEnglish": "Fans, fridges, generators, wind, rain, traffic, animals, phones, bracelets, chairs, papers, echo, and people outside can all hurt a recording. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add noise note"
+      ],
+      "tags": [
+        "noise",
+        "field"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0032",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Microphone",
+      "intent": "microphone",
+      "question": "Where should I place the microphone?",
+      "answer": "Place it close enough for clear voice but not directly in the blast of breath. Slightly off to the side often reduces pops while keeping the voice clear.",
+      "easyEnglish": "Place it close enough for clear voice but not directly in the blast of breath. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Adjust microphone"
+      ],
+      "tags": [
+        "microphone",
+        "plosives"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0033",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Speaker care",
+      "intent": "speaker_care",
+      "question": "How do I help a nervous speaker?",
+      "answer": "Explain the process simply, record a practice line, encourage normal speech, allow breaks, and keep correction gentle. Protect the speaker’s dignity.",
+      "easyEnglish": "Explain the process simply, record a practice line, encourage normal speech, allow breaks, and keep correction gentle. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add speaker care note"
+      ],
+      "tags": [
+        "speaker care",
+        "nervous"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0034",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Mistakes",
+      "intent": "mistakes",
+      "question": "What if the speaker makes a mistake?",
+      "answer": "Pause calmly, mark the mistake, and restart from a natural sentence break. Do not talk over the mistake if the recorder is still running unless that is your team method.",
+      "easyEnglish": "Pause calmly, mark the mistake, and restart from a natural sentence break. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add retake marker"
+      ],
+      "tags": [
+        "mistake",
+        "retake"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0035",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Takes",
+      "intent": "takes",
+      "question": "How do I mark the best take?",
+      "answer": "Write the file name, take number, script section, and why it is best. If possible, mark the best take before leaving the session.",
+      "easyEnglish": "Write the file name, take number, script section, and why it is best. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark best take"
+      ],
+      "tags": [
+        "take",
+        "session log"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0036",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Playback",
+      "intent": "playback",
+      "question": "Do we need to listen back before leaving?",
+      "answer": "Yes. Listen to a sample or full take if possible. Check that the file exists, audio is clear, no severe clipping occurred, and the correct speaker/script was recorded.",
+      "easyEnglish": "Yes. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Playback check"
+      ],
+      "tags": [
+        "playback",
+        "QC"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0037",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Backup",
+      "intent": "backup",
+      "question": "How many backups do we need?",
+      "answer": "At least one backup before leaving; two is better. Keep copies on separate devices when possible.",
+      "easyEnglish": "At least one backup before leaving; two is better. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark backup made"
+      ],
+      "tags": [
+        "backup",
+        "files"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0038",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Record proof",
+      "intent": "record_proof",
+      "question": "What should be complete before Record is done?",
+      "answer": "Session log, speaker consent, room tone, test recording, usable takes, best take notes, noise/retake notes, playback check, and backup status should be complete.",
+      "easyEnglish": "Session log, speaker consent, room tone, test recording, usable takes, best take notes, noise/retake notes, playback check, and backup status should be complete. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Record readiness"
+      ],
+      "tags": [
+        "record",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Recording phase; standards, documentation, room tone, backup"
+    },
+    {
+      "id": "tomqa_0039",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Organizing",
+      "intent": "organizing",
+      "question": "What is Program stage for?",
+      "answer": "Program turns raw or edited recordings into a usable final product with clear order, titles, metadata, file names, and purpose.",
+      "easyEnglish": "Program turns raw or edited recordings into a usable final product with clear order, titles, metadata, file names, and purpose. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Program Builder"
+      ],
+      "tags": [
+        "program",
+        "organize"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0040",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Tracklist",
+      "intent": "tracklist",
+      "question": "What belongs in a tracklist?",
+      "answer": "Track number, title, speaker/singer, script or song name, duration, Scripture references, notes, and final file name.",
+      "easyEnglish": "Track number, title, speaker/singer, script or song name, duration, Scripture references, notes, and final file name. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Audio Program Form"
+      ],
+      "tags": [
+        "tracklist",
+        "metadata"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0041",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Order",
+      "intent": "order",
+      "question": "How do I decide track order?",
+      "answer": "Choose an order that helps listeners understand and respond. Keep stories, teaching, songs, and calls to action in a clear sequence.",
+      "easyEnglish": "Choose an order that helps listeners understand and respond. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Move tracks up/down"
+      ],
+      "tags": [
+        "order",
+        "flow"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0042",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Naming",
+      "intent": "naming",
+      "question": "Why does file naming matter?",
+      "answer": "Clear file names prevent lost audio, slow review, and wrong uploads. Names should help another worker understand the file without asking you.",
+      "easyEnglish": "Clear file names prevent lost audio, slow review, and wrong uploads. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Preview smart file names"
+      ],
+      "tags": [
+        "naming",
+        "files"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0043",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Originals",
+      "intent": "originals",
+      "question": "Should I rename original recorder files?",
+      "answer": "Usually keep originals safe and create clean copies with better names. Do not destroy or overwrite original field recordings.",
+      "easyEnglish": "Usually keep originals safe and create clean copies with better names. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Create clean copies"
+      ],
+      "tags": [
+        "originals",
+        "backup"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0044",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Metadata",
+      "intent": "metadata",
+      "question": "What metadata should be checked?",
+      "answer": "Language, dialect, project, speaker, title, Scripture, content type, duration, permissions, track order, and version status.",
+      "easyEnglish": "Language, dialect, project, speaker, title, Scripture, content type, duration, permissions, track order, and version status. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run metadata check"
+      ],
+      "tags": [
+        "metadata",
+        "QC"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0045",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Quality",
+      "intent": "quality",
+      "question": "What quality checks belong in Program?",
+      "answer": "Check clean audio, correct edits, no missing tracks, no wrong language labels, no missing permissions, and no mismatch between script and audio.",
+      "easyEnglish": "Check clean audio, correct edits, no missing tracks, no wrong language labels, no missing permissions, and no mismatch between script and audio. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Program QC"
+      ],
+      "tags": [
+        "quality",
+        "program"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0046",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Music",
+      "intent": "music",
+      "question": "What if the program includes songs?",
+      "answer": "Record song title, singer/group, owner if known, permission, language, meaning, and allowed sharing methods.",
+      "easyEnglish": "Record song title, singer/group, owner if known, permission, language, meaning, and allowed sharing methods. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Rights & Permissions"
+      ],
+      "tags": [
+        "song",
+        "music",
+        "rights"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0047",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Version",
+      "intent": "version",
+      "question": "How do I handle versions?",
+      "answer": "Use simple labels such as draft, reviewed, final, corrected, or published. Avoid sending a draft file as final by mistake.",
+      "easyEnglish": "Use simple labels such as draft, reviewed, final, corrected, or published. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Set version status"
+      ],
+      "tags": [
+        "version",
+        "status"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0048",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Program proof",
+      "intent": "program_proof",
+      "question": "What should be complete before Program is done?",
+      "answer": "Track order, program title, file names, metadata, duration, speaker/script info, permissions check, quality check, and package preview should be complete.",
+      "easyEnglish": "Track order, program title, file names, metadata, duration, speaker/script info, permissions check, quality check, and package preview should be complete. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Program readiness"
+      ],
+      "tags": [
+        "program",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Program phase; naming, metadata, final product organization"
+    },
+    {
+      "id": "tomqa_0049",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Meaning",
+      "intent": "meaning",
+      "question": "What is Submit?",
+      "answer": "Submit is the handoff of a complete recording package to the reviewer, media team, studio, database team, ministry office, or publishing process.",
+      "easyEnglish": "Submit is the handoff of a complete recording package to the reviewer, media team, studio, database team, ministry office, or publishing process. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Submission Package Checklist"
+      ],
+      "tags": [
+        "submit",
+        "handoff"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0050",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Package",
+      "intent": "package",
+      "question": "What goes in a submission package?",
+      "answer": "Final audio, original or edited files if required, scripts, translations/back-translations, forms, permissions, tracklist, metadata, notes, and reviewer questions.",
+      "easyEnglish": "Final audio, original or edited files if required, scripts, translations/back-translations, forms, permissions, tracklist, metadata, notes, and reviewer questions. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run package checklist"
+      ],
+      "tags": [
+        "package",
+        "submit"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0051",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Completeness",
+      "intent": "completeness",
+      "question": "Why send a complete package the first time?",
+      "answer": "Incomplete packages create delays, repeated questions, lost files, and stress for reviewers and field teams. A complete package speeds ministry use.",
+      "easyEnglish": "Incomplete packages create delays, repeated questions, lost files, and stress for reviewers and field teams. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Submission Readiness"
+      ],
+      "tags": [
+        "complete",
+        "review"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0052",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Status",
+      "intent": "status",
+      "question": "What status should I choose?",
+      "answer": "Use simple status labels: Draft, Ready to Submit, Submitted, Needs Correction, Approved, Published, or Archived.",
+      "easyEnglish": "Use simple status labels: Draft, Ready to Submit, Submitted, Needs Correction, Approved, Published, or Archived. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Update status"
+      ],
+      "tags": [
+        "status",
+        "submit"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0053",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Reviewer",
+      "intent": "reviewer",
+      "question": "What should I ask the reviewer?",
+      "answer": "Ask about theological clarity, cultural concerns, technical issues, missing metadata, permissions, and whether anything blocks sharing.",
+      "easyEnglish": "Ask about theological clarity, cultural concerns, technical issues, missing metadata, permissions, and whether anything blocks sharing. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add reviewer question"
+      ],
+      "tags": [
+        "reviewer",
+        "questions"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0054",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Corrections",
+      "intent": "corrections",
+      "question": "What if the reviewer requests changes?",
+      "answer": "Do not overwrite the original package. Make a corrected version, write what changed, update the status, and keep the old version if needed.",
+      "easyEnglish": "Do not overwrite the original package. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Create corrected version"
+      ],
+      "tags": [
+        "correction",
+        "version"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0055",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Large files",
+      "intent": "large_files",
+      "question": "What if internet is too weak to upload?",
+      "answer": "Prepare a physical or delayed transfer plan: USB, SD card, external drive, local partner upload, or compressed package if allowed. Keep the package organized.",
+      "easyEnglish": "Prepare a physical or delayed transfer plan: USB, SD card, external drive, local partner upload, or compressed package if allowed. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Choose alternate handoff"
+      ],
+      "tags": [
+        "upload",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0056",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Backup",
+      "intent": "backup",
+      "question": "Should I back up before submitting?",
+      "answer": "Yes. Back up the full package before sending. Submission is not a replacement for your own safe copy.",
+      "easyEnglish": "Yes. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark backup complete"
+      ],
+      "tags": [
+        "backup",
+        "submit"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0057",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Submit proof",
+      "intent": "submit_proof",
+      "question": "What should be complete before Submit is done?",
+      "answer": "Package checklist, forms, permissions, tracklist, metadata, backup, submitted-to person/place, date, status, and reviewer notes should be complete.",
+      "easyEnglish": "Package checklist, forms, permissions, tracklist, metadata, backup, submitted-to person/place, date, status, and reviewer notes should be complete. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Submit readiness"
+      ],
+      "tags": [
+        "submit",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0058",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Submit to Share",
+      "intent": "submit_to_share",
+      "question": "Why does Share come after Submit?",
+      "answer": "Submit is the handoff; Share is the ministry distribution and follow-up. A recording can be submitted but still not reach listeners yet.",
+      "easyEnglish": "Submit is the handoff; Share is the ministry distribution and follow-up. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Share stage"
+      ],
+      "tags": [
+        "share",
+        "submit"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submit phase; complete package, status, distribution thinking"
+    },
+    {
+      "id": "tomqa_0059",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Meaning",
+      "intent": "meaning",
+      "question": "What is Share?",
+      "answer": "Share means the finished message reaches real listeners through churches, believers, field workers, phones, SD cards, Bluetooth, QR codes, radio, speaker boxes, or listening groups.",
+      "easyEnglish": "Share means the finished message reaches real listeners through churches, believers, field workers, phones, SD cards, Bluetooth, QR codes, radio, speaker boxes, or listening groups. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Sharing & Distribution Plan"
+      ],
+      "tags": [
+        "share",
+        "distribution"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0060",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Offline",
+      "intent": "offline",
+      "question": "How can we share without internet?",
+      "answer": "Use SD cards, USB drives, Bluetooth, phone-to-phone sharing, speaker boxes, local Wi-Fi sharing, printed instructions, and listening groups.",
+      "easyEnglish": "Use SD cards, USB drives, Bluetooth, phone-to-phone sharing, speaker boxes, local Wi-Fi sharing, printed instructions, and listening groups. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add offline sharing method"
+      ],
+      "tags": [
+        "offline",
+        "share"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0061",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Online",
+      "intent": "online",
+      "question": "How can we share online wisely?",
+      "answer": "Use approved links, ministry pages, apps, or messaging platforms. Confirm permissions, safety, and whether public sharing could put speakers or believers at risk.",
+      "easyEnglish": "Use approved links, ministry pages, apps, or messaging platforms. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add online link",
+        "Check permissions"
+      ],
+      "tags": [
+        "online",
+        "safety"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0062",
+      "type": "qa",
+      "stage": "Share",
+      "category": "QR code",
+      "intent": "qr_code",
+      "question": "What should a QR code point to?",
+      "answer": "Point it to a stable, tested page or file location where the correct language content is easy to access. Test it on a phone before printing.",
+      "easyEnglish": "Point it to a stable, tested page or file location where the correct language content is easy to access. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add QR link",
+        "Test QR"
+      ],
+      "tags": [
+        "QR",
+        "link"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0063",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Church",
+      "intent": "church",
+      "question": "How can local churches use the recordings?",
+      "answer": "They can use them for evangelism, discipleship, children’s ministry, women’s ministry, listening groups, visitation, follow-up, and church planting support.",
+      "easyEnglish": "They can use them for evangelism, discipleship, children’s ministry, women’s ministry, listening groups, visitation, follow-up, and church planting support. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add church use"
+      ],
+      "tags": [
+        "church",
+        "ministry"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0064",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Listening groups",
+      "intent": "listening_groups",
+      "question": "How do we plan a listening group?",
+      "answer": "Plan who invites people, where they meet, what track is played, who leads discussion, how questions are handled, and how follow-up happens.",
+      "easyEnglish": "Plan who invites people, where they meet, what track is played, who leads discussion, how questions are handled, and how follow-up happens. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open listening group plan"
+      ],
+      "tags": [
+        "listening group",
+        "follow-up"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0065",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Feedback",
+      "intent": "feedback",
+      "question": "What feedback should we collect?",
+      "answer": "Collect whether the language was understandable, the message was clear, people listened, questions came up, objections appeared, and what content is needed next.",
+      "easyEnglish": "Collect whether the language was understandable, the message was clear, people listened, questions came up, objections appeared, and what content is needed next. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Field Feedback Form"
+      ],
+      "tags": [
+        "feedback",
+        "evaluation"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0066",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Safety",
+      "intent": "safety",
+      "question": "When should we avoid public sharing?",
+      "answer": "Avoid public sharing when it may endanger speakers, believers, churches, or communities, or when permission is limited to local/private use.",
+      "easyEnglish": "Avoid public sharing when it may endanger speakers, believers, churches, or communities, or when permission is limited to local/private use. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check safety risk"
+      ],
+      "tags": [
+        "safety",
+        "permissions"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0067",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Ministry result",
+      "intent": "ministry_result",
+      "question": "How do we know Share worked?",
+      "answer": "Look for access, understanding, use by local partners, listener response, questions, testimonies, requests for more content, and clear next steps.",
+      "easyEnglish": "Look for access, understanding, use by local partners, listener response, questions, testimonies, requests for more content, and clear next steps. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add response notes"
+      ],
+      "tags": [
+        "impact",
+        "feedback"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0068",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Share proof",
+      "intent": "share_proof",
+      "question": "What should be complete before Share is done?",
+      "answer": "Sharing method, local partner, permission check, target listeners, follow-up contact, feedback plan, and response notes should be complete.",
+      "easyEnglish": "Sharing method, local partner, permission check, target listeners, follow-up contact, feedback plan, and response notes should be complete. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run Sharing Plan"
+      ],
+      "tags": [
+        "share",
+        "checklist"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
+    },
+    {
+      "id": "tomqa_0069",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Language & Community Profile",
+      "intent": "language_&_community_profile",
+      "question": "What is the Language & Community Profile for?",
+      "answer": "It stores the research facts about language, dialect, people, location, existing resources, contacts, and confidence level.",
+      "easyEnglish": "It stores the research facts about language, dialect, people, location, existing resources, contacts, and confidence level. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Language & Community Profile"
+      ],
+      "tags": [
+        "forms",
+        "research"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0070",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Recording Project Plan",
+      "intent": "recording_project_plan",
+      "question": "What is the Recording Project Plan for?",
+      "answer": "It keeps purpose, audience, content, Scripture, logistics, equipment, permissions, backup, and sharing plan in one place.",
+      "easyEnglish": "It keeps purpose, audience, content, Scripture, logistics, equipment, permissions, backup, and sharing plan in one place. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Recording Project Plan"
+      ],
+      "tags": [
+        "forms",
+        "plan"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0071",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Speaker & Helper Consent",
+      "intent": "speaker_&_helper_consent",
+      "question": "What is the Speaker & Helper Consent Form for?",
+      "answer": "It records whether a person agrees to be recorded and how their voice, name, photo, or contribution may be used.",
+      "easyEnglish": "It records whether a person agrees to be recorded and how their voice, name, photo, or contribution may be used. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Consent Form"
+      ],
+      "tags": [
+        "forms",
+        "consent"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0072",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Script & Content Approval",
+      "intent": "script_&_content_approval",
+      "question": "What is the Script & Content Approval Form for?",
+      "answer": "It tracks script source, translation/adaptation, back-translation, theological review, local review, sensitive terms, and approval status.",
+      "easyEnglish": "It tracks script source, translation/adaptation, back-translation, theological review, local review, sensitive terms, and approval status. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Script Approval"
+      ],
+      "tags": [
+        "forms",
+        "script"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0073",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Recording Session Log",
+      "intent": "recording_session_log",
+      "question": "What is the Recording Session Log for?",
+      "answer": "It records what happened in a session: file names, takes, best take, equipment, room tone, noise, playback, and backup.",
+      "easyEnglish": "It records what happened in a session: file names, takes, best take, equipment, room tone, noise, playback, and backup. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Session Log"
+      ],
+      "tags": [
+        "forms",
+        "record"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0074",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Audio Program Form",
+      "intent": "audio_program_form",
+      "question": "What is the Audio Program Form for?",
+      "answer": "It describes the final program: title, track order, speakers, durations, Scripture, music, notes, and final file names.",
+      "easyEnglish": "It describes the final program: title, track order, speakers, durations, Scripture, music, notes, and final file names. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Program Form"
+      ],
+      "tags": [
+        "forms",
+        "program"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0075",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Rights & Permissions",
+      "intent": "rights_&_permissions",
+      "question": "What is the Rights & Permissions Form for?",
+      "answer": "It tracks who owns content and whether it can be used locally, online, by radio, on SD cards, in churches, or in training.",
+      "easyEnglish": "It tracks who owns content and whether it can be used locally, online, by radio, on SD cards, in churches, or in training. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Rights & Permissions"
+      ],
+      "tags": [
+        "forms",
+        "rights"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0076",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Submission Package Checklist",
+      "intent": "submission_package_checklist",
+      "question": "What is the Submission Package Checklist for?",
+      "answer": "It helps the team confirm that all audio, scripts, forms, permissions, metadata, tracklist, and backups are ready before handoff.",
+      "easyEnglish": "It helps the team confirm that all audio, scripts, forms, permissions, metadata, tracklist, and backups are ready before handoff. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Submission Checklist"
+      ],
+      "tags": [
+        "forms",
+        "submit"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0077",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Sharing & Distribution Plan",
+      "intent": "sharing_&_distribution_plan",
+      "question": "What is the Sharing & Distribution Plan for?",
+      "answer": "It helps the team move from finished recording to real listener access through local and digital channels.",
+      "easyEnglish": "It helps the team move from finished recording to real listener access through local and digital channels. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Sharing Plan"
+      ],
+      "tags": [
+        "forms",
+        "share"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0078",
+      "type": "qa",
+      "stage": "Forms",
+      "category": "Field Feedback Form",
+      "intent": "field_feedback_form",
+      "question": "What is the Field Feedback Form for?",
+      "answer": "It captures response after sharing: understanding, objections, testimonies, questions, requests, corrections, and follow-up.",
+      "easyEnglish": "It captures response after sharing: understanding, objections, testimonies, questions, requests, corrections, and follow-up. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Feedback Form"
+      ],
+      "tags": [
+        "forms",
+        "feedback"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Neutral form pack placement"
+    },
+    {
+      "id": "tomqa_0079",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "The recording sounds distorted. What do I do?",
+      "answer": "Distortion often means clipping or microphone overload. Lower the input gain, move the mic slightly away, retake the section, and mark the bad take so it is not used.",
+      "easyEnglish": "Distortion often means clipping or microphone overload. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Lower gain",
+        "Retake"
+      ],
+      "tags": [
+        "distortion",
+        "clipping"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0080",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "The recording is too quiet. What do I do?",
+      "answer": "Check the microphone connection, move closer, raise gain carefully, and record a new test. Do not depend on editing to fix a very weak recording.",
+      "easyEnglish": "Check the microphone connection, move closer, raise gain carefully, and record a new test. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check mic",
+        "Retest"
+      ],
+      "tags": [
+        "quiet",
+        "gain"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0081",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "There is wind noise. What do I do?",
+      "answer": "Move indoors or behind a wind block, use a windscreen, turn the microphone away from direct wind, and retest before continuing.",
+      "easyEnglish": "Move indoors or behind a wind block, use a windscreen, turn the microphone away from direct wind, and retest before continuing. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Use windscreen",
+        "Retest"
+      ],
+      "tags": [
+        "wind",
+        "noise"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0082",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "There is hum or buzz. What do I do?",
+      "answer": "Check lights, chargers, power cables, generators, laptops, and nearby electronics. Try battery power and move audio cables away from power cables.",
+      "easyEnglish": "Check lights, chargers, power cables, generators, laptops, and nearby electronics. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Remove power source",
+        "Retest"
+      ],
+      "tags": [
+        "hum",
+        "buzz"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0083",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "The room is echoey. What do I do?",
+      "answer": "Move to a smaller or softer space, add blankets or curtains, avoid bare walls, and keep the mic closer to the speaker.",
+      "easyEnglish": "Move to a smaller or softer space, add blankets or curtains, avoid bare walls, and keep the mic closer to the speaker. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Change room"
+      ],
+      "tags": [
+        "echo",
+        "room"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0084",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Audio",
+      "intent": "audio",
+      "question": "The speaker pops P and B sounds. What do I do?",
+      "answer": "Move the microphone slightly off-axis, add a pop filter or windscreen, and ask for natural speech instead of strong projection.",
+      "easyEnglish": "Move the microphone slightly off-axis, add a pop filter or windscreen, and ask for natural speech instead of strong projection. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Move mic off-axis"
+      ],
+      "tags": [
+        "plosives",
+        "microphone"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0085",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "App",
+      "intent": "app",
+      "question": "Tailender Tom gives the wrong answer. What do I do?",
+      "answer": "Try a shorter question with key words like room tone, consent, submit, or heart language. If still wrong, save the question for review and add a better Q&A later.",
+      "easyEnglish": "Try a shorter question with key words like room tone, consent, submit, or heart language. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Save unanswered question"
+      ],
+      "tags": [
+        "Tom",
+        "search"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0086",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "App",
+      "intent": "app",
+      "question": "Tailender Tom says he does not know. What now?",
+      "answer": "That means the offline database has no good match yet. Save the question, ask a trainer or reviewer, then add the approved answer to the database.",
+      "easyEnglish": "That means the offline database has no good match yet. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add new Q&A draft"
+      ],
+      "tags": [
+        "unknown",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0087",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "App",
+      "intent": "app",
+      "question": "The app is blank. What should I check?",
+      "answer": "Restart the dev server, check browser console errors, confirm index.html points to /src/main.tsx, and confirm the latest code was saved.",
+      "easyEnglish": "Restart the dev server, check browser console errors, confirm index. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Restart npm run dev",
+        "Open DevTools"
+      ],
+      "tags": [
+        "PWA",
+        "blank"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0088",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "App",
+      "intent": "app",
+      "question": "The logo is missing. What should I check?",
+      "answer": "Confirm the image is in public/icons/tailender-buckle.png and the app uses /icons/tailender-buckle.png, not a src folder path.",
+      "easyEnglish": "Confirm the image is in public/icons/tailender-buckle. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check logo path"
+      ],
+      "tags": [
+        "logo",
+        "PWA"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0089",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "App",
+      "intent": "app",
+      "question": "The PWA will not install. What should I check?",
+      "answer": "Check manifest, service worker registration, icon paths, localhost/HTTPS, and console errors. Restart the app after changing manifest or service worker.",
+      "easyEnglish": "Check manifest, service worker registration, icon paths, localhost/HTTPS, and console errors. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check manifest",
+        "Check service worker"
+      ],
+      "tags": [
+        "PWA",
+        "install"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0090",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Git",
+      "intent": "git",
+      "question": "GitHub Desktop wants to commit a backup folder. What should I do?",
+      "answer": "Move the backup outside the repo, delete it after testing, or add it to .gitignore. Do not commit temporary backup folders.",
+      "easyEnglish": "Move the backup outside the repo, delete it after testing, or add it to. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Move backup",
+        "Run git status"
+      ],
+      "tags": [
+        "git",
+        "backup"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0091",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Files",
+      "intent": "files",
+      "question": "I cannot find a recording. What do I search?",
+      "answer": "Search project name, date, language, speaker, recorder file name, track number, and backup drive. Check originals, edited files, program exports, memory card, and ZIP package.",
+      "easyEnglish": "Search project name, date, language, speaker, recorder file name, track number, and backup drive. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open file finder"
+      ],
+      "tags": [
+        "lost file",
+        "search"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0092",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Storage",
+      "intent": "storage",
+      "question": "Device storage is full. What do I do?",
+      "answer": "Stop importing new files. Back up originals, remove duplicate exports and temporary files, empty trash if safe, and keep the final package organized.",
+      "easyEnglish": "Stop importing new files. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Storage Manager"
+      ],
+      "tags": [
+        "storage",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0093",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Offline",
+      "intent": "offline",
+      "question": "We have no internet. What can we still do?",
+      "answer": "Use offline forms, training cards, local project data, local audio files, and prepare a package for later submission or physical transfer.",
+      "easyEnglish": "Use offline forms, training cards, local project data, local audio files, and prepare a package for later submission or physical transfer. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Switch to offline workflow"
+      ],
+      "tags": [
+        "offline",
+        "field"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Troubleshooting and offline-first training principles"
+    },
+    {
+      "id": "tomqa_0094",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Roles",
+      "intent": "roles",
+      "question": "What roles should a Recording Team have?",
+      "answer": "Useful roles include Research lead, Script lead, Speaker care, Recorder operator, Backup person, Editor, Reviewer, Submitter, and Distribution/Share lead.",
+      "easyEnglish": "Useful roles include Research lead, Script lead, Speaker care, Recorder operator, Backup person, Editor, Reviewer, Submitter, and Distribution/Share lead. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Team Roles"
+      ],
+      "tags": [
+        "team",
+        "roles"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0095",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Roles",
+      "intent": "roles",
+      "question": "Can one person have more than one role?",
+      "answer": "Yes. Small teams may combine roles, but each role should still have a named owner so tasks do not disappear.",
+      "easyEnglish": "Yes. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign role owner"
+      ],
+      "tags": [
+        "team",
+        "ownership"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0096",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Handoff",
+      "intent": "handoff",
+      "question": "How do we make a clean handoff?",
+      "answer": "At the end of a stage, write what is complete, what is missing, who owns the next step, and what could block progress.",
+      "easyEnglish": "At the end of a stage, write what is complete, what is missing, who owns the next step, and what could block progress. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add handoff note"
+      ],
+      "tags": [
+        "handoff",
+        "workflow"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0097",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Speaker care",
+      "intent": "speaker_care",
+      "question": "Who should care for speakers and helpers?",
+      "answer": "Assign someone to explain the process, watch for fatigue or shame, help with breaks, and protect consent and dignity.",
+      "easyEnglish": "Assign someone to explain the process, watch for fatigue or shame, help with breaks, and protect consent and dignity. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign Speaker care"
+      ],
+      "tags": [
+        "speaker care",
+        "team"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0098",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Backup",
+      "intent": "backup",
+      "question": "Who should be responsible for backups?",
+      "answer": "Name a backup person before recording begins. That person checks files, copies them safely, and records where the backups are stored.",
+      "easyEnglish": "Name a backup person before recording begins. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign Backup person"
+      ],
+      "tags": [
+        "backup",
+        "team"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0099",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Reviewer",
+      "intent": "reviewer",
+      "question": "What does the reviewer do?",
+      "answer": "The reviewer checks theological clarity, language accuracy, cultural clarity, permissions, metadata, and whether the program is ready for submission or sharing.",
+      "easyEnglish": "The reviewer checks theological clarity, language accuracy, cultural clarity, permissions, metadata, and whether the program is ready for submission or sharing. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign Reviewer"
+      ],
+      "tags": [
+        "review",
+        "team"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0100",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Mentoring",
+      "intent": "mentoring",
+      "question": "How can experienced recordists help?",
+      "answer": "Ask them for hidden knowledge, common mistakes, local tips, sample files, and realistic practice scenarios. Turn their advice into training cards.",
+      "easyEnglish": "Ask them for hidden knowledge, common mistakes, local tips, sample files, and realistic practice scenarios. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add veteran tip"
+      ],
+      "tags": [
+        "mentor",
+        "training"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0101",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Stress",
+      "intent": "stress",
+      "question": "How can we reduce stress on one person?",
+      "answer": "Divide tasks by strengths, use checklists, make handoffs visible, keep file naming consistent, and train more than one person in critical skills.",
+      "easyEnglish": "Divide tasks by strengths, use checklists, make handoffs visible, keep file naming consistent, and train more than one person in critical skills. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open team workload"
+      ],
+      "tags": [
+        "stress",
+        "team"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0102",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Follow-up",
+      "intent": "follow-up",
+      "question": "Who owns follow-up after sharing?",
+      "answer": "Assign a Distribution/Share lead or local partner to collect feedback, testimonies, questions, and requests for more content.",
+      "easyEnglish": "Assign a Distribution/Share lead or local partner to collect feedback, testimonies, questions, and requests for more content. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign Share lead"
+      ],
+      "tags": [
+        "follow-up",
+        "share"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0103",
+      "type": "qa",
+      "stage": "Teamwork",
+      "category": "Team proof",
+      "intent": "team_proof",
+      "question": "How do we know the team is ready?",
+      "answer": "The team can explain the workflow, complete forms without heavy correction, record clean audio, back up files, package correctly, and explain how the material will be used.",
+      "easyEnglish": "The team can explain the workflow, complete forms without heavy correction, record clean audio, back up files, package correctly, and explain how the material will be used. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Run field readiness"
+      ],
+      "tags": [
+        "team",
+        "readiness"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
+    },
+    {
+      "id": "tomqa_0104",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Heart language",
+      "intent": "heart_language",
+      "question": "Why not record only in the national language?",
+      "answer": "The national language may reach some people, but the heart language often communicates trust, identity, emotion, and spiritual meaning more deeply. Research should show what listeners actually understand and prefer.",
+      "easyEnglish": "The national language may reach some people, but the heart language often communicates trust, identity, emotion, and spiritual meaning more deeply. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Heart-Language Check"
+      ],
+      "tags": [
+        "national language",
+        "heart language"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0105",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Population",
+      "intent": "population",
+      "question": "Should population size decide which language to record?",
+      "answer": "Population matters, but it is not the only factor. Spiritual need, access, existing materials, partner requests, dialect barriers, and local opportunity also matter.",
+      "easyEnglish": "Population matters, but it is not the only factor. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add ministry opportunity note"
+      ],
+      "tags": [
+        "population",
+        "priority"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0106",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Priority",
+      "intent": "priority",
+      "question": "How do we choose between two possible languages?",
+      "answer": "Compare heart-language need, existing resources, partner readiness, access, urgency, speaker availability, and likely sharing path. Write the reason for the decision.",
+      "easyEnglish": "Compare heart-language need, existing resources, partner readiness, access, urgency, speaker availability, and likely sharing path. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add priority decision"
+      ],
+      "tags": [
+        "priority",
+        "research"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0107",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Audience",
+      "intent": "audience",
+      "question": "How specific should the target listeners be?",
+      "answer": "Be as specific as possible: children, women, elders, new believers, non-readers, church leaders, unreached villages, trauma survivors, or health message listeners may need different content.",
+      "easyEnglish": "Be as specific as possible: children, women, elders, new believers, non-readers, church leaders, unreached villages, trauma survivors, or health message listeners may need different content. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Edit target listeners"
+      ],
+      "tags": [
+        "audience",
+        "purpose"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0108",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Children",
+      "intent": "children",
+      "question": "What changes for children’s ministry recordings?",
+      "answer": "Use shorter sections, clear stories, natural voices, repetition, songs if appropriate, and safe sharing through trusted adults or churches.",
+      "easyEnglish": "Use shorter sections, clear stories, natural voices, repetition, songs if appropriate, and safe sharing through trusted adults or churches. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Mark children’s ministry use"
+      ],
+      "tags": [
+        "children",
+        "ministry"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0109",
+      "type": "qa",
+      "stage": "Plan",
+      "category": "Testimony",
+      "intent": "testimony",
+      "question": "How should we plan a testimony?",
+      "answer": "Keep it truthful, clear, culturally safe, and Christ-centered. Get consent, avoid unnecessary sensitive details, and protect identity if public sharing could cause risk.",
+      "easyEnglish": "Keep it truthful, clear, culturally safe, and Christ-centered. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Consent Form",
+        "Add testimony safety note"
+      ],
+      "tags": [
+        "testimony",
+        "safety"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0110",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Breaks",
+      "intent": "breaks",
+      "question": "How often should we take breaks?",
+      "answer": "Take breaks before the speaker becomes tired or frustrated. Short breaks protect voice quality and help the speaker stay natural.",
+      "easyEnglish": "Take breaks before the speaker becomes tired or frustrated. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add break note"
+      ],
+      "tags": [
+        "speaker care",
+        "breaks"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0111",
+      "type": "qa",
+      "stage": "Record",
+      "category": "Multiple speakers",
+      "intent": "multiple_speakers",
+      "question": "How do we record multiple speakers?",
+      "answer": "Record one speaker at a time when possible, keep names and takes clear, and write who speaks in each file. If recording a group, test microphone placement carefully.",
+      "easyEnglish": "Record one speaker at a time when possible, keep names and takes clear, and write who speaks in each file. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add speaker list"
+      ],
+      "tags": [
+        "multiple speakers",
+        "session"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0112",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Long tracks",
+      "intent": "long_tracks",
+      "question": "What if a track is very long?",
+      "answer": "Ask whether listeners can follow it. Consider dividing it into natural sections if the sharing method, audience, or format would benefit.",
+      "easyEnglish": "Ask whether listeners can follow it. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Check long track"
+      ],
+      "tags": [
+        "duration",
+        "listeners"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0113",
+      "type": "qa",
+      "stage": "Program",
+      "category": "Final check",
+      "intent": "final_check",
+      "question": "Who should do the final listen?",
+      "answer": "Someone other than the editor should listen when possible. A fresh listener catches missing tracks, wrong order, bad edits, or unclear audio.",
+      "easyEnglish": "Someone other than the editor should listen when possible. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Assign final listener"
+      ],
+      "tags": [
+        "QC",
+        "review"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0114",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Physical package",
+      "intent": "physical_package",
+      "question": "How should a physical submission be prepared?",
+      "answer": "Use a labeled USB/SD/external drive, include a README, keep folder structure clear, and keep a backup before shipping or handing it off.",
+      "easyEnglish": "Use a labeled USB/SD/external drive, include a README, keep folder structure clear, and keep a backup before shipping or handing it off. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Create README placeholder"
+      ],
+      "tags": [
+        "physical transfer",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0115",
+      "type": "qa",
+      "stage": "Submit",
+      "category": "Correction notes",
+      "intent": "correction_notes",
+      "question": "What should correction notes say?",
+      "answer": "Write what changed, why it changed, who approved it, and which files replaced older versions. Keep it short and clear.",
+      "easyEnglish": "Write what changed, why it changed, who approved it, and which files replaced older versions. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add correction note"
+      ],
+      "tags": [
+        "correction",
+        "notes"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0116",
+      "type": "qa",
+      "stage": "Share",
+      "category": "WhatsApp",
+      "intent": "whatsapp",
+      "question": "Can we share by WhatsApp or Signal?",
+      "answer": "Yes, if permissions and safety allow. Check file size, quality loss, language labels, and whether listeners can save or forward it appropriately.",
+      "easyEnglish": "Yes, if permissions and safety allow. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add messaging app plan"
+      ],
+      "tags": [
+        "WhatsApp",
+        "Signal",
+        "share"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0117",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Radio",
+      "intent": "radio",
+      "question": "What should we check for radio sharing?",
+      "answer": "Check permission, length, audio level, station requirements, language labels, local approval, and whether follow-up contact is announced.",
+      "easyEnglish": "Check permission, length, audio level, station requirements, language labels, local approval, and whether follow-up contact is announced. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add radio plan"
+      ],
+      "tags": [
+        "radio",
+        "share"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0118",
+      "type": "qa",
+      "stage": "Share",
+      "category": "Speaker box",
+      "intent": "speaker_box",
+      "question": "What is a speaker box plan?",
+      "answer": "Plan which device, who holds it, what files are loaded, battery charging, volume, group setting, and how feedback will be collected.",
+      "easyEnglish": "Plan which device, who holds it, what files are loaded, battery charging, volume, group setting, and how feedback will be collected. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Add speaker box plan"
+      ],
+      "tags": [
+        "speaker box",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0119",
+      "type": "qa",
+      "stage": "Training",
+      "category": "Short lessons",
+      "intent": "short_lessons",
+      "question": "Why should training lessons be short?",
+      "answer": "Short lessons help adult learners practice quickly and remember better. Ten minutes of explanation plus hands-on practice often works better than long lectures.",
+      "easyEnglish": "Short lessons help adult learners practice quickly and remember better. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open Training card"
+      ],
+      "tags": [
+        "training",
+        "adult learning"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0120",
+      "type": "qa",
+      "stage": "Training",
+      "category": "Practice",
+      "intent": "practice",
+      "question": "What should trainees practice first?",
+      "answer": "Practice the real workflow: research a language, plan a short script, record a test, fill the log, name files, and explain sharing.",
+      "easyEnglish": "Practice the real workflow: research a language, plan a short script, record a test, fill the log, name files, and explain sharing. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Start practice project"
+      ],
+      "tags": [
+        "practice",
+        "training"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0121",
+      "type": "qa",
+      "stage": "Offline",
+      "category": "USB kit",
+      "intent": "usb_kit",
+      "question": "What belongs in an offline kit?",
+      "answer": "Include training videos, PDFs, forms, sample audio, practice files, checklists, installers or links, and a simple README for where to start.",
+      "easyEnglish": "Include training videos, PDFs, forms, sample audio, practice files, checklists, installers or links, and a simple README for where to start. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Open offline kit checklist"
+      ],
+      "tags": [
+        "USB",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0122",
+      "type": "qa",
+      "stage": "Offline",
+      "category": "Sync later",
+      "intent": "sync_later",
+      "question": "How should offline work sync later?",
+      "answer": "Keep local project data organized, export a package, record what changed, and sync/upload when internet or a regional hub is available.",
+      "easyEnglish": "Keep local project data organized, export a package, record what changed, and sync/upload when internet or a regional hub is available. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Prepare sync package"
+      ],
+      "tags": [
+        "sync",
+        "offline"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    },
+    {
+      "id": "tomqa_0123",
+      "type": "qa",
+      "stage": "Troubleshooting",
+      "category": "Too many questions",
+      "intent": "too_many_questions",
+      "question": "Tom gives too many related answers. What should I do?",
+      "answer": "Use a stage filter like Record or Submit, and ask with fewer words: 'room tone', 'consent', 'file naming', or 'submit package'.",
+      "easyEnglish": "Use a stage filter like Record or Submit, and ask with fewer words: 'room tone', 'consent', 'file naming', or 'submit package'. Use the checklist. Ask a trusted helper if you are not sure.",
+      "actions": [
+        "Use stage filter"
+      ],
+      "tags": [
+        "Tom",
+        "search"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Expanded practical FAQ"
+    }
+  ],
+  "trainingCards": [
+    {
+      "id": "tomcard_0001",
+      "type": "training_card",
+      "stage": "Research",
+      "title": "Confirm the Heart Language",
+      "goal": "Trainee can explain which language or dialect should be recorded and why.",
+      "steps": [
+        "List local names for the language.",
+        "Ask what people use at home.",
+        "Compare outside data with local interviews.",
+        "Mark each fact Confirmed, Likely, or Unknown.",
+        "Write one open question for follow-up."
+      ],
+      "commonMistakes": [
+        "Assuming the national language is enough.",
+        "Copying web data without field verification.",
+        "Ignoring dialect acceptability."
+      ],
+      "practiceTask": "Choose one community and complete a mini Language & Community Profile.",
+      "easyEnglish": "Learn this one job: Trainee can explain which language or dialect should be recorded and why."
+    },
+    {
+      "id": "tomcard_0002",
+      "type": "training_card",
+      "stage": "Research",
+      "title": "Find Cultural Bridges",
+      "goal": "Trainee can identify local bridges that may help a script communicate clearly.",
+      "steps": [
+        "Ask about local stories, proverbs, songs, fears, and daily life.",
+        "Write the bridge without changing biblical truth.",
+        "Ask a local believer if the bridge helps or confuses.",
+        "Mark bridges needing review."
+      ],
+      "commonMistakes": [
+        "Forcing a bridge that does not fit.",
+        "Changing Bible meaning to sound local.",
+        "Using sensitive cultural details carelessly."
+      ],
+      "practiceTask": "Collect three possible bridges and mark one as best.",
+      "easyEnglish": "Learn this one job: Trainee can identify local bridges that may help a script communicate clearly."
+    },
+    {
+      "id": "tomcard_0003",
+      "type": "training_card",
+      "stage": "Plan",
+      "title": "Adapt a Script Naturally",
+      "goal": "Trainee can adapt a script for natural speech while protecting meaning.",
+      "steps": [
+        "Read the source script.",
+        "Ask how a respected local person would say it.",
+        "Write the target-language draft.",
+        "Back-translate the meaning.",
+        "Ask for theological and local review."
+      ],
+      "commonMistakes": [
+        "Word-for-word translation that sounds foreign.",
+        "Dropping important meaning.",
+        "Adding unreviewed teaching."
+      ],
+      "practiceTask": "Adapt one paragraph and write two reviewer questions.",
+      "easyEnglish": "Learn this one job: Trainee can adapt a script for natural speech while protecting meaning."
+    },
+    {
+      "id": "tomcard_0004",
+      "type": "training_card",
+      "stage": "Plan",
+      "title": "Prepare Permissions and Consent",
+      "goal": "Trainee can explain what permissions are needed before recording.",
+      "steps": [
+        "List voices, songs, scripts, music, photos, and names.",
+        "Decide what will be shared locally or online.",
+        "Use the consent and rights forms.",
+        "Write restrictions clearly.",
+        "Do not record public-use material without permission."
+      ],
+      "commonMistakes": [
+        "Assuming verbal permission is enough for all uses.",
+        "Forgetting online sharing permission.",
+        "Using songs without rights clarity."
+      ],
+      "practiceTask": "Fill a sample consent form for a speaker.",
+      "easyEnglish": "Learn this one job: Trainee can explain what permissions are needed before recording."
+    },
+    {
+      "id": "tomcard_0005",
+      "type": "training_card",
+      "stage": "Record",
+      "title": "Record a Clean Test",
+      "goal": "Trainee can set up, test, listen, adjust, and retest before a real session.",
+      "steps": [
+        "Set mic position.",
+        "Record 10 seconds.",
+        "Listen with headphones.",
+        "Check noise and clipping.",
+        "Adjust and retest.",
+        "Capture room tone."
+      ],
+      "commonMistakes": [
+        "Recording the whole script without testing.",
+        "Trusting meters without listening.",
+        "Ignoring small noises that continue for the whole session."
+      ],
+      "practiceTask": "Record two tests: one bad and one improved. Explain the difference.",
+      "easyEnglish": "Learn this one job: Trainee can set up, test, listen, adjust, and retest before a real session."
+    },
+    {
+      "id": "tomcard_0006",
+      "type": "training_card",
+      "stage": "Record",
+      "title": "Protect the Speaker",
+      "goal": "Trainee can coach and correct a speaker without shame.",
+      "steps": [
+        "Explain the process simply.",
+        "Let them practice.",
+        "Correct gently at sentence breaks.",
+        "Offer breaks and water.",
+        "Thank them and confirm consent."
+      ],
+      "commonMistakes": [
+        "Rushing nervous speakers.",
+        "Correcting harshly.",
+        "Continuing when the speaker is tired."
+      ],
+      "practiceTask": "Role-play a retake conversation.",
+      "easyEnglish": "Learn this one job: Trainee can coach and correct a speaker without shame."
+    },
+    {
+      "id": "tomcard_0007",
+      "type": "training_card",
+      "stage": "Program",
+      "title": "Build a Program Tracklist",
+      "goal": "Trainee can organize tracks into a complete, understandable program.",
+      "steps": [
+        "List every track.",
+        "Add titles and speakers.",
+        "Set the order.",
+        "Add durations and Scripture references.",
+        "Check permissions and missing metadata.",
+        "Preview final file names."
+      ],
+      "commonMistakes": [
+        "Missing track titles.",
+        "Wrong order.",
+        "No duration check.",
+        "Unclear file names."
+      ],
+      "practiceTask": "Create a 5-track program from sample files.",
+      "easyEnglish": "Learn this one job: Trainee can organize tracks into a complete, understandable program."
+    },
+    {
+      "id": "tomcard_0008",
+      "type": "training_card",
+      "stage": "Submit",
+      "title": "Prepare a Complete Package",
+      "goal": "Trainee can make a package that another team can review without confusion.",
+      "steps": [
+        "Gather audio files.",
+        "Add scripts and translations.",
+        "Add consent and rights notes.",
+        "Add tracklist and metadata.",
+        "Create ZIP or physical package.",
+        "Write reviewer notes."
+      ],
+      "commonMistakes": [
+        "Sending audio without forms.",
+        "No backup before upload.",
+        "No status or reviewer notes."
+      ],
+      "practiceTask": "Build a mock package and let another trainee check it.",
+      "easyEnglish": "Learn this one job: Trainee can make a package that another team can review without confusion."
+    },
+    {
+      "id": "tomcard_0009",
+      "type": "training_card",
+      "stage": "Share",
+      "title": "Plan Listener Access",
+      "goal": "Trainee can choose sharing methods that fit the listeners.",
+      "steps": [
+        "Name target listeners.",
+        "Choose offline and/or online methods.",
+        "Confirm permissions and safety.",
+        "Assign local follow-up.",
+        "Collect feedback after sharing."
+      ],
+      "commonMistakes": [
+        "Treating Share as an afterthought.",
+        "Using online-only sharing where internet is weak.",
+        "No feedback plan."
+      ],
+      "practiceTask": "Design a sharing plan for one village and one church.",
+      "easyEnglish": "Learn this one job: Trainee can choose sharing methods that fit the listeners."
+    },
+    {
+      "id": "tomcard_0010",
+      "type": "training_card",
+      "stage": "Teamwork",
+      "title": "Use Team Roles Wisely",
+      "goal": "Trainee can assign workflow tasks to people, not just hope someone does them.",
+      "steps": [
+        "List the nine team roles.",
+        "Assign owners.",
+        "Name handoff points.",
+        "Write what is missing.",
+        "Review after each stage."
+      ],
+      "commonMistakes": [
+        "One person carrying everything.",
+        "No backup owner.",
+        "No Distribution/Share lead."
+      ],
+      "practiceTask": "Assign roles for a three-person recording team.",
+      "easyEnglish": "Learn this one job: Trainee can assign workflow tasks to people, not just hope someone does them."
+    },
+    {
+      "id": "tomcard_0011",
+      "type": "training_card",
+      "stage": "Offline",
+      "title": "Prepare a Rugged Offline Kit",
+      "goal": "Trainee can work when internet fails.",
+      "steps": [
+        "Save forms locally.",
+        "Save training cards and sample files.",
+        "Keep installers or links documented.",
+        "Prepare USB/SD backup.",
+        "Write offline submission plan."
+      ],
+      "commonMistakes": [
+        "Depending on live websites only.",
+        "No physical backup.",
+        "No README for beginners."
+      ],
+      "practiceTask": "Create a folder structure for an offline training kit.",
+      "easyEnglish": "Learn this one job: Trainee can work when internet fails."
+    },
+    {
+      "id": "tomcard_0012",
+      "type": "training_card",
+      "stage": "Troubleshooting",
+      "title": "Diagnose Bad Audio Quickly",
+      "goal": "Trainee can identify the top recording problems and first fixes.",
+      "steps": [
+        "Listen with headphones.",
+        "Check clipping, noise, echo, wind, hum, and quiet level.",
+        "Fix the physical cause first.",
+        "Retest.",
+        "Write the problem in the log."
+      ],
+      "commonMistakes": [
+        "Trying to fix everything later in editing.",
+        "Not writing retake notes.",
+        "Keeping distorted takes."
+      ],
+      "practiceTask": "Listen to a bad sample and choose the first fix.",
+      "easyEnglish": "Learn this one job: Trainee can identify the top recording problems and first fixes."
+    }
+  ],
+  "troubleshootingFlows": [
+    {
+      "id": "tomflow_0001",
+      "type": "troubleshooting_flow",
+      "stage": "Audio Quality",
+      "title": "Distorted or clipped audio",
+      "trigger": "Voice sounds harsh, crunchy, broken, or red peaks appear.",
+      "steps": [
+        "Stop recording.",
+        "Lower input gain.",
+        "Move microphone slightly away or off-axis.",
+        "Record a short test.",
+        "Listen with headphones.",
+        "Retake the affected section.",
+        "Mark the bad take so it is not used."
+      ],
+      "stopWhen": "Stop when a clean retake is captured."
+    },
+    {
+      "id": "tomflow_0002",
+      "type": "troubleshooting_flow",
+      "stage": "Audio Quality",
+      "title": "Too much background noise",
+      "trigger": "Noise is clearly heard behind the speaker.",
+      "steps": [
+        "Pause and identify the noise source.",
+        "Turn off fans, fridges, generators, phones, or noisy lights if possible.",
+        "Move to a quieter place.",
+        "Capture new room tone.",
+        "Record a new test.",
+        "Continue only if the noise is acceptable."
+      ],
+      "stopWhen": "Stop when the test sounds clear enough for ministry use."
+    },
+    {
+      "id": "tomflow_0003",
+      "type": "troubleshooting_flow",
+      "stage": "Audio Quality",
+      "title": "Wind noise",
+      "trigger": "Low rumble or blasts appear outdoors.",
+      "steps": [
+        "Move indoors or behind a wind block.",
+        "Use a windscreen.",
+        "Turn the mic away from direct wind.",
+        "Lower handling movement.",
+        "Record a test and listen.",
+        "Retake if needed."
+      ],
+      "stopWhen": "Stop when wind no longer distracts from the voice."
+    },
+    {
+      "id": "tomflow_0004",
+      "type": "troubleshooting_flow",
+      "stage": "Record",
+      "title": "Nervous speaker",
+      "trigger": "Speaker is tense, rushing, freezing, or apologizing often.",
+      "steps": [
+        "Stop and encourage the speaker.",
+        "Explain that retakes are normal.",
+        "Practice one short line.",
+        "Let a trusted helper sit nearby if appropriate.",
+        "Record shorter sections.",
+        "Take breaks."
+      ],
+      "stopWhen": "Stop when the speaker can continue calmly."
+    },
+    {
+      "id": "tomflow_0005",
+      "type": "troubleshooting_flow",
+      "stage": "Research",
+      "title": "Dialect uncertainty",
+      "trigger": "Team is not sure which dialect should be recorded.",
+      "steps": [
+        "Mark the dialect as Unknown or Likely.",
+        "Record word lists or short stories from possible dialects.",
+        "Ask multiple trusted local listeners about understanding and acceptability.",
+        "Write the differences.",
+        "Ask reviewer or partner before finalizing."
+      ],
+      "stopWhen": "Stop when the team has a confirmed or documented decision."
+    },
+    {
+      "id": "tomflow_0006",
+      "type": "troubleshooting_flow",
+      "stage": "Submit",
+      "title": "Upload failure",
+      "trigger": "Large package fails during upload.",
+      "steps": [
+        "Do not change the package randomly.",
+        "Check internet connection and file size.",
+        "Confirm the ZIP is not corrupted.",
+        "Try resumable upload if available.",
+        "Use alternate approved transfer: USB, SD card, external drive, or local partner upload.",
+        "Write the handoff method in notes."
+      ],
+      "stopWhen": "Stop when the package is safely transferred or assigned for transfer."
+    },
+    {
+      "id": "tomflow_0007",
+      "type": "troubleshooting_flow",
+      "stage": "Share",
+      "title": "Unsafe public sharing",
+      "trigger": "Public sharing may endanger a speaker, believer, or community.",
+      "steps": [
+        "Stop public sharing plan.",
+        "Check consent restrictions.",
+        "Ask local partner or leader.",
+        "Use private/local sharing if appropriate.",
+        "Remove names/photos if needed.",
+        "Record the safety decision."
+      ],
+      "stopWhen": "Stop when a safer sharing method is chosen."
+    },
+    {
+      "id": "tomflow_0008",
+      "type": "troubleshooting_flow",
+      "stage": "PWA",
+      "title": "Tailender Tom cannot answer",
+      "trigger": "Tom says he does not know or gives weak answers.",
+      "steps": [
+        "Ask a shorter question with key words.",
+        "Use the stage filter.",
+        "Check related questions.",
+        "Save the unanswered question.",
+        "Ask a trainer or reviewer.",
+        "Add the approved answer to the knowledge base."
+      ],
+      "stopWhen": "Stop when the question is answered or saved for review."
+    }
+  ],
+  "glossary": [
+    {
+      "id": "tomterm_0001",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Heart language",
+      "meaning": "The language variety people understand deeply and naturally, often used at home and for important life matters.",
+      "easyEnglish": "The language variety people understand deeply and naturally, often used at home and for important life matters."
+    },
+    {
+      "id": "tomterm_0002",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Trade language",
+      "meaning": "A language used for business, school, government, or communication with outsiders.",
+      "easyEnglish": "A language used for business, school, government, or communication with outsiders."
+    },
+    {
+      "id": "tomterm_0003",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Dialect",
+      "meaning": "A speech variety within a language that may differ by region, community, or social group.",
+      "easyEnglish": "A speech variety within a language that may differ by region, community, or social group."
+    },
+    {
+      "id": "tomterm_0004",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Word list",
+      "meaning": "A short set of recorded words used to compare speech varieties and pronunciation.",
+      "easyEnglish": "A short set of recorded words used to compare speech varieties and pronunciation."
+    },
+    {
+      "id": "tomterm_0005",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Cultural bridge",
+      "meaning": "A local idea, object, story, or practice that helps explain a message clearly.",
+      "easyEnglish": "A local idea, object, story, or practice that helps explain a message clearly."
+    },
+    {
+      "id": "tomterm_0006",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Back-translation",
+      "meaning": "A translation of the target-language script back into a review language to check meaning.",
+      "easyEnglish": "A translation of the target-language script back into a review language to check meaning."
+    },
+    {
+      "id": "tomterm_0007",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Consent",
+      "meaning": "Clear agreement from a person about recording and how their voice/name/photo may be used.",
+      "easyEnglish": "Clear agreement from a person about recording and how their voice/name/photo may be used."
+    },
+    {
+      "id": "tomterm_0008",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Permission",
+      "meaning": "Approval to use content, music, script, song, photo, or other material owned by someone else.",
+      "easyEnglish": "Approval to use content, music, script, song, photo, or other material owned by someone else."
+    },
+    {
+      "id": "tomterm_0009",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Room tone",
+      "meaning": "A short recording of the quiet room or location background sound.",
+      "easyEnglish": "A short recording of the quiet room or location background sound."
+    },
+    {
+      "id": "tomterm_0010",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Clipping",
+      "meaning": "Distortion caused when audio is recorded too loud.",
+      "easyEnglish": "Distortion caused when audio is recorded too loud."
+    },
+    {
+      "id": "tomterm_0011",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Take",
+      "meaning": "One recorded attempt of a script section, song, or line.",
+      "easyEnglish": "One recorded attempt of a script section, song, or line."
+    },
+    {
+      "id": "tomterm_0012",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Best take",
+      "meaning": "The take chosen as the best usable recording.",
+      "easyEnglish": "The take chosen as the best usable recording."
+    },
+    {
+      "id": "tomterm_0013",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Metadata",
+      "meaning": "Information about the audio, such as language, speaker, title, track order, and Scripture.",
+      "easyEnglish": "Information about the audio, such as language, speaker, title, track order, and Scripture."
+    },
+    {
+      "id": "tomterm_0014",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Program",
+      "meaning": "An organized final set of tracks prepared for submission or sharing.",
+      "easyEnglish": "An organized final set of tracks prepared for submission or sharing."
+    },
+    {
+      "id": "tomterm_0015",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Submission package",
+      "meaning": "The complete set of audio, forms, scripts, metadata, permissions, and notes handed off for review or publishing.",
+      "easyEnglish": "The complete set of audio, forms, scripts, metadata, permissions, and notes handed off for review or publishing."
+    },
+    {
+      "id": "tomterm_0016",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Distribution",
+      "meaning": "The process of helping recordings reach listeners.",
+      "easyEnglish": "The process of helping recordings reach listeners."
+    },
+    {
+      "id": "tomterm_0017",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Listening group",
+      "meaning": "A group that gathers to hear audio and discuss or respond.",
+      "easyEnglish": "A group that gathers to hear audio and discuss or respond."
+    },
+    {
+      "id": "tomterm_0018",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Offline kit",
+      "meaning": "A USB, SD card, device folder, or local package with training and project materials that work without internet.",
+      "easyEnglish": "A USB, SD card, device folder, or local package with training and project materials that work without internet."
+    },
+    {
+      "id": "tomterm_0019",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Recording Team",
+      "meaning": "People who share recording ministry tasks according to strengths and roles.",
+      "easyEnglish": "People who share recording ministry tasks according to strengths and roles."
+    },
+    {
+      "id": "tomterm_0020",
+      "type": "glossary",
+      "stage": "Glossary",
+      "term": "Handoff",
+      "meaning": "The transfer of responsibility from one person or stage to the next.",
+      "easyEnglish": "The transfer of responsibility from one person or stage to the next."
+    }
+  ]
+}
