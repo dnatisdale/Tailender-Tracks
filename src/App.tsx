@@ -779,8 +779,8 @@ export default function App() {
   };
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setSplashState('fading'), 1500);
-    const timer2 = setTimeout(() => setSplashState('hidden'), 2000);
+    const timer1 = setTimeout(() => setSplashState('fading'), 7500);
+    const timer2 = setTimeout(() => setSplashState('hidden'), 8500);
     return () => { clearTimeout(timer1); clearTimeout(timer2); };
   }, []);
 

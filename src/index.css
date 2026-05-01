@@ -554,7 +554,7 @@ body {
   border-radius: 4px;
   position: relative;
   /* Start off-screen */
-  animation: hike-path 3s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  animation: hike-path 7s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 .dymo-label--splash:nth-child(2) {
@@ -600,7 +600,7 @@ body {
   color: var(--accent-color);
   opacity: 0;
   filter: blur(0.5px);
-  animation: footprint-fade 3s linear forwards;
+  animation: footprint-fade 7s linear forwards;
 }
 
 @keyframes footprint-fade {
