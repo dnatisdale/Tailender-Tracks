@@ -21,6 +21,29 @@
   },
   "items": [
     {
+      "id": "tomqa_0124",
+      "type": "qa",
+      "stage": "Research",
+      "category": "Language data",
+      "intent": "finding_languages",
+      "question": "How do I find new languages in a region?",
+      "answer": "Start by checking the MAP app to see existing data for your current location. Talk to local market traders, religious leaders, and transporters who travel between villages. Always verify 'web' or 'map' data with real people in the field.",
+      "easyEnglish": "Check the MAP app first. Then talk to local people who travel. Always check the information yourself.",
+      "actions": [
+        "Open MAP App",
+        "Add new language note"
+      ],
+      "tags": [
+        "finding",
+        "new language",
+        "map",
+        "research"
+      ],
+      "related": [],
+      "caution": "",
+      "sourceHint": "Research phase; finding and verifying new speech communities"
+    },
+    {
       "id": "tomqa_0001",
       "type": "qa",
       "stage": "Research",
