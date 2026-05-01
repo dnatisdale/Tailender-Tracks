@@ -729,6 +729,13 @@ export default function App() {
   });
   const [showTomDialog, setShowTomDialog] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
+  const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => setSplashState('fading'), 1500);
+    const timer2 = setTimeout(() => setSplashState('hidden'), 2000);
+    return () => { clearTimeout(timer1); clearTimeout(timer2); };
+  }, []);
 
   const toggleDarkMode = () => {
     if (isDarkMode) {
@@ -818,8 +825,15 @@ export default function App() {
   const isProjectView = ['ProjectDetail', 'Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'].includes(activeView);
 
   return (
-    <div className="app-container">
-      {/* HEADER */}
+    <>
+      {splashState !== 'hidden' && (
+        <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
+          <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Logo" className="splash-logo" />
+          <div className="splash-title">TAILENDER TRACKS</div>
+        </div>
+      )}
+      <div className="app-container">
+        {/* HEADER */}
       <header className="header">
         <div className="header-title">
           {isProjectView ? (
@@ -903,6 +917,7 @@ export default function App() {
           </div>
         </Modal>
       )}
-    </div>
+      </div>
+    </>
   );
 }
