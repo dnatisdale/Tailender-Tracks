@@ -664,7 +664,7 @@ function SettingsView() {
       </div>
       
       <div style={{ textAlign: 'center', marginTop: 32, opacity: 0.5 }}>
-        <img src="/icons/tailender-buckle.png" alt="Logo" style={{ height: 40 }} />
+        <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Logo" style={{ height: 40 }} />
         <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78 RPM Series</p>
       </div>
     </div>
@@ -679,9 +679,16 @@ export default function App() {
   const [formsManifest, setFormsManifest] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('/forms/forms_manifest_for_pwa.json')
+    fetch(`${import.meta.env.BASE_URL}forms/forms_manifest_for_pwa.json`)
       .then(r => r.json())
-      .then(data => setFormsManifest(data))
+      .then(data => {
+        // Prepend BASE_URL to the file paths inside the manifest so forms link correctly on GitHub Pages
+        const mappedData = data.map((d: any) => ({
+          ...d,
+          file: d.file.startsWith('/') ? `${import.meta.env.BASE_URL}${d.file.slice(1)}` : d.file
+        }));
+        setFormsManifest(mappedData);
+      })
       .catch(e => console.error("Could not load forms manifest", e));
   }, []);
 
@@ -775,7 +782,7 @@ export default function App() {
               <ChevronLeft size={24} />
             </button>
           ) : (
-            <img src="/icons/tailender-buckle.png" alt="Tailender Tracks Logo" />
+            <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Tailender Tracks Logo" />
           )}
           <span>{isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : 'TAILENDER TRACKS'}</span>
         </div>
