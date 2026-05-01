@@ -210,9 +210,9 @@ body {
   position: absolute;
   font-size: 24px; /* Bigger */
   opacity: 0;
-  animation: boot-walk 12s linear infinite;
-  /* Rustic Brown Filter */
-  filter: sepia(1) saturate(2) brightness(0.7) contrast(1.2) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: boot-walk 20s linear infinite; /* Slower hike */
+  /* Deep Rustic Brown (less yellow) */
+  filter: brightness(0.5) contrast(1.3) sepia(0.3) hue-rotate(-20deg) saturate(2.5) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 /* Stagger the steps */
@@ -662,7 +662,7 @@ body {
     transform: translate(-5vw, 5vh) rotate(-5deg);
   }
   100% {
-    transform: translate(0, 0) rotate(-1.5deg); /* Settles at its CSS rotation */
+    transform: translate(0, 0); /* Let the CSS class handle the rotation */
     opacity: 1;
   }
 }
@@ -679,8 +679,8 @@ body {
   position: absolute;
   font-size: 32px;
   opacity: 0;
-  /* Rustic Brown Filter */
-  filter: sepia(1) saturate(2) brightness(0.7) contrast(1.2) blur(0.3px);
+  /* Deep Rustic Brown (less yellow) */
+  filter: brightness(0.5) contrast(1.3) sepia(0.3) hue-rotate(-20deg) saturate(2.5) blur(0.3px);
   animation: footprint-fade 7s linear forwards;
 }
 
