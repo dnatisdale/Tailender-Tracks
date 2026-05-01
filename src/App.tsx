@@ -900,7 +900,6 @@ export default function App() {
                   transform: `rotate(${f.r}) ${f.side === 'left' ? 'scaleX(-1)' : ''}` 
                 }}
               >
-                🥾
               </div>
             ))}
           </div>
@@ -915,15 +914,13 @@ export default function App() {
         {/* HEADER */}
       <header className="header">
         <div className="header-boot-trail">
-          {/* Pair 1 */}
-          <div className="walking-boot">🥾</div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
-          {/* Pair 2 */}
-          <div className="walking-boot">🥾</div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
-          {/* Pair 3 (Fade-out pair) */}
-          <div className="walking-boot">🥾</div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
+          {/* Pairs of boots (now using the image via CSS) */}
+          <div className="walking-boot"></div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
+          <div className="walking-boot"></div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
+          <div className="walking-boot"></div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
         </div>
         <div className="header-title">
           {isProjectView ? (
