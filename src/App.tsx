@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
-  Share2, MessageCircle, Sun, Moon, User, X
+  Share2, Sun, Moon, User, X
 } from 'lucide-react';
 import { 
   askTailenderTom, 
@@ -929,7 +929,7 @@ export default function App() {
         onClick={() => setShowTomDialog(true)}
         title="Chat with Tailender Tom"
       >
-        <MessageCircle size={24} />
+        <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-fab.png`} alt="Tom" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </button>
         <div className={`nav-item ${activeView === 'Home' ? 'active' : ''}`} onClick={() => setActiveView('Home')}>
           <Home size={24} />

@@ -489,15 +489,13 @@ body {
   bottom: calc(var(--nav-height) + 16px);
   right: 20px;
   left: auto;
-  width: 52px;
-  height: 52px;
-  background-color: #7a0a0a;
-  color: white;
-  border-radius: 50%;
+  width: 70px;
+  height: 82px;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(122, 10, 10, 0.45);
+  box-shadow: none;
   cursor: pointer;
   z-index: 200;
   border: none;
@@ -505,8 +503,8 @@ body {
 }
 
 .tom-fab:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(122, 10, 10, 0.6);
+  transform: scale(1.1) translateY(-5px);
+  filter: brightness(1.1);
 }
 
 /* Utility Classes */
