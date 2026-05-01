@@ -878,20 +878,26 @@ export default function App() {
           <div className="footprint-container">
             {/* Array of footprints along the trail path */}
             {[
-              { t: '10%', l: '10%', a: '0.2s', r: '20deg' },
-              { t: '30%', l: '25%', a: '0.6s', r: '-10deg' },
-              { t: '15%', l: '45%', a: '1.0s', r: '15deg' },
-              { t: '40%', l: '60%', a: '1.4s', r: '-5deg' },
-              { t: '25%', l: '80%', a: '1.8s', r: '25deg' },
-              { t: '50%', l: '50%', a: '2.2s', r: '0deg' },
+              { t: '10%', l: '10%', a: '0.2s', r: '20deg', side: 'right' },
+              { t: '12%', l: '12%', a: '0.4s', r: '15deg', side: 'left' },
+              { t: '30%', l: '25%', a: '0.8s', r: '-10deg', side: 'right' },
+              { t: '32%', l: '27%', a: '1.0s', r: '-15deg', side: 'left' },
+              { t: '15%', l: '45%', a: '1.4s', r: '15deg', side: 'right' },
+              { t: '17%', l: '47%', a: '1.6s', r: '20deg', side: 'left' },
+              { t: '40%', l: '60%', a: '2.0s', r: '-5deg', side: 'right' },
+              { t: '42%', l: '62%', a: '2.2s', r: '-10deg', side: 'left' },
+              { t: '25%', l: '80%', a: '2.6s', r: '25deg', side: 'right' },
+              { t: '27%', l: '82%', a: '2.8s', r: '20deg', side: 'left' },
+              { t: '50%', l: '50%', a: '3.2s', r: '0deg', side: 'right' },
+              { t: '52%', l: '52%', a: '3.4s', r: '-5deg', side: 'left' },
             ].map((f, i) => (
               <div 
                 key={i} 
-                className="footprint" 
+                className={`footprint ${f.side === 'left' ? 'walking-boot--left' : ''}`} 
                 style={{ 
                   top: f.t, left: f.l, 
                   animationDelay: f.a, 
-                  transform: `rotate(${f.r})` 
+                  transform: `rotate(${f.r}) ${f.side === 'left' ? 'scaleX(-1)' : ''}` 
                 }}
               >
                 🥾
@@ -909,11 +915,15 @@ export default function App() {
         {/* HEADER */}
       <header className="header">
         <div className="header-boot-trail">
+          {/* Pair 1 */}
           <div className="walking-boot">🥾</div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
+          {/* Pair 2 */}
           <div className="walking-boot">🥾</div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
+          {/* Pair 3 (Fade-out pair) */}
           <div className="walking-boot">🥾</div>
-          <div className="walking-boot">🥾</div>
-          <div className="walking-boot">🥾</div>
+          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}>🥾</div>
         </div>
         <div className="header-title">
           {isProjectView ? (
