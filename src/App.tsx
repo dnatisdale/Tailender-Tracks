@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, Plus, Save, Play,
-  Download, CheckCircle, Search, Edit3, Mic, CheckSquare
+  Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText
 } from 'lucide-react';
 import './index.css';
 
@@ -116,6 +116,23 @@ const FieldSelect = ({ label, value, onChange, options }: any) => (
 // ==========================================
 // VIEWS
 // ==========================================
+
+function StageForms({ stage, forms }: any) {
+  const stageForms = forms.filter((f: any) => f.stage === stage);
+  if (stageForms.length === 0) return null;
+  return (
+    <div className="card">
+      <h3 className="card-title">Required Forms</h3>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        {stageForms.map((f: any, i: number) => (
+          <a key={i} href={f.file} target="_blank" rel="noopener noreferrer" className="btn" style={{ justifyContent: 'flex-start', margin: 0 }}>
+            <FileText size={18} /> {f.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
   const recentProject = projects.length > 0 ? [...projects].sort((a,b) => b.updatedAt - a.updatedAt)[0] : null;
@@ -260,7 +277,7 @@ function ProjectDetailView({ project, updateProject, goStage }: any) {
 }
 
 // STAGE: RESEARCH
-function StageResearch({ project, update }: any) {
+function StageResearch({ project, update, formsManifest }: any) {
   const d = project.research || {};
   const cb = d.heartLanguageChecklist || {};
   const setD = (k: string, v: any) => update('research', k, v);
@@ -269,6 +286,9 @@ function StageResearch({ project, update }: any) {
   return (
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Confirm you are recording the right message for the right people in the right heart language.</p>
+      
+      <StageForms stage="Research" forms={formsManifest} />
+
       <div className="card">
         <h3 className="card-title">Language Context</h3>
         <FieldInput label="Local Language Names" value={d.localLanguageNames} onChange={(v:any) => setD('localLanguageNames', v)} />
@@ -299,13 +319,16 @@ function StageResearch({ project, update }: any) {
 }
 
 // STAGE: PLAN
-function StagePlan({ project, update }: any) {
+function StagePlan({ project, update, formsManifest }: any) {
   const d = project.plan || {};
   const setD = (k: string, v: any) => update('plan', k, v);
 
   return (
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Prepare properly before recording day.</p>
+      
+      <StageForms stage="Plan" forms={formsManifest} />
+
       <div className="card">
         <h3 className="card-title">Content Plan</h3>
         <FieldInput label="Message Purpose" value={d.messagePurpose} onChange={(v:any) => setD('messagePurpose', v)} />
@@ -335,7 +358,7 @@ function StagePlan({ project, update }: any) {
 }
 
 // STAGE: RECORD
-function StageRecord({ project, update }: any) {
+function StageRecord({ project, update, formsManifest }: any) {
   const d = project.record || {};
   const cb = d.equipmentChecklist || {};
   const setD = (k: string, v: any) => update('record', k, v);
@@ -345,6 +368,8 @@ function StageRecord({ project, update }: any) {
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Capture clean, usable audio.</p>
       
+      <StageForms stage="Record" forms={formsManifest} />
+
       <div className="card" style={{ textAlign: 'center' }}>
         <Mic size={48} color="var(--accent-color)" style={{ marginBottom: 16 }} />
         <h3 style={{ margin: '0 0 16px 0' }}>Recording Session</h3>
@@ -382,7 +407,7 @@ function StageRecord({ project, update }: any) {
 }
 
 // STAGE: PROGRAM
-function StageProgram({ project, update }: any) {
+function StageProgram({ project, update, formsManifest }: any) {
   const d = project.program || {};
   const tracks = d.tracks || [];
   const setD = (k: string, v: any) => update('program', k, v);
@@ -412,6 +437,8 @@ function StageProgram({ project, update }: any) {
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Organize the final audio program.</p>
       
+      <StageForms stage="Program" forms={formsManifest} />
+
       <div className="card">
         <h3 className="card-title">Program Identity</h3>
         <FieldInput label="Program Title" value={d.programTitle} onChange={(v:any) => setD('programTitle', v)} />
@@ -460,7 +487,7 @@ function StageProgram({ project, update }: any) {
 }
 
 // STAGE: SUBMIT
-function StageSubmit({ project, update }: any) {
+function StageSubmit({ project, update, formsManifest }: any) {
   const d = project.submit || {};
   const cb = d.submissionChecklist || {};
   const setD = (k: string, v: any) => update('submit', k, v);
@@ -470,6 +497,8 @@ function StageSubmit({ project, update }: any) {
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Send the finished recording package.</p>
       
+      <StageForms stage="Submit" forms={formsManifest} />
+
       <div className="card">
         <h3 className="card-title">Submission Readiness Checklist</h3>
         <FieldCheckbox label="Audio files included" checked={cb.c1} onChange={(v:any) => setCb('c1', v)} />
@@ -505,7 +534,7 @@ function StageSubmit({ project, update }: any) {
 }
 
 // STAGE: SHARE
-function StageShare({ project, update }: any) {
+function StageShare({ project, update, formsManifest }: any) {
   const d = project.share || {};
   const cb = d.sharingChecklist || {};
   const setD = (k: string, v: any) => update('share', k, v);
@@ -515,6 +544,8 @@ function StageShare({ project, update }: any) {
     <div>
       <p style={{ color: 'var(--text-secondary)' }}>Help the message actually reach listeners.</p>
       
+      <StageForms stage="Share" forms={formsManifest} />
+
       <div className="card">
         <h3 className="card-title">Sharing Plan Checklist</h3>
         <FieldCheckbox label="Target listeners identified" checked={cb.c1} onChange={(v:any) => setCb('c1', v)} />
@@ -645,6 +676,15 @@ function SettingsView() {
 // ==========================================
 
 export default function App() {
+  const [formsManifest, setFormsManifest] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/forms/forms_manifest_for_pwa.json')
+      .then(r => r.json())
+      .then(data => setFormsManifest(data))
+      .catch(e => console.error("Could not load forms manifest", e));
+  }, []);
+
   const [projects, setProjects] = useState<Project[]>(() => {
     try {
       const saved = localStorage.getItem('tailender_projects_v2');
@@ -715,12 +755,12 @@ export default function App() {
     if (!currentProject) return <div style={{padding: 24}}>Project not found.</div>;
     
     if (activeView === 'ProjectDetail') return <ProjectDetailView project={currentProject} updateProject={updateProjectLevel} goStage={setActiveView} />;
-    if (activeView === 'Research') return <StageResearch project={currentProject} update={updateProjectSection} />;
-    if (activeView === 'Plan') return <StagePlan project={currentProject} update={updateProjectSection} />;
-    if (activeView === 'Record') return <StageRecord project={currentProject} update={updateProjectSection} />;
-    if (activeView === 'Program') return <StageProgram project={currentProject} update={updateProjectSection} />;
-    if (activeView === 'Submit') return <StageSubmit project={currentProject} update={updateProjectSection} />;
-    if (activeView === 'Share') return <StageShare project={currentProject} update={updateProjectSection} />;
+    if (activeView === 'Research') return <StageResearch project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'Plan') return <StagePlan project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'Record') return <StageRecord project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'Program') return <StageProgram project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'Submit') return <StageSubmit project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'Share') return <StageShare project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
   };
 
   const isProjectView = ['ProjectDetail', 'Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'].includes(activeView);
