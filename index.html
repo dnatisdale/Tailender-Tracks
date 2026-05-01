@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#940414" />
+    <title>Tailenders</title>
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      body {
+        margin: 0;
+        background: #111;
+        color: #fff;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      header {
+        background: #940414;
+        padding: 16px;
+        text-align: center;
+        font-weight: 700;
+      }
+      .wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .record {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: #000;
+        position: relative;
+        box-shadow:
+          0 0 0 8px #222,
+          0 0 0 16px #000,
+          0 10px 30px rgba(0, 0, 0, 0.8);
+        animation: s 3s linear infinite paused;
+      }
+      .record.on {
+        animation-play-state: running;
+      }
+      .label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #940414;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        text-align: center;
+      }
+      .hole {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background: #111;
+        border-radius: 50%;
+      }
+      button {
+        background: #940414;
+        border: 0;
+        color: #fff;
+        padding: 12px 20px;
+        margin: 10px;
+        border-radius: 30px;
+        font-weight: 600;
+      }
+      @keyframes s {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>TAILENDERS</header>
+    <div class="wrap">
+      <div class="record" id="r">
+        <div class="label">TAILENDERS<br />67 RPM</div>
+        <div class="hole"></div>
+      </div>
+    </div>
+    <div style="text-align: center; padding: 20px">
+      <button id="p">▶ Play</button>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+      const r = document.getElementById("r"),
+        p = document.getElementById("p");
+      let on = false;
+      p.onclick = () => {
+        on = !on;
+        r.classList.toggle("on", on);
+        p.textContent = on ? "⏸ Pause" : "▶ Play";
+      };
+    </script>
+  </body>
+</html>
