@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, Plus, Save, Play,
-  Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText
+  Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
+  Share2, MessageCircle, Sun, Moon, User, X
 } from 'lucide-react';
 import './index.css';
 
@@ -116,6 +117,22 @@ const FieldSelect = ({ label, value, onChange, options }: any) => (
 // ==========================================
 // VIEWS
 // ==========================================
+
+const Modal = ({ title, onClose, children }: any) => (
+  <div style={{
+    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, 
+    backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000,
+    display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16
+  }}>
+    <div className="card" style={{ width: '100%', maxWidth: 400, margin: 0, position: 'relative' }}>
+      <button onClick={onClose} style={{ position: 'absolute', top: 12, right: 12, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}>
+        <X size={20} />
+      </button>
+      <h3 className="card-title" style={{ marginTop: 0 }}>{title}</h3>
+      {children}
+    </div>
+  </div>
+);
 
 function StageForms({ stage, forms }: any) {
   const stageForms = forms.filter((f: any) => f.stage === stage);
@@ -707,6 +724,34 @@ export default function App() {
   const [activeView, setActiveView] = useState('Home');
   const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
 
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return document.body.classList.contains('dark-theme');
+  });
+  const [showTomDialog, setShowTomDialog] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      document.body.classList.remove('dark-theme');
+      setIsDarkMode(false);
+    } else {
+      document.body.classList.add('dark-theme');
+      setIsDarkMode(true);
+    }
+  };
+
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Tailender Tracks',
+        text: 'Check out Tailender Tracks PWA!',
+        url: window.location.href,
+      }).catch(console.error);
+    } else {
+      alert('Sharing is not supported on this browser.');
+    }
+  };
+
   const currentProject = projects.find(p => p.id === activeProjectId);
 
   const handleCreateProject = () => {
@@ -786,6 +831,20 @@ export default function App() {
           )}
           <span>{isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : 'TAILENDER TRACKS'}</span>
         </div>
+        <div className="header-actions">
+          <button className="icon-btn" onClick={toggleDarkMode} title="Toggle Light/Dark">
+            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button className="icon-btn" onClick={handleShare} title="Share App">
+            <Share2 size={20} />
+          </button>
+          <button className="icon-btn" onClick={() => setShowTomDialog(true)} title="Chat with Tailender Tom">
+            <MessageCircle size={20} />
+          </button>
+          <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
+            <User size={20} />
+          </button>
+        </div>
       </header>
 
       {/* MAIN CONTENT */}
@@ -812,6 +871,38 @@ export default function App() {
           <span>Settings</span>
         </div>
       </nav>
+
+      {/* MODALS */}
+      {showTomDialog && (
+        <Modal title="Chatting with Tailender Tom" onClose={() => setShowTomDialog(false)}>
+          <div style={{ minHeight: 200, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12, border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
+              <p>Tom is ready to help you with field recording!</p>
+            </div>
+            <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
+              <input type="text" placeholder="Ask Tom a question..." style={{ margin: 0 }} />
+              <button className="btn btn-primary" style={{ width: 'auto', margin: 0 }}>Send</button>
+            </div>
+          </div>
+        </Modal>
+      )}
+
+      {showSignIn && (
+        <Modal title="Sign In" onClose={() => setShowSignIn(false)}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="input-group">
+              <label>Email / Username</label>
+              <input type="text" placeholder="Enter email..." />
+            </div>
+            <div className="input-group">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password..." />
+            </div>
+            <button className="btn btn-primary" onClick={() => setShowSignIn(false)}>Sign In</button>
+            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: 16, cursor: 'pointer' }}>Create an account</p>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }
