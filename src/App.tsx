@@ -4,6 +4,7 @@ import {
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
   Share2, MessageCircle, Sun, Moon, User, X
 } from 'lucide-react';
+import { askTailenderTom } from './data/tailenderTomKb';
 import './index.css';
 
 // ==========================================
@@ -731,6 +732,32 @@ export default function App() {
   const [showSignIn, setShowSignIn] = useState(false);
   const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
 
+  // Tom Chat State
+  const [tomFilter, setTomFilter] = useState('All');
+  const [tomMessages, setTomMessages] = useState<any[]>([
+    { sender: 'tom', text: 'Howdy! I am Tailender Tom. How can I help you with your recording project today?' }
+  ]);
+  const [tomInput, setTomInput] = useState('');
+
+  const handleSendTomMessage = (textToSubmit?: string) => {
+    const text = typeof textToSubmit === 'string' ? textToSubmit : tomInput;
+    if (!text.trim()) return;
+    
+    const newMsgs = [...tomMessages, { sender: 'user', text }];
+    setTomMessages(newMsgs);
+    setTomInput('');
+    
+    setTimeout(() => {
+      const response = askTailenderTom(text, { stage: tomFilter === 'All' ? '' : tomFilter });
+      setTomMessages(prev => [...prev, { 
+        sender: 'tom', 
+        text: response.answer,
+        actions: response.actions || response.suggestions,
+        related: response.related
+      }]);
+    }, 600);
+  };
+
   useEffect(() => {
     const timer1 = setTimeout(() => setSplashState('fading'), 1500);
     const timer2 = setTimeout(() => setSplashState('hidden'), 2000);
@@ -843,7 +870,9 @@ export default function App() {
           ) : (
             <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Tailender Tracks Logo" />
           )}
-          <span>{isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : 'TAILENDER TRACKS'}</span>
+          <span className={!isProjectView ? 'dymo-label' : ''}>
+            {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : 'TAILENDER TRACKS'}
+          </span>
         </div>
         <div className="header-actions">
           <button className="icon-btn" onClick={toggleDarkMode} title="Toggle Light/Dark">
@@ -851,9 +880,6 @@ export default function App() {
           </button>
           <button className="icon-btn" onClick={handleShare} title="Share App">
             <Share2 size={20} />
-          </button>
-          <button className="icon-btn" onClick={() => setShowTomDialog(true)} title="Chat with Tailender Tom">
-            <MessageCircle size={20} />
           </button>
           <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
             <User size={20} />
@@ -868,6 +894,15 @@ export default function App() {
 
       {/* BOTTOM NAV */}
       <nav className="bottom-nav">
+
+      {/* TAILENDER TOM FAB - bottom left */}
+      <button
+        className="tom-fab"
+        onClick={() => setShowTomDialog(true)}
+        title="Chat with Tailender Tom"
+      >
+        <MessageCircle size={24} />
+      </button>
         <div className={`nav-item ${activeView === 'Home' ? 'active' : ''}`} onClick={() => setActiveView('Home')}>
           <Home size={24} />
           <span>Home</span>
@@ -888,14 +923,76 @@ export default function App() {
 
       {/* MODALS */}
       {showTomDialog && (
-        <Modal title="Chatting with Tailender Tom" onClose={() => setShowTomDialog(false)}>
-          <div style={{ minHeight: 200, display: 'flex', flexDirection: 'column' }}>
-            <div style={{ flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12, border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
-              <p>Tom is ready to help you with field recording!</p>
+        <Modal title={
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+            <span>Tailender Tom</span>
+            <select 
+              value={tomFilter} 
+              onChange={e => setTomFilter(e.target.value)} 
+              style={{ padding: '2px 8px', borderRadius: 4, width: 'auto', fontSize: '0.8rem', marginRight: 24, fontWeight: 'normal', backgroundColor: 'var(--bg-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}
+            >
+              {['All', 'Research', 'Plan', 'Record', 'Program', 'Submit', 'Share', 'Troubleshooting', 'Forms'].map(f => (
+                <option key={f} value={f}>{f}</option>
+              ))}
+            </select>
+          </div>
+        } onClose={() => setShowTomDialog(false)}>
+          <div style={{ height: 400, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ 
+              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12, 
+              border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12 
+            }}>
+              {tomMessages.map((msg, i) => (
+                <div key={i} style={{ 
+                  alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
+                  display: 'flex', flexDirection: 'column',
+                  alignItems: msg.sender === 'user' ? 'flex-end' : 'flex-start',
+                  maxWidth: '90%'
+                }}>
+                  <div style={{
+                    backgroundColor: msg.sender === 'user' ? 'var(--accent-color)' : 'var(--surface-color)',
+                    color: msg.sender === 'user' ? '#fff' : 'var(--text-primary)',
+                    padding: '8px 12px', borderRadius: 12, fontSize: '0.9rem',
+                    border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
+                    marginBottom: 4
+                  }}>
+                    {msg.text}
+                  </div>
+                  {msg.actions && msg.actions.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 4 }}>
+                      {msg.actions.map((action: string, j: number) => (
+                        <button key={j} className="btn" style={{ padding: '4px 8px', fontSize: '0.75rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}>
+                          {action}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {msg.related && msg.related.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+                      {msg.related.map((rel: any, j: number) => (
+                        <span key={j} onClick={() => handleSendTomMessage(rel.question)} style={{
+                          backgroundColor: 'rgba(128,128,128,0.1)', color: 'var(--text-secondary)',
+                          padding: '4px 8px', borderRadius: 12, fontSize: '0.75rem', cursor: 'pointer',
+                          display: 'inline-block'
+                        }}>
+                          {rel.question}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
             <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
-              <input type="text" placeholder="Ask Tom a question..." style={{ margin: 0 }} />
-              <button className="btn btn-primary" style={{ width: 'auto', margin: 0 }}>Send</button>
+              <input 
+                type="text" 
+                placeholder="Ask Tom a question..." 
+                style={{ margin: 0 }} 
+                value={tomInput}
+                onChange={e => setTomInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleSendTomMessage()}
+              />
+              <button className="btn btn-primary" style={{ width: 'auto', margin: 0 }} onClick={() => handleSendTomMessage()}>Send</button>
             </div>
           </div>
         </Modal>
