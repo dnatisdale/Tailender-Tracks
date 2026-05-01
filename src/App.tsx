@@ -856,7 +856,10 @@ export default function App() {
       {splashState !== 'hidden' && (
         <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
           <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Logo" className="splash-logo" />
-          <div className="splash-title">TAILENDER TRACKS</div>
+          <div className="dymo-label-stack splash-dymo">
+            <span className="dymo-label dymo-label--splash">TAILENDER</span>
+            <span className="dymo-label dymo-label--splash dymo-label--red">TRACKS</span>
+          </div>
         </div>
       )}
       <div className="app-container">
@@ -870,8 +873,13 @@ export default function App() {
           ) : (
             <img src={`${import.meta.env.BASE_URL}icons/tailender-buckle.png`} alt="Tailender Tracks Logo" />
           )}
-          <span className={!isProjectView ? 'dymo-label' : ''}>
-            {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : 'TAILENDER TRACKS'}
+          <span>
+            {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
+              <div className="dymo-label-stack">
+                <span className="dymo-label">TAILENDER</span>
+                <span className="dymo-label dymo-label--red">TRACKS</span>
+              </div>
+            )}
           </span>
         </div>
         <div className="header-actions">
