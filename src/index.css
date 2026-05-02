@@ -63,8 +63,17 @@ body {
   letter-spacing: 1px;
 }
 
+.splash-logo {
+  height: 80px;
+  width: auto;
+  animation: logo-entrance 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+  margin-bottom: 10px;
+  z-index: 5;
+}
+
 .header-title img {
-  height: 150px;
+  height: 70px; /* Restored and scaled down to avoid dominating */
   width: auto;
   filter: drop-shadow(0 6px 15px rgba(0,0,0,0.3));
   margin-right: 20px;
@@ -133,9 +142,9 @@ body {
   pointer-events: none;
 }
 
-/* Splash screen labels - Refined and Floating */
+/* Splash screen labels - Proportional to the 25% smaller logo */
 .dymo-label--splash {
-  height: 35px;
+  height: 22px;
   opacity: 0;
   animation: splash-dymo-float 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
