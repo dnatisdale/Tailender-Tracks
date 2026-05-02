@@ -64,12 +64,20 @@ body {
 }
 
 .header-title img {
-  height: 120px;
-  filter: drop-shadow(0 4px 12px var(--accent-glow));
-  margin-right: 15px;
-  animation: header-pivot 5s ease-in-out;
+  height: 110px;
+  width: auto;
+  filter: drop-shadow(0 6px 15px rgba(0,0,0,0.3));
+  margin-right: 20px;
+  animation: header-pivot 5s ease-in-out infinite;
   position: relative;
-  z-index: 15; /* Above everything */
+  z-index: 15;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+  cursor: pointer;
+}
+
+.header-title img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 10px 25px var(--accent-glow)) brightness(1.05);
 }
 
 @keyframes header-pivot {
@@ -129,7 +137,7 @@ body {
     10px 15px 25px rgba(0,0,0,0.5);
 
   /* Tilted up-right */
-  transform: rotate(-3deg);
+  transform: rotate(-5deg) translateX(5px);
   transform-origin: center;
 }
 
@@ -142,7 +150,7 @@ body {
     #820311 100%
   );
   /* Tilted down-right */
-  transform: rotate(2deg);
+  transform: rotate(4deg) translateX(-3px);
   z-index: 9;
 }
 
@@ -196,10 +204,10 @@ body {
   background-image: url('/Tailender-Tracks/icons/hiking-boots-trail.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 120px;
-  height: 60px;
+  width: 100px;
+  height: 50px;
   opacity: 0;
-  animation: boot-walk 20s linear infinite;
+  animation: boot-walk 15s linear infinite;
   filter: brightness(0.9) contrast(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
@@ -207,36 +215,61 @@ body {
   transform: scaleX(-1); /* Flip for left foot */
 }
 
-/* Stagger the steps */
-.walking-boot:nth-child(1) { animation-delay: 0s; }
-.walking-boot:nth-child(2) { animation-delay: 0.8s; }
-.walking-boot:nth-child(3) { animation-delay: 1.6s; }
-/* Fourth and fifth boots fade away early as requested */
-.walking-boot:nth-child(4) { animation-delay: 2.4s; animation-name: boot-walk-fade; }
-.walking-boot:nth-child(5) { animation-delay: 3.2s; animation-name: boot-walk-fade; }
+/* Stagger the steps for header */
+.header-boot-trail .walking-boot:nth-child(1) { animation-delay: 0s; }
+.header-boot-trail .walking-boot:nth-child(2) { animation-delay: 0.6s; margin-top: 15px; }
+.header-boot-trail .walking-boot:nth-child(3) { animation-delay: 1.2s; }
+.header-boot-trail .walking-boot:nth-child(4) { animation-delay: 1.8s; margin-top: 15px; }
+.header-boot-trail .walking-boot:nth-child(5) { animation-delay: 2.4s; }
+.header-boot-trail .walking-boot:nth-child(6) { animation-delay: 3.0s; margin-top: 15px; }
 
-@keyframes boot-walk {
-  0% { transform: translateX(-50px) translateY(5px) rotate(10deg); opacity: 0; }
-  5% { opacity: 0.8; }
-  10% { transform: translateX(10vw) translateY(-5px) rotate(-10deg); }
-  20% { transform: translateX(25vw) translateY(5px) rotate(10deg); }
-  30% { transform: translateX(40vw) translateY(-5px) rotate(-10deg); }
-  40% { transform: translateX(55vw) translateY(5px) rotate(10deg); }
-  50% { transform: translateX(70vw) translateY(-5px) rotate(-10deg); }
-  60% { transform: translateX(85vw) translateY(5px) rotate(10deg); }
-  70% { transform: translateX(105vw) translateY(-5px) rotate(-10deg); opacity: 0.8; }
-  75%, 100% { transform: translateX(110vw); opacity: 0; }
+/* Splash Boot Trail */
+.splash-boot-trail {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
-@keyframes boot-walk-fade {
-  0% { transform: translateX(-50px) translateY(5px) rotate(10deg); opacity: 0; }
+.splash-boot-trail .walking-boot {
+  width: 140px;
+  height: 70px;
+  animation: boot-walk-splash 12s linear infinite;
+}
+
+.splash-boot-trail .walking-boot:nth-child(1) { animation-delay: 0s; }
+.splash-boot-trail .walking-boot:nth-child(2) { animation-delay: 0.5s; }
+.splash-boot-trail .walking-boot:nth-child(3) { animation-delay: 1.0s; }
+.splash-boot-trail .walking-boot:nth-child(4) { animation-delay: 1.5s; }
+.splash-boot-trail .walking-boot:nth-child(5) { animation-delay: 2.0s; }
+.splash-boot-trail .walking-boot:nth-child(6) { animation-delay: 2.5s; }
+.splash-boot-trail .walking-boot:nth-child(7) { animation-delay: 3.0s; }
+.splash-boot-trail .walking-boot:nth-child(8) { animation-delay: 3.5s; }
+
+@keyframes boot-walk {
+  0% { transform: translateX(-100px) translateY(0) rotate(10deg); opacity: 0; }
   5% { opacity: 0.8; }
-  10% { transform: translateX(10vw) translateY(-5px) rotate(-10deg); }
-  20% { transform: translateX(25vw) translateY(5px) rotate(10deg); }
-  /* Fades out halfway through the trail */
-  25% { opacity: 0.4; }
-  30% { transform: translateX(40vw) translateY(-5px) rotate(-10deg); opacity: 0; }
-  100% { transform: translateX(110vw); opacity: 0; }
+  10% { transform: translateX(10vw) translateY(-5px) rotate(-5deg); }
+  20% { transform: translateX(25vw) translateY(5px) rotate(5deg); }
+  30% { transform: translateX(40vw) translateY(-5px) rotate(-5deg); }
+  40% { transform: translateX(55vw) translateY(5px) rotate(5deg); }
+  50% { transform: translateX(70vw) translateY(-5px) rotate(-5deg); }
+  60% { transform: translateX(85vw) translateY(5px) rotate(5deg); }
+  70% { transform: translateX(105vw) translateY(-5px) rotate(-5deg); opacity: 0.8; }
+  75%, 100% { transform: translateX(120vw); opacity: 0; }
+}
+
+@keyframes boot-walk-splash {
+  0% { 
+    transform: translate(-20vw, 80vh) rotate(-15deg); 
+    opacity: 0; 
+  }
+  5% { opacity: 0.4; }
+  20% { transform: translate(10vw, 60vh) rotate(10deg); }
+  40% { transform: translate(40vw, 70vh) rotate(-5deg); }
+  60% { transform: translate(70vw, 50vh) rotate(15deg); }
+  80% { transform: translate(100vw, 30vh) rotate(-10deg); opacity: 0.4; }
+  100% { transform: translate(120vw, 10vh) rotate(5deg); opacity: 0; }
 }
 
 .icon-btn {
