@@ -885,7 +885,7 @@ export default function App() {
             <div className="walking-boot"></div>
             <div className="walking-boot walking-boot--left"></div>
           </div>
-          <img src={`${import.meta.env.BASE_URL}icons/Chat with Toshi.png`} alt="Logo" className="splash-logo" />
+          <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Logo" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
             <span className="dymo-label dymo-label--splash dymo-label--red">TRACKS</span>
             <span className="dymo-label dymo-label--splash">TAILENDER</span>
@@ -910,7 +910,7 @@ export default function App() {
               <ChevronLeft size={24} />
             </button>
           ) : (
-            <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Tailender Tracks Logo" />
+            <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Tailender Boots" />
           )}
           <span>
             {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
@@ -948,7 +948,7 @@ export default function App() {
         onClick={() => setShowTomDialog(true)}
         title="Chat with Tailender Tom"
       >
-        <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Boots" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src={`${import.meta.env.BASE_URL}icons/Chat with Toshi.png`} alt="Chat with Toshi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </button>
         <div className={`nav-item ${activeView === 'Home' ? 'active' : ''}`} onClick={() => setActiveView('Home')}>
           <Home size={24} />
