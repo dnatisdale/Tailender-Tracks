@@ -5,11 +5,11 @@ import {
   Share2, Sun, Moon, User, X
 } from 'lucide-react';
 import { 
-  askTailenderTom, 
-  getTailenderTomCategories, 
-  getSuggestedTomQuestions,
-  getTomBrainStats 
-} from './data/tailenderTomBrain';
+  askTailenderToshi, 
+  getTailenderToshiCategories, 
+  getSuggestedToshiQuestions,
+  getToshiBrainStats 
+} from './data/tailenderToshiBrain';
 import './index.css';
 
 // ==========================================
@@ -167,7 +167,7 @@ function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
         <p>Offline field recording workflow</p>
       </div>
 
-      <button className="btn btn-primary" onClick={onCreateProject} style={{ marginBottom: 24, padding: 16 }}>
+      <button className="btn btn-primary" onClick={onCreateProject} style={{ marginbottom: 24, padding: 16 }}>
         <Plus size={20} /> Create New Project
       </button>
 
@@ -394,7 +394,7 @@ function StageRecord({ project, update, formsManifest }: any) {
       <StageForms stage="Record" forms={formsManifest} />
 
       <div className="card" style={{ textAlign: 'center' }}>
-        <Mic size={48} color="var(--accent-color)" style={{ marginBottom: 16 }} />
+        <Mic size={48} color="var(--accent-color)" style={{ marginbottom: 16 }} />
         <h3 style={{ margin: '0 0 16px 0' }}>Recording Session</h3>
         <FieldInput label="Session Title" value={d.sessionTitle} onChange={(v:any) => setD('sessionTitle', v)} />
         <FieldInput label="Speaker" value={d.speaker} onChange={(v:any) => setD('speaker', v)} />
@@ -482,8 +482,8 @@ function StageProgram({ project, update, formsManifest }: any) {
         {tracks.length === 0 && <p style={{ color: 'var(--text-secondary)', textAlign: 'center' }}>No tracks added yet.</p>}
 
         {tracks.map((t:any, i:number) => (
-          <div key={t.id} style={{ border: '1px solid var(--border-color)', borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: 'var(--bg-color)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
+          <div key={t.id} style={{ border: '1px solid var(--border-color)', borderRadius: 8, padding: 12, marginbottom: 12, backgroundColor: 'var(--bg-color)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginbottom: 12 }}>
               <strong>Track {i + 1}</strong>
               <div style={{ display: 'flex', gap: 8 }}>
                 <button onClick={() => moveTrack(i, -1)} disabled={i===0}>↑</button>
@@ -502,7 +502,7 @@ function StageProgram({ project, update, formsManifest }: any) {
         ))}
       </div>
       
-      <button className="btn btn-primary" style={{ marginBottom: 24 }}>
+      <button className="btn btn-primary" style={{ marginbottom: 24 }}>
         <Download size={18} /> Export Tracklist
       </button>
     </div>
@@ -538,7 +538,7 @@ function StageSubmit({ project, update, formsManifest }: any) {
       <div className="card">
         <h3 className="card-title">Package ZIP Preview</h3>
         <div style={{ textAlign: 'center', padding: '24px 0', border: '2px dashed var(--border-color)', borderRadius: 8 }}>
-          <Folder size={32} color="var(--text-secondary)" style={{ marginBottom: 8 }} />
+          <Folder size={32} color="var(--text-secondary)" style={{ marginbottom: 8 }} />
           <div><strong>{project.languageName.substring(0,3).toUpperCase()}_Package.zip</strong></div>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Ready to assemble from selected files.</p>
         </div>
@@ -632,15 +632,15 @@ function TrainingView() {
       <div className="card">
         <h3 className="card-title">Team Roles</h3>
         <ul style={{ paddingLeft: 20, margin: 0, color: 'var(--text-secondary)' }}>
-          <li style={{ marginBottom: 8 }}><strong>Research lead:</strong> Verifies heart language.</li>
-          <li style={{ marginBottom: 8 }}><strong>Script lead:</strong> Adapts & translates scripts.</li>
-          <li style={{ marginBottom: 8 }}><strong>Speaker care:</strong> Supports local speakers.</li>
-          <li style={{ marginBottom: 8 }}><strong>Recorder operator:</strong> Handles audio capture.</li>
-          <li style={{ marginBottom: 8 }}><strong>Backup person:</strong> Manages SD cards and files.</li>
-          <li style={{ marginBottom: 8 }}><strong>Editor:</strong> Cleans and tops/tails audio.</li>
-          <li style={{ marginBottom: 8 }}><strong>Reviewer:</strong> Theology and language check.</li>
-          <li style={{ marginBottom: 8 }}><strong>Submitter:</strong> Prepares the final package.</li>
-          <li style={{ marginBottom: 8 }}><strong>Distribution lead:</strong> Shares the finished work.</li>
+          <li style={{ marginbottom: 8 }}><strong>Research lead:</strong> Verifies heart language.</li>
+          <li style={{ marginbottom: 8 }}><strong>Script lead:</strong> Adapts & translates scripts.</li>
+          <li style={{ marginbottom: 8 }}><strong>Speaker care:</strong> Supports local speakers.</li>
+          <li style={{ marginbottom: 8 }}><strong>Recorder operator:</strong> Handles audio capture.</li>
+          <li style={{ marginbottom: 8 }}><strong>Backup person:</strong> Manages SD cards and files.</li>
+          <li style={{ marginbottom: 8 }}><strong>Editor:</strong> Cleans and tops/tails audio.</li>
+          <li style={{ marginbottom: 8 }}><strong>Reviewer:</strong> Theology and language check.</li>
+          <li style={{ marginbottom: 8 }}><strong>Submitter:</strong> Prepares the final package.</li>
+          <li style={{ marginbottom: 8 }}><strong>Distribution lead:</strong> Shares the finished work.</li>
         </ul>
       </div>
 
@@ -653,7 +653,7 @@ function TrainingView() {
         { t: '6. Share', d: 'How to share recordings wisely.' }
       ].map((card, i) => (
         <div key={i} className="card" style={{ padding: 16 }}>
-          <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: 4 }}>{card.t}</div>
+          <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginbottom: 4 }}>{card.t}</div>
           <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{card.d}</div>
         </div>
       ))}
@@ -733,21 +733,48 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return document.body.classList.contains('dark-theme');
   });
-  const [showTomDialog, setShowTomDialog] = useState(false);
+  const [showToshiDialog, setShowToshiDialog] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [showInstallBanner, setShowInstallBanner] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallBanner(true);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      console.log('User accepted the install prompt');
+    }
+    setDeferredPrompt(null);
+    setShowInstallBanner(false);
+  };
   const [showSignIn, setShowSignIn] = useState(false);
   const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
 
-  // Tom Chat State
-  const [tomFilter, setTomFilter] = useState('All');
-  const [tomEasyEnglish, setTomEasyEnglish] = useState<Record<number, boolean>>({});
-  const stats = getTomBrainStats();
-  const [tomMessages, setTomMessages] = useState<any[]>([
-    { sender: 'tom', text: `Howdy! I am Tailender Tom — your offline field recording guide. I have ${stats.total} items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!` }
+  // Toshi Chat State
+  const [ToshiFilter, setToshiFilter] = useState('All');
+  const [ToshiEasyEnglish, setToshiEasyEnglish] = useState<Record<number, boolean>>({});
+  const stats = getToshiBrainStats();
+  const [ToshiMessages, setToshiMessages] = useState<any[]>([
+    { sender: 'Toshi', text: `Howdy! I am Tailender Toshi — your offline field recording guide. I have ${stats.total} items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!` }
   ]);
-  const [tomInput, setTomInput] = useState('');
+  const [ToshiInput, setToshiInput] = useState('');
 
-  const handleTomAction = (action: string) => {
-    setShowTomDialog(false);
+  const handleToshiAction = (action: string) => {
+    setShowToshiDialog(false);
     if (action.toLowerCase().includes('heart-language') || action.toLowerCase().includes('consent') || action.toLowerCase().includes('form')) {
       setActiveView('Forms');
     } else if (action.toLowerCase().includes('note') || action.toLowerCase().includes('project') || action.toLowerCase().includes('mark')) {
@@ -760,16 +787,16 @@ export default function App() {
     }
   };
 
-  const handleSendTomMessage = (textToSubmit?: string) => {
-    const text = typeof textToSubmit === 'string' ? textToSubmit : tomInput;
+  const handleSendToshiMessage = (textToSubmit?: string) => {
+    const text = typeof textToSubmit === 'string' ? textToSubmit : ToshiInput;
     if (!text.trim()) return;
-    const newMsgs = [...tomMessages, { sender: 'user', text }];
-    setTomMessages(newMsgs);
-    setTomInput('');
+    const newMsgs = [...ToshiMessages, { sender: 'user', text }];
+    setToshiMessages(newMsgs);
+    setToshiInput('');
     setTimeout(() => {
-      const response = askTailenderTom(text, { stage: tomFilter === 'All' ? '' : tomFilter, limit: 8 });
-      setTomMessages(prev => [...prev, {
-        sender: 'tom',
+      const response = askTailenderToshi(text, { stage: ToshiFilter === 'All' ? '' : ToshiFilter, limit: 8 });
+      setToshiMessages(prev => [...prev, {
+        sender: 'Toshi',
         text: response.answer,
         easyEnglish: response.easyEnglish,
         actions: response.actions || response.suggestions,
@@ -875,17 +902,7 @@ export default function App() {
     <>
       {splashState !== 'hidden' && (
         <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
-          <div className="splash-boot-trail">
-            <div className="walking-boot"></div>
-            <div className="walking-boot walking-boot--left"></div>
-            <div className="walking-boot"></div>
-            <div className="walking-boot walking-boot--left"></div>
-            <div className="walking-boot"></div>
-            <div className="walking-boot walking-boot--left"></div>
-            <div className="walking-boot"></div>
-            <div className="walking-boot walking-boot--left"></div>
-          </div>
-          <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Logo" className="splash-logo" />
+          <img src={`${import.meta.env.BASE_URL}icons/tailender-Toshi-badge.png`} alt="Logo" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
             <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="dymo-label dymo-label--splash" />
             <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--splash dymo-label--red" />
@@ -914,10 +931,7 @@ export default function App() {
           )}
           <span>
             {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
-              <div className="dymo-label-stack">
-                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="dymo-label" />
-                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--red" />
-              </div>
+              'Tailender Tracks'
             )}
           </span>
         </div>
@@ -939,14 +953,14 @@ export default function App() {
         {renderView()}
       </main>
 
-      {/* BOTTOM NAV */}
+      {/* bottom NAV */}
       <nav className="bottom-nav">
 
-      {/* TAILENDER TOM FAB - bottom left */}
+      {/* TAILENDER Toshi FAB - bottom left */}
       <button
-        className="tom-fab"
-        onClick={() => setShowTomDialog(true)}
-        title="Chat with Tailender Tom"
+        className="Toshi-fab"
+        onClick={() => setShowToshiDialog(true)}
+        title="Chat with Tailender Toshi"
       >
         <img src={`${import.meta.env.BASE_URL}icons/Chat with Toshi.png`} alt="Chat with Toshi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </button>
@@ -969,30 +983,30 @@ export default function App() {
       </nav>
 
       {/* MODALS */}
-      {showTomDialog && (
+      {showToshiDialog && (
         <Modal title={
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div className="dymo-label-stack" style={{ gap: 2 }}>
               <span className="dymo-label" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TAILENDER</span>
-              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TOM</span>
+              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>Toshi</span>
             </div>
             <select
-              value={tomFilter}
-              onChange={e => setTomFilter(e.target.value)}
+              value={ToshiFilter}
+              onChange={e => setToshiFilter(e.target.value)}
               style={{ padding: '2px 8px', borderRadius: 4, width: 'auto', fontSize: '0.75rem', marginRight: 24, fontWeight: 'normal', backgroundColor: 'var(--bg-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}
             >
-              {getTailenderTomCategories().map((f: string) => (
+              {getTailenderToshiCategories().map((f: string) => (
                 <option key={f} value={f}>{f}</option>
               ))}
             </select>
           </div>
-        } onClose={() => setShowTomDialog(false)}>
+        } onClose={() => setShowToshiDialog(false)}>
           <div style={{ height: 420, display: 'flex', flexDirection: 'column' }}>
             <div style={{
-              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12,
+              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginbottom: 12,
               border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12
             }}>
-              {tomMessages.map((msg, i) => (
+              {ToshiMessages.map((msg, i) => (
                 <div key={i} style={{
                   alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
                   display: 'flex', flexDirection: 'column',
@@ -1004,32 +1018,32 @@ export default function App() {
                     color: msg.sender === 'user' ? '#fff' : 'var(--text-primary)',
                     padding: '8px 12px', borderRadius: 12, fontSize: '0.88rem', lineHeight: 1.5,
                     border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
-                    marginBottom: 4, whiteSpace: 'pre-wrap'
+                    marginbottom: 4, whiteSpace: 'pre-wrap'
                   }}>
-                    {tomEasyEnglish[i] && msg.easyEnglish ? msg.easyEnglish : msg.text}
+                    {ToshiEasyEnglish[i] && msg.easyEnglish ? msg.easyEnglish : msg.text}
                   </div>
                   {/* Easy English toggle */}
-                  {msg.sender === 'tom' && msg.easyEnglish && msg.easyEnglish !== msg.text && (
+                  {msg.sender === 'Toshi' && msg.easyEnglish && msg.easyEnglish !== msg.text && (
                     <button
-                      onClick={() => setTomEasyEnglish(prev => ({ ...prev, [i]: !prev[i] }))}
+                      onClick={() => setToshiEasyEnglish(prev => ({ ...prev, [i]: !prev[i] }))}
                       style={{
                         background: 'none', border: '1px solid var(--border-color)', borderRadius: 8,
                         padding: '2px 8px', fontSize: '0.7rem', cursor: 'pointer',
-                        color: 'var(--text-secondary)', marginBottom: 4, alignSelf: 'flex-start'
+                        color: 'var(--text-secondary)', marginbottom: 4, alignSelf: 'flex-start'
                       }}
                     >
-                      {tomEasyEnglish[i] ? '📖 Full answer' : '🟢 Easy English'}
+                      {ToshiEasyEnglish[i] ? '📖 Full answer' : '🟢 Easy English'}
                     </button>
                   )}
                   {/* Action buttons */}
                   {msg.actions && msg.actions.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 4 }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginbottom: 4 }}>
                       {msg.actions.map((action: string, j: number) => (
                         <button 
                           key={j} 
                           className="btn" 
-                          onClick={() => handleTomAction(action)}
-                          style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}
+                          onClick={() => handleToshiAction(action)}
+                          style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginbottom: 0, fontWeight: 'normal' }}
                         >
                           {action}
                         </button>
@@ -1040,7 +1054,7 @@ export default function App() {
                   {msg.related && msg.related.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
                       {msg.related.map((rel: any, j: number) => (
-                        <span key={j} onClick={() => handleSendTomMessage(rel.label)} style={{
+                        <span key={j} onClick={() => handleSendToshiMessage(rel.label)} style={{
                           backgroundColor: 'rgba(122,10,10,0.08)', color: 'var(--accent-color)',
                           padding: '3px 8px', borderRadius: 12, fontSize: '0.72rem', cursor: 'pointer',
                           display: 'inline-block', border: '1px solid rgba(122,10,10,0.2)'
@@ -1055,14 +1069,14 @@ export default function App() {
             </div>
 
             {/* Suggested Questions for current stage */}
-            {tomMessages.length < 3 && (
-              <div style={{ marginBottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {ToshiMessages.length < 3 && (
+              <div style={{ marginbottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', marginLeft: 4 }}>Try asking:</span>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                  {getSuggestedTomQuestions(tomFilter).slice(0, 3).map((q, i) => (
+                  {getSuggestedToshiQuestions(ToshiFilter).slice(0, 3).map((q, i) => (
                     <button 
                       key={i} 
-                      onClick={() => handleSendTomMessage(q)}
+                      onClick={() => handleSendToshiMessage(q)}
                       style={{ 
                         background: 'rgba(128,128,128,0.1)', border: '1px solid var(--border-color)', 
                         borderRadius: 16, padding: '4px 10px', fontSize: '0.72rem', color: 'var(--text-primary)',
@@ -1076,16 +1090,16 @@ export default function App() {
               </div>
             )}
 
-            <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
+            <div className="input-group" style={{ marginbottom: 0, display: 'flex', gap: 8 }}>
               <input
                 type="text"
-                placeholder="Ask Tom a question..."
+                placeholder="Ask Toshi a question..."
                 style={{ margin: 0 }}
-                value={tomInput}
-                onChange={e => setTomInput(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleSendTomMessage()}
+                value={ToshiInput}
+                onChange={e => setToshiInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleSendToshiMessage()}
               />
-              <button className="btn btn-primary" style={{ width: 'auto', margin: 0 }} onClick={() => handleSendTomMessage()}>Send</button>
+              <button className="btn btn-primary" style={{ width: 'auto', margin: 0 }} onClick={() => handleSendToshiMessage()}>Send</button>
             </div>
           </div>
         </Modal>
