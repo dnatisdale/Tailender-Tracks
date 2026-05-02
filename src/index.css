@@ -143,7 +143,7 @@ body {
 
 /* Splash screen labels - Proportional to the 25% smaller logo */
 .dymo-label--splash {
-  height: 22px;
+  height: 45px;
   opacity: 0;
   animation: splash-dymo-float 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -194,7 +194,7 @@ body {
 }
 
 .header-dymo-label {
-  height: 18px;
+  height: 12px;
   width: auto;
   display: block;
   filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.35));
