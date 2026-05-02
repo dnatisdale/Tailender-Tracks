@@ -1,7 +1,7 @@
 // Tailender Toshi Brain v3 - Offline helper for Tailender Tracks
-import brain from './tailender_Toshi_brain_v3.json';
+import brain from './tailender_toshi_brain_v3.json';
 
-export const TAILENDER_Toshi_BRAIN = brain;
+export const TAILENDER_TOSHI_BRAIN = brain;
 
 type ToshiSearchOptions = { stage?: string; limit?: number; easyEnglish?: boolean };
 

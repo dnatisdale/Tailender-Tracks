@@ -133,15 +133,46 @@ body {
   pointer-events: none;
 }
 
-/* Splash screen labels — much bigger */
+/* Splash screen labels - Refined and Floating */
 .dymo-label--splash {
-  height: 100px;
+  height: 35px;
+  opacity: 0;
+  animation: splash-dymo-float 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.dymo-label--splash:nth-child(1) {
+  animation-delay: 0.3s;
+  transform: rotate(-3deg);
+}
+
+.dymo-label--splash:nth-child(2) {
+  animation-delay: 0.5s;
+  transform: rotate(4deg); /* Angled downward left-to-right */
+  margin-top: -5px; /* Slight overlap for title look */
 }
 
 .splash-dymo {
-  margin-top: 25px;
-  gap: 12px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
+
+@keyframes splash-dymo-float {
+  from {
+    opacity: 0;
+    transform: translateX(-60px) rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(var(--final-rotate, 0deg));
+  }
+}
+
+/* Override the rotation in the keyframe to allow unique settling */
+.dymo-label--splash:nth-child(1) { --final-rotate: -3deg; }
+.dymo-label--splash:nth-child(2) { --final-rotate: 4deg; }
 
 /* Remove old .splash-title */
 
@@ -513,8 +544,8 @@ body {
   transform: scale(1.05);
 }
 
-/* Tailender Tom floating button - bottom right */
-.tom-fab {
+/* Tailender Toshi floating button - bottom right */
+.toshi-fab {
   position: fixed;
   bottom: calc(var(--nav-height) + 16px);
   right: 20px;
@@ -537,11 +568,11 @@ body {
   filter: brightness(1.1);
 }
 
-.tom-fab {
-  animation: tom-nudge 10s ease-in-out infinite;
+.toshi-fab {
+  animation: toshi-nudge 10s ease-in-out infinite;
 }
 
-@keyframes tom-nudge {
+@keyframes toshi-nudge {
   0%, 90% { transform: scale(1) rotate(0); }
   92% { transform: scale(1.1) rotate(-5deg); }
   94% { transform: scale(1.1) rotate(5deg); }
@@ -560,113 +591,7 @@ body {
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 
-/* Splash Screen */
-.splash-screen {
-  position: fixed;
-  inset: 0;
-  background-color: var(--bg-color);
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease-out;
-  overflow: hidden;
-}
 
-.splash-logo {
-  width: 280px;
-  height: auto;
-  animation: logo-entrance 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  filter: drop-shadow(0 12px 25px rgba(0,0,0,0.4));
-  margin-bottom: 20px;
-  z-index: 5;
-}
-
-.splash-dymo {
-  margin-top: 25px;
-  gap: 12px;
-  z-index: 10;
-}
-
-/* Windy Trail Animation */
-.dymo-label--splash {
-  font-size: 2.8rem; /* Larger for splash */
-  padding: 12px 32px 12px 20px;
-  letter-spacing: 0.4em;
-  border-radius: 3px;
-  box-shadow: 
-    0 10px 30px rgba(0,0,0,0.6),
-    inset 0 1px 2px rgba(255,255,255,0.1);
-  filter: contrast(1.1) brightness(0.9);
-  animation: hike-path 7s cubic-bezier(0.45, 0, 0.55, 1) forwards;
-}
-
-.dymo-label--splash:nth-child(2) {
-  animation-delay: 0.4s; /* Second label follows the first */
-}
-
-@keyframes hike-path {
-  0% {
-    transform: translate(-150vw, 50vh) rotate(-15deg);
-    opacity: 0;
-  }
-  20% {
-    transform: translate(-100vw, -20vh) rotate(10deg);
-    opacity: 1;
-  }
-  40% {
-    transform: translate(-40vw, 30vh) rotate(-10deg);
-  }
-  60% {
-    transform: translate(20vw, -10vh) rotate(5deg);
-  }
-  80% {
-    transform: translate(-5vw, 5vh) rotate(-5deg);
-  }
-  100% {
-    transform: translate(0, 0); /* Let the CSS class handle the rotation */
-    opacity: 1;
-  }
-}
-
-/* Footprints */
-.footprint-container {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.footprint {
-  position: absolute;
-  width: 80px;
-  height: 40px;
-  background-image: url('/Tailender-Tracks/icons/hiking-boots-trail.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  filter: brightness(0.9) contrast(1.1) blur(0.3px);
-  animation: footprint-fade 7s linear forwards;
-}
-
-@keyframes footprint-fade {
-  0% { opacity: 0; transform: scale(0.8); }
-  10% { opacity: 0.3; transform: scale(1); }
-  80% { opacity: 0.3; }
-  100% { opacity: 0; }
-}
-
-@keyframes logo-entrance {
-  from { transform: scale(0.8) translateY(20px); opacity: 0; }
-  to { transform: scale(1) translateY(0); opacity: 1; }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
 
 .install-banner-overlay {
   position: fixed;

@@ -902,7 +902,7 @@ export default function App() {
     <>
       {splashState !== 'hidden' && (
         <div className="splash-screen" style={{ opacity: splashState === 'fading' ? 0 : 1 }}>
-          <img src={`${import.meta.env.BASE_URL}icons/tailender-Toshi-badge.png`} alt="Logo" className="splash-logo" />
+          <img src={`${import.meta.env.BASE_URL}icons/Toshi-wave-record-in-back.png`} alt="Tailender Toshi" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
             <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="dymo-label dymo-label--splash" />
             <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--splash dymo-label--red" />
@@ -973,7 +973,7 @@ export default function App() {
 
       {/* TAILENDER Toshi FAB - bottom left */}
       <button
-        className="Toshi-fab"
+        className="toshi-fab"
         onClick={() => setShowToshiDialog(true)}
         title="Chat with Tailender Toshi"
       >
@@ -1003,7 +1003,7 @@ export default function App() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <div className="dymo-label-stack" style={{ gap: 2 }}>
               <span className="dymo-label" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TAILENDER</span>
-              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>Toshi</span>
+              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TOSHI</span>
             </div>
             <select
               value={ToshiFilter}
