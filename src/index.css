@@ -102,9 +102,8 @@ body {
 .dymo-label-stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   align-items: flex-start;
-  animation: header-pivot 5s ease-in-out;
 }
 
 .dymo-label {
@@ -185,66 +184,36 @@ body {
 
 /* Remove old .splash-title */
 
+/* Header DYMO title labels — separate from splash, static and intentional */
+.header-dymo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  margin-left: 4px;
+}
+
+.header-dymo-label {
+  height: 18px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.35));
+  transform: rotate(-4deg);
+  transform-origin: left center;
+}
+
+.header-dymo-label--red {
+  transform: rotate(3deg);
+  transform-origin: left center;
+  margin-top: -2px;
+}
+
 .header-actions {
   display: flex;
   gap: 12px;
 }
 
-/* Header Walking Boots */
-.header-boot-trail {
-  position: absolute;
-  top: 40px; /* Positioned higher up */
-  left: 0;
-  width: 100%;
-  height: 40px;
-  pointer-events: none;
-  z-index: 10; /* Between the labels */
-  overflow: hidden;
-}
 
-.header-boot-trail .walking-boot {
-  width: 30px;
-  height: 30px;
-}
-
-.walking-boot {
-  position: absolute;
-  background-image: url('/icons/Boot1.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  opacity: 0;
-  animation: boot-walk 15s linear infinite;
-  filter: brightness(0.9) contrast(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-.walking-boot--left {
-  transform: scaleX(-1); /* Flip for left foot */
-}
-
-/* Stagger the steps for header - Spaced further apart */
-.header-boot-trail .walking-boot:nth-child(1) { animation-delay: 0s; }
-.header-boot-trail .walking-boot:nth-child(2) { animation-delay: 1.0s; margin-top: 8px; }
-.header-boot-trail .walking-boot:nth-child(3) { animation-delay: 2.0s; }
-.header-boot-trail .walking-boot:nth-child(4) { animation-delay: 3.0s; margin-top: 8px; }
-.header-boot-trail .walking-boot:nth-child(5) { animation-delay: 4.0s; }
-.header-boot-trail .walking-boot:nth-child(6) { animation-delay: 5.0s; margin-top: 8px; }
-
-
-
-@keyframes boot-walk {
-  0% { transform: translateX(-100px) translateY(0) rotate(10deg); opacity: 0; }
-  5% { opacity: 0.8; }
-  10% { transform: translateX(10vw) translateY(-5px) rotate(-5deg); }
-  20% { transform: translateX(25vw) translateY(5px) rotate(5deg); }
-  30% { transform: translateX(40vw) translateY(-5px) rotate(-5deg); }
-  40% { transform: translateX(55vw) translateY(5px) rotate(5deg); }
-  50% { transform: translateX(70vw) translateY(-5px) rotate(-5deg); }
-  60% { transform: translateX(85vw) translateY(5px) rotate(5deg); }
-  70% { transform: translateX(105vw) translateY(-5px) rotate(-5deg); opacity: 0.8; }
-  75%, 100% { transform: translateX(120vw); opacity: 0; }
-}
 
 
 

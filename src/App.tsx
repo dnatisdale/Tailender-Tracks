@@ -911,42 +911,37 @@ export default function App() {
       )}
       <div className="app-container">
         {/* HEADER */}
-      <header className="header">
-        <div className="header-boot-trail">
-          {/* Pairs of boots (now using the image via CSS) */}
-          <div className="walking-boot"></div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
-          <div className="walking-boot"></div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
-          <div className="walking-boot"></div>
-          <div className="walking-boot walking-boot--left" style={{ marginTop: 10 }}></div>
-        </div>
-        <div className="header-title">
-          {isProjectView ? (
-            <button className="icon-btn" onClick={goBack} style={{ marginRight: 8 }}>
-              <ChevronLeft size={24} />
-            </button>
-          ) : (
-            <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Tailender Boots" />
-          )}
-          <span>
-            {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
-              'Tailender Tracks'
+        <header className="header">
+          <div className="header-title">
+            {isProjectView ? (
+              <button className="icon-btn" onClick={goBack} style={{ marginRight: 8 }}>
+                <ChevronLeft size={24} />
+              </button>
+            ) : (
+              <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Tailender Toshi and Boots" />
             )}
-          </span>
-        </div>
-        <div className="header-actions">
-          <button className="icon-btn" onClick={toggleDarkMode} title="Toggle Light/Dark">
-            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button className="icon-btn" onClick={handleShare} title="Share App">
-            <Share2 size={20} />
-          </button>
-          <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
-            <User size={20} />
-          </button>
-        </div>
-      </header>
+            {!isProjectView && (
+              <div className="header-dymo-stack">
+                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="header-dymo-label" />
+                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="header-dymo-label header-dymo-label--red" />
+              </div>
+            )}
+            {isProjectView && (
+              <span>{activeView === 'ProjectDetail' ? 'Project Details' : activeView}</span>
+            )}
+          </div>
+          <div className="header-actions">
+            <button className="icon-btn" onClick={toggleDarkMode} title="Toggle Light/Dark">
+              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <button className="icon-btn" onClick={handleShare} title="Share App">
+              <Share2 size={20} />
+            </button>
+            <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
+              <User size={20} />
+            </button>
+          </div>
+        </header>
 
       {/* MAIN CONTENT */}
       <main className="main-content">
