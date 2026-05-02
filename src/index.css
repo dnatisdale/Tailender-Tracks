@@ -209,7 +209,7 @@ body {
 }
 
 .header-dymo-label {
-  height: 6px;
+  height: 15px;
   width: auto;
   display: block;
   filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.35));
