@@ -99,41 +99,15 @@ body {
 }
 
 .dymo-label {
-  font-family: 'Share Tech Mono', 'Courier New', monospace;
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #fff;
+  height: 45px;
+  width: auto;
   display: inline-block;
-  padding: 6px 20px 6px 14px;
-  border-radius: 2px;
   position: relative;
-  overflow: visible; /* Allow shadow to bleed */
-  cursor: default;
-  user-select: none;
+  overflow: visible;
   z-index: 11;
   
-  /* Clean high-contrast tape */
-  background: linear-gradient(
-    180deg,
-    #151515 0%,
-    #101010 48%,
-    #050505 52%,
-    #101010 100%
-  );
-  
-  /* Stamped / Embossed letter effect */
-  text-shadow: 
-    0 -1px 0 rgba(0,0,0,0.8),
-    0 1px 0 rgba(255,255,255,0.4);
-
-  /* 3D Tape Edge and Large Soft Drop Shadow */
-  box-shadow: 
-    /* The 3D edge on right/bottom */
-    3px 3px 0px rgba(0,0,0,0.8),
-    /* The large soft floating shadow */
-    10px 15px 25px rgba(0,0,0,0.5);
+  /* Authentic Large Soft Drop Shadow */
+  box-shadow: 10px 15px 25px rgba(0,0,0,0.5);
 
   /* Tilted up-right */
   transform: rotate(-5deg) translateX(5px);
@@ -141,13 +115,6 @@ body {
 }
 
 .dymo-label--red {
-  background: linear-gradient(
-    180deg,
-    #940414 0%,
-    #820311 48%,
-    #6a020d 52%,
-    #820311 100%
-  );
   /* Tilted down-right */
   transform: rotate(4deg) translateX(-3px);
   z-index: 9;
@@ -168,10 +135,7 @@ body {
 
 /* Splash screen labels — much bigger */
 .dymo-label--splash {
-  font-size: 2.2rem;
-  padding: 8px 24px 8px 16px;
-  letter-spacing: 0.35em;
-  border-radius: 4px;
+  height: 100px;
 }
 
 .splash-dymo {
