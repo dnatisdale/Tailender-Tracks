@@ -1,9 +1,9 @@
-// Tailender Tom Brain v3 - Offline helper for Tailender Tracks
-import brain from './tailender_tom_brain_v3.json';
+// Tailender Toshi Brain v3 - Offline helper for Tailender Tracks
+import brain from './tailender_Toshi_brain_v3.json';
 
-export const TAILENDER_TOM_BRAIN = brain;
+export const TAILENDER_Toshi_BRAIN = brain;
 
-type TomSearchOptions = { stage?: string; limit?: number; easyEnglish?: boolean };
+type ToshiSearchOptions = { stage?: string; limit?: number; easyEnglish?: boolean };
 
 const STOP_WORDS = new Set(['a','an','the','and','or','but','if','then','to','of','in','on','for','with','by','is','are','am','be','been','do','does','did','what','how','why','when','where','who','should','can','could','would','i','we','you','me','my','our','your','it','this','that','there','here','about','help','please']);
 const SYNONYMS: Record<string, string[]> = {
@@ -61,10 +61,10 @@ function scoreItem(words:string[], item:any, stage?:string): number {
   if (item.type==='troubleshooting_flow' && words.some(w=>['fix','problem','wrong','bad','failed','noise','clipping','distorted'].includes(w))) score += 6;
   return score;
 }
-export function getTailenderTomCategories(): string[] {
-  return ['All', ...brain.workflow, 'Forms','Teamwork','Training','Troubleshooting','Audio Quality','Offline','Tom Help','Glossary'];
+export function getTailenderToshiCategories(): string[] {
+  return ['All', ...brain.workflow, 'Forms','Teamwork','Training','Troubleshooting','Audio Quality','Offline','Toshi Help','Glossary'];
 }
-export function searchTailenderTom(query:string, options:TomSearchOptions={}) {
+export function searchTailenderToshi(query:string, options:ToshiSearchOptions={}) {
   const q=normalize(query); if (!q) return [];
   const words=tokenize(q);
   const allItems=[...((brain as any).items||[]),...((brain as any).trainingCards||[]),...((brain as any).troubleshootingFlows||[]),...((brain as any).glossary||[])];
@@ -77,14 +77,14 @@ function formatItemAnswer(item:any, easyEnglish=false): string {
   if (item.type==='glossary') return item.meaning || item.easyEnglish || '';
   return item.answer || item.easyEnglish || 'I found a related item, but it needs a better answer.';
 }
-export function askTailenderTom(query:string, options:TomSearchOptions={}) {
-  const results=searchTailenderTom(query,{...options,limit:options.limit||8});
-  if (!results.length) return {found:false,answer:'I do not have that answer saved offline yet. Mark this question for a trainer or reviewer, and add the answer to Tailender Tom later.',easyEnglish:'I do not know yet. Save this question and ask a trainer.',suggestions:['Ask a trainer','Add this as a new Q&A','Check the project notes'],related:[]};
+export function askTailenderToshi(query:string, options:ToshiSearchOptions={}) {
+  const results=searchTailenderToshi(query,{...options,limit:options.limit||8});
+  if (!results.length) return {found:false,answer:'I do not have that answer saved offline yet. Mark this question for a trainer or reviewer, and add the answer to Tailender Toshi later.',easyEnglish:'I do not know yet. Save this question and ask a trainer.',suggestions:['Ask a trainer','Add this as a new Q&A','Check the project notes'],related:[]};
   const best:any=results[0];
   return {found:true,id:best.id,type:best.type,stage:best.stage,category:best.category||best.title||best.term,question:best.question||best.title||best.term,answer:formatItemAnswer(best,!!options.easyEnglish),easyEnglish:best.easyEnglish||formatItemAnswer(best,true),actions:best.actions||[],caution:best.caution||'',related:results.slice(1,5).map((r:any)=>({id:r.id,type:r.type,stage:r.stage,label:r.question||r.title||r.term}))};
 }
-export function getTomBrainStats() { return (brain as any).counts; }
-export function getSuggestedTomQuestions(stage='All'): string[] {
+export function getToshiBrainStats() { return (brain as any).counts; }
+export function getSuggestedToshiQuestions(stage='All'): string[] {
   const stageNorm=normalize(stage);
   const pool=((brain as any).items||[]).filter((x:any)=>stageNorm==='all'||normalize(x.stage)===stageNorm).slice(0,12).map((x:any)=>x.question);
   return pool.length ? pool : ['How do I know this is the right heart language?','What is room tone?','What do I do if the audio clips?','What goes in a submission package?','How can we share without internet?'];

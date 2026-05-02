@@ -1,5 +1,5 @@
 {
-  "name": "Tailender Tom Brain",
+  "name": "Tailender Toshi Brain",
   "version": "0.3.0",
   "created": "2026-05-01T17:26:16.795835+00:00",
   "app": "Tailender Tracks",
@@ -13,7 +13,7 @@
     "Share"
   ],
   "designNotes": [
-    "Tom should be practical: answer, coach, troubleshoot, route to forms, and admit uncertainty.",
+    "Toshi should be practical: answer, coach, troubleshoot, route to forms, and admit uncertainty.",
     "The database uses neutral Christian field-recording wording rather than GRN-only form names.",
     "The PWA should search this database offline first."
   ],
@@ -32,7 +32,7 @@
   },
   "items": [
     {
-      "id": "tomqa_0124",
+      "id": "Toshiqa_0124",
       "type": "qa",
       "stage": "Research",
       "category": "Language data",
@@ -55,7 +55,7 @@
       "sourceHint": "Research phase; finding and verifying new speech communities"
     },
     {
-      "id": "tomqa_0001",
+      "id": "Toshiqa_0001",
       "type": "qa",
       "stage": "Research",
       "category": "Heart language",
@@ -77,7 +77,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0002",
+      "id": "Toshiqa_0002",
       "type": "qa",
       "stage": "Research",
       "category": "Heart language",
@@ -97,7 +97,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0003",
+      "id": "Toshiqa_0003",
       "type": "qa",
       "stage": "Research",
       "category": "Dialect",
@@ -118,7 +118,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0004",
+      "id": "Toshiqa_0004",
       "type": "qa",
       "stage": "Research",
       "category": "Dialect",
@@ -139,7 +139,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0005",
+      "id": "Toshiqa_0005",
       "type": "qa",
       "stage": "Research",
       "category": "Language data",
@@ -161,7 +161,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0006",
+      "id": "Toshiqa_0006",
       "type": "qa",
       "stage": "Research",
       "category": "Language data",
@@ -182,7 +182,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0007",
+      "id": "Toshiqa_0007",
       "type": "qa",
       "stage": "Research",
       "category": "Existing resources",
@@ -203,7 +203,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0008",
+      "id": "Toshiqa_0008",
       "type": "qa",
       "stage": "Research",
       "category": "Existing resources",
@@ -224,7 +224,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0009",
+      "id": "Toshiqa_0009",
       "type": "qa",
       "stage": "Research",
       "category": "Local verification",
@@ -244,7 +244,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0010",
+      "id": "Toshiqa_0010",
       "type": "qa",
       "stage": "Research",
       "category": "Cultural bridges",
@@ -264,7 +264,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0011",
+      "id": "Toshiqa_0011",
       "type": "qa",
       "stage": "Research",
       "category": "Cultural sensitivity",
@@ -284,7 +284,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0012",
+      "id": "Toshiqa_0012",
       "type": "qa",
       "stage": "Research",
       "category": "Research proof",
@@ -304,7 +304,7 @@
       "sourceHint": "Research phase; heart-language and local verification principles"
     },
     {
-      "id": "tomqa_0013",
+      "id": "Toshiqa_0013",
       "type": "qa",
       "stage": "Plan",
       "category": "Script",
@@ -325,7 +325,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0014",
+      "id": "Toshiqa_0014",
       "type": "qa",
       "stage": "Plan",
       "category": "Script",
@@ -345,7 +345,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0015",
+      "id": "Toshiqa_0015",
       "type": "qa",
       "stage": "Plan",
       "category": "Script",
@@ -365,7 +365,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0016",
+      "id": "Toshiqa_0016",
       "type": "qa",
       "stage": "Plan",
       "category": "Script",
@@ -385,7 +385,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0017",
+      "id": "Toshiqa_0017",
       "type": "qa",
       "stage": "Plan",
       "category": "Theology",
@@ -405,7 +405,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0018",
+      "id": "Toshiqa_0018",
       "type": "qa",
       "stage": "Plan",
       "category": "Culture",
@@ -426,7 +426,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0019",
+      "id": "Toshiqa_0019",
       "type": "qa",
       "stage": "Plan",
       "category": "Permission",
@@ -446,7 +446,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0020",
+      "id": "Toshiqa_0020",
       "type": "qa",
       "stage": "Plan",
       "category": "Consent",
@@ -466,7 +466,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0021",
+      "id": "Toshiqa_0021",
       "type": "qa",
       "stage": "Plan",
       "category": "Speaker",
@@ -486,7 +486,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0022",
+      "id": "Toshiqa_0022",
       "type": "qa",
       "stage": "Plan",
       "category": "Helper",
@@ -506,7 +506,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0023",
+      "id": "Toshiqa_0023",
       "type": "qa",
       "stage": "Plan",
       "category": "Logistics",
@@ -526,7 +526,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0024",
+      "id": "Toshiqa_0024",
       "type": "qa",
       "stage": "Plan",
       "category": "Risk",
@@ -546,7 +546,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0025",
+      "id": "Toshiqa_0025",
       "type": "qa",
       "stage": "Plan",
       "category": "Distribution",
@@ -566,7 +566,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0026",
+      "id": "Toshiqa_0026",
       "type": "qa",
       "stage": "Plan",
       "category": "Plan proof",
@@ -586,7 +586,7 @@
       "sourceHint": "Planning and scripting guidance; permissions and adaptation"
     },
     {
-      "id": "tomqa_0027",
+      "id": "Toshiqa_0027",
       "type": "qa",
       "stage": "Record",
       "category": "Setup",
@@ -606,7 +606,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0028",
+      "id": "Toshiqa_0028",
       "type": "qa",
       "stage": "Record",
       "category": "Room tone",
@@ -626,7 +626,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0029",
+      "id": "Toshiqa_0029",
       "type": "qa",
       "stage": "Record",
       "category": "Levels",
@@ -646,7 +646,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0030",
+      "id": "Toshiqa_0030",
       "type": "qa",
       "stage": "Record",
       "category": "Clipping",
@@ -667,7 +667,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0031",
+      "id": "Toshiqa_0031",
       "type": "qa",
       "stage": "Record",
       "category": "Noise",
@@ -687,7 +687,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0032",
+      "id": "Toshiqa_0032",
       "type": "qa",
       "stage": "Record",
       "category": "Microphone",
@@ -707,7 +707,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0033",
+      "id": "Toshiqa_0033",
       "type": "qa",
       "stage": "Record",
       "category": "Speaker care",
@@ -727,7 +727,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0034",
+      "id": "Toshiqa_0034",
       "type": "qa",
       "stage": "Record",
       "category": "Mistakes",
@@ -747,7 +747,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0035",
+      "id": "Toshiqa_0035",
       "type": "qa",
       "stage": "Record",
       "category": "Takes",
@@ -767,7 +767,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0036",
+      "id": "Toshiqa_0036",
       "type": "qa",
       "stage": "Record",
       "category": "Playback",
@@ -787,7 +787,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0037",
+      "id": "Toshiqa_0037",
       "type": "qa",
       "stage": "Record",
       "category": "Backup",
@@ -807,7 +807,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0038",
+      "id": "Toshiqa_0038",
       "type": "qa",
       "stage": "Record",
       "category": "Record proof",
@@ -827,7 +827,7 @@
       "sourceHint": "Recording phase; standards, documentation, room tone, backup"
     },
     {
-      "id": "tomqa_0039",
+      "id": "Toshiqa_0039",
       "type": "qa",
       "stage": "Program",
       "category": "Organizing",
@@ -847,7 +847,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0040",
+      "id": "Toshiqa_0040",
       "type": "qa",
       "stage": "Program",
       "category": "Tracklist",
@@ -867,7 +867,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0041",
+      "id": "Toshiqa_0041",
       "type": "qa",
       "stage": "Program",
       "category": "Order",
@@ -887,7 +887,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0042",
+      "id": "Toshiqa_0042",
       "type": "qa",
       "stage": "Program",
       "category": "Naming",
@@ -907,7 +907,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0043",
+      "id": "Toshiqa_0043",
       "type": "qa",
       "stage": "Program",
       "category": "Originals",
@@ -927,7 +927,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0044",
+      "id": "Toshiqa_0044",
       "type": "qa",
       "stage": "Program",
       "category": "Metadata",
@@ -947,7 +947,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0045",
+      "id": "Toshiqa_0045",
       "type": "qa",
       "stage": "Program",
       "category": "Quality",
@@ -967,7 +967,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0046",
+      "id": "Toshiqa_0046",
       "type": "qa",
       "stage": "Program",
       "category": "Music",
@@ -988,7 +988,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0047",
+      "id": "Toshiqa_0047",
       "type": "qa",
       "stage": "Program",
       "category": "Version",
@@ -1008,7 +1008,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0048",
+      "id": "Toshiqa_0048",
       "type": "qa",
       "stage": "Program",
       "category": "Program proof",
@@ -1028,7 +1028,7 @@
       "sourceHint": "Program phase; naming, metadata, final product organization"
     },
     {
-      "id": "tomqa_0049",
+      "id": "Toshiqa_0049",
       "type": "qa",
       "stage": "Submit",
       "category": "Meaning",
@@ -1048,7 +1048,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0050",
+      "id": "Toshiqa_0050",
       "type": "qa",
       "stage": "Submit",
       "category": "Package",
@@ -1068,7 +1068,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0051",
+      "id": "Toshiqa_0051",
       "type": "qa",
       "stage": "Submit",
       "category": "Completeness",
@@ -1088,7 +1088,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0052",
+      "id": "Toshiqa_0052",
       "type": "qa",
       "stage": "Submit",
       "category": "Status",
@@ -1108,7 +1108,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0053",
+      "id": "Toshiqa_0053",
       "type": "qa",
       "stage": "Submit",
       "category": "Reviewer",
@@ -1128,7 +1128,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0054",
+      "id": "Toshiqa_0054",
       "type": "qa",
       "stage": "Submit",
       "category": "Corrections",
@@ -1148,7 +1148,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0055",
+      "id": "Toshiqa_0055",
       "type": "qa",
       "stage": "Submit",
       "category": "Large files",
@@ -1168,7 +1168,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0056",
+      "id": "Toshiqa_0056",
       "type": "qa",
       "stage": "Submit",
       "category": "Backup",
@@ -1188,7 +1188,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0057",
+      "id": "Toshiqa_0057",
       "type": "qa",
       "stage": "Submit",
       "category": "Submit proof",
@@ -1208,7 +1208,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0058",
+      "id": "Toshiqa_0058",
       "type": "qa",
       "stage": "Submit",
       "category": "Submit to Share",
@@ -1228,7 +1228,7 @@
       "sourceHint": "Submit phase; complete package, status, distribution thinking"
     },
     {
-      "id": "tomqa_0059",
+      "id": "Toshiqa_0059",
       "type": "qa",
       "stage": "Share",
       "category": "Meaning",
@@ -1248,7 +1248,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0060",
+      "id": "Toshiqa_0060",
       "type": "qa",
       "stage": "Share",
       "category": "Offline",
@@ -1268,7 +1268,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0061",
+      "id": "Toshiqa_0061",
       "type": "qa",
       "stage": "Share",
       "category": "Online",
@@ -1289,7 +1289,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0062",
+      "id": "Toshiqa_0062",
       "type": "qa",
       "stage": "Share",
       "category": "QR code",
@@ -1310,7 +1310,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0063",
+      "id": "Toshiqa_0063",
       "type": "qa",
       "stage": "Share",
       "category": "Church",
@@ -1330,7 +1330,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0064",
+      "id": "Toshiqa_0064",
       "type": "qa",
       "stage": "Share",
       "category": "Listening groups",
@@ -1350,7 +1350,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0065",
+      "id": "Toshiqa_0065",
       "type": "qa",
       "stage": "Share",
       "category": "Feedback",
@@ -1370,7 +1370,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0066",
+      "id": "Toshiqa_0066",
       "type": "qa",
       "stage": "Share",
       "category": "Safety",
@@ -1390,7 +1390,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0067",
+      "id": "Toshiqa_0067",
       "type": "qa",
       "stage": "Share",
       "category": "Ministry result",
@@ -1410,7 +1410,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0068",
+      "id": "Toshiqa_0068",
       "type": "qa",
       "stage": "Share",
       "category": "Share proof",
@@ -1430,7 +1430,7 @@
       "sourceHint": "Submission & distribution guidance; Share added for Christian workflow"
     },
     {
-      "id": "tomqa_0069",
+      "id": "Toshiqa_0069",
       "type": "qa",
       "stage": "Forms",
       "category": "Language & Community Profile",
@@ -1450,7 +1450,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0070",
+      "id": "Toshiqa_0070",
       "type": "qa",
       "stage": "Forms",
       "category": "Recording Project Plan",
@@ -1470,7 +1470,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0071",
+      "id": "Toshiqa_0071",
       "type": "qa",
       "stage": "Forms",
       "category": "Speaker & Helper Consent",
@@ -1490,7 +1490,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0072",
+      "id": "Toshiqa_0072",
       "type": "qa",
       "stage": "Forms",
       "category": "Script & Content Approval",
@@ -1510,7 +1510,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0073",
+      "id": "Toshiqa_0073",
       "type": "qa",
       "stage": "Forms",
       "category": "Recording Session Log",
@@ -1530,7 +1530,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0074",
+      "id": "Toshiqa_0074",
       "type": "qa",
       "stage": "Forms",
       "category": "Audio Program Form",
@@ -1550,7 +1550,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0075",
+      "id": "Toshiqa_0075",
       "type": "qa",
       "stage": "Forms",
       "category": "Rights & Permissions",
@@ -1570,7 +1570,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0076",
+      "id": "Toshiqa_0076",
       "type": "qa",
       "stage": "Forms",
       "category": "Submission Package Checklist",
@@ -1590,7 +1590,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0077",
+      "id": "Toshiqa_0077",
       "type": "qa",
       "stage": "Forms",
       "category": "Sharing & Distribution Plan",
@@ -1610,7 +1610,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0078",
+      "id": "Toshiqa_0078",
       "type": "qa",
       "stage": "Forms",
       "category": "Field Feedback Form",
@@ -1630,7 +1630,7 @@
       "sourceHint": "Neutral form pack placement"
     },
     {
-      "id": "tomqa_0079",
+      "id": "Toshiqa_0079",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1651,7 +1651,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0080",
+      "id": "Toshiqa_0080",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1672,7 +1672,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0081",
+      "id": "Toshiqa_0081",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1693,7 +1693,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0082",
+      "id": "Toshiqa_0082",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1714,7 +1714,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0083",
+      "id": "Toshiqa_0083",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1734,7 +1734,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0084",
+      "id": "Toshiqa_0084",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Audio",
@@ -1754,19 +1754,19 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0085",
+      "id": "Toshiqa_0085",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "App",
       "intent": "app",
-      "question": "Tailender Tom gives the wrong answer. What do I do?",
+      "question": "Tailender Toshi gives the wrong answer. What do I do?",
       "answer": "Try a shorter question with key words like room tone, consent, submit, or heart language. If still wrong, save the question for review and add a better Q&A later.",
       "easyEnglish": "Try a shorter question with key words like room tone, consent, submit, or heart language. Use the checklist. Ask a trusted helper if you are not sure.",
       "actions": [
         "Save unanswered question"
       ],
       "tags": [
-        "Tom",
+        "Toshi",
         "search"
       ],
       "related": [],
@@ -1774,12 +1774,12 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0086",
+      "id": "Toshiqa_0086",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "App",
       "intent": "app",
-      "question": "Tailender Tom says he does not know. What now?",
+      "question": "Tailender Toshi says he does not know. What now?",
       "answer": "That means the offline database has no good match yet. Save the question, ask a trainer or reviewer, then add the approved answer to the database.",
       "easyEnglish": "That means the offline database has no good match yet. Use the checklist. Ask a trusted helper if you are not sure.",
       "actions": [
@@ -1794,7 +1794,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0087",
+      "id": "Toshiqa_0087",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "App",
@@ -1815,7 +1815,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0088",
+      "id": "Toshiqa_0088",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "App",
@@ -1835,7 +1835,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0089",
+      "id": "Toshiqa_0089",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "App",
@@ -1856,7 +1856,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0090",
+      "id": "Toshiqa_0090",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Git",
@@ -1877,7 +1877,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0091",
+      "id": "Toshiqa_0091",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Files",
@@ -1897,7 +1897,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0092",
+      "id": "Toshiqa_0092",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Storage",
@@ -1917,7 +1917,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0093",
+      "id": "Toshiqa_0093",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Offline",
@@ -1937,7 +1937,7 @@
       "sourceHint": "Troubleshooting and offline-first training principles"
     },
     {
-      "id": "tomqa_0094",
+      "id": "Toshiqa_0094",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Roles",
@@ -1957,7 +1957,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0095",
+      "id": "Toshiqa_0095",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Roles",
@@ -1977,7 +1977,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0096",
+      "id": "Toshiqa_0096",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Handoff",
@@ -1997,7 +1997,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0097",
+      "id": "Toshiqa_0097",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Speaker care",
@@ -2017,7 +2017,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0098",
+      "id": "Toshiqa_0098",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Backup",
@@ -2037,7 +2037,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0099",
+      "id": "Toshiqa_0099",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Reviewer",
@@ -2057,7 +2057,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0100",
+      "id": "Toshiqa_0100",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Mentoring",
@@ -2077,7 +2077,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0101",
+      "id": "Toshiqa_0101",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Stress",
@@ -2097,7 +2097,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0102",
+      "id": "Toshiqa_0102",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Follow-up",
@@ -2117,7 +2117,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0103",
+      "id": "Toshiqa_0103",
       "type": "qa",
       "stage": "Teamwork",
       "category": "Team proof",
@@ -2137,7 +2137,7 @@
       "sourceHint": "Team-based ministry, shared strengths, handoffs, readiness checks"
     },
     {
-      "id": "tomqa_0104",
+      "id": "Toshiqa_0104",
       "type": "qa",
       "stage": "Research",
       "category": "Heart language",
@@ -2157,7 +2157,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0105",
+      "id": "Toshiqa_0105",
       "type": "qa",
       "stage": "Research",
       "category": "Population",
@@ -2177,7 +2177,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0106",
+      "id": "Toshiqa_0106",
       "type": "qa",
       "stage": "Research",
       "category": "Priority",
@@ -2197,7 +2197,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0107",
+      "id": "Toshiqa_0107",
       "type": "qa",
       "stage": "Plan",
       "category": "Audience",
@@ -2217,7 +2217,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0108",
+      "id": "Toshiqa_0108",
       "type": "qa",
       "stage": "Plan",
       "category": "Children",
@@ -2237,7 +2237,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0109",
+      "id": "Toshiqa_0109",
       "type": "qa",
       "stage": "Plan",
       "category": "Testimony",
@@ -2258,7 +2258,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0110",
+      "id": "Toshiqa_0110",
       "type": "qa",
       "stage": "Record",
       "category": "Breaks",
@@ -2278,7 +2278,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0111",
+      "id": "Toshiqa_0111",
       "type": "qa",
       "stage": "Record",
       "category": "Multiple speakers",
@@ -2298,7 +2298,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0112",
+      "id": "Toshiqa_0112",
       "type": "qa",
       "stage": "Program",
       "category": "Long tracks",
@@ -2318,7 +2318,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0113",
+      "id": "Toshiqa_0113",
       "type": "qa",
       "stage": "Program",
       "category": "Final check",
@@ -2338,7 +2338,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0114",
+      "id": "Toshiqa_0114",
       "type": "qa",
       "stage": "Submit",
       "category": "Physical package",
@@ -2358,7 +2358,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0115",
+      "id": "Toshiqa_0115",
       "type": "qa",
       "stage": "Submit",
       "category": "Correction notes",
@@ -2378,7 +2378,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0116",
+      "id": "Toshiqa_0116",
       "type": "qa",
       "stage": "Share",
       "category": "WhatsApp",
@@ -2399,7 +2399,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0117",
+      "id": "Toshiqa_0117",
       "type": "qa",
       "stage": "Share",
       "category": "Radio",
@@ -2419,7 +2419,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0118",
+      "id": "Toshiqa_0118",
       "type": "qa",
       "stage": "Share",
       "category": "Speaker box",
@@ -2439,7 +2439,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0119",
+      "id": "Toshiqa_0119",
       "type": "qa",
       "stage": "Training",
       "category": "Short lessons",
@@ -2459,7 +2459,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0120",
+      "id": "Toshiqa_0120",
       "type": "qa",
       "stage": "Training",
       "category": "Practice",
@@ -2479,7 +2479,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0121",
+      "id": "Toshiqa_0121",
       "type": "qa",
       "stage": "Offline",
       "category": "USB kit",
@@ -2499,7 +2499,7 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0122",
+      "id": "Toshiqa_0122",
       "type": "qa",
       "stage": "Offline",
       "category": "Sync later",
@@ -2519,19 +2519,19 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0123",
+      "id": "Toshiqa_0123",
       "type": "qa",
       "stage": "Troubleshooting",
       "category": "Too many questions",
       "intent": "too_many_questions",
-      "question": "Tom gives too many related answers. What should I do?",
+      "question": "Toshi gives too many related answers. What should I do?",
       "answer": "Use a stage filter like Record or Submit, and ask with fewer words: 'room tone', 'consent', 'file naming', or 'submit package'.",
       "easyEnglish": "Use a stage filter like Record or Submit, and ask with fewer words: 'room tone', 'consent', 'file naming', or 'submit package'. Use the checklist. Ask a trusted helper if you are not sure.",
       "actions": [
         "Use stage filter"
       ],
       "tags": [
-        "Tom",
+        "Toshi",
         "search"
       ],
       "related": [],
@@ -2539,61 +2539,61 @@
       "sourceHint": "Expanded practical FAQ"
     },
     {
-      "id": "tomqa_0125",
+      "id": "Toshiqa_0125",
       "type": "qa",
-      "stage": "Tom Help",
-      "category": "Asking Tom",
-      "intent": "asking_tom",
-      "question": "How should I ask Tailender Tom a question?",
+      "stage": "Toshi Help",
+      "category": "Asking Toshi",
+      "intent": "asking_Toshi",
+      "question": "How should I ask Tailender Toshi a question?",
       "answer": "Ask one practical question at a time. Include the stage if you know it, such as Record, Program, Submit, or Share. Short questions like 'room tone', 'speaker consent', or 'upload failed' often work better than long paragraphs.",
       "easyEnglish": "Ask one practical question at a time. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
       "tags": [
-        "asking tom",
-        "tom help"
+        "asking Toshi",
+        "Toshi help"
       ],
       "related": [],
       "caution": "",
-      "sourceHint": "Tailender Tom UX improvement."
+      "sourceHint": "Tailender Toshi UX improvement."
     },
     {
-      "id": "tomqa_0126",
+      "id": "Toshiqa_0126",
       "type": "qa",
-      "stage": "Tom Help",
-      "category": "Tom limits",
-      "intent": "tom_limits",
-      "question": "Can Tailender Tom make decisions for me?",
-      "answer": "Tom can guide, checklist, and troubleshoot, but people must make ministry, safety, theological, and permission decisions. Use Tom to remember steps, then ask a qualified local leader, reviewer, or trainer when judgment is needed.",
-      "easyEnglish": "Tom can guide, checklist, and troubleshoot, but people must make ministry, safety, theological, and permission decisions. Ask a trusted local helper or trainer if you are not sure.",
+      "stage": "Toshi Help",
+      "category": "Toshi limits",
+      "intent": "Toshi_limits",
+      "question": "Can Tailender Toshi make decisions for me?",
+      "answer": "Toshi can guide, checklist, and troubleshoot, but people must make ministry, safety, theological, and permission decisions. Use Toshi to remember steps, then ask a qualified local leader, reviewer, or trainer when judgment is needed.",
+      "easyEnglish": "Toshi can guide, checklist, and troubleshoot, but people must make ministry, safety, theological, and permission decisions. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
       "tags": [
-        "tom limits",
-        "tom help"
+        "Toshi limits",
+        "Toshi help"
       ],
       "related": [],
       "caution": "",
-      "sourceHint": "Tailender Tom UX improvement."
+      "sourceHint": "Tailender Toshi UX improvement."
     },
     {
-      "id": "tomqa_0127",
+      "id": "Toshiqa_0127",
       "type": "qa",
-      "stage": "Tom Help",
+      "stage": "Toshi Help",
       "category": "Uncertainty",
       "intent": "uncertainty",
-      "question": "What should Tom do when he is unsure?",
-      "answer": "Tom should say he is unsure, give the safest next step, and invite the user to save the question for a trainer. He should not pretend to know a field, language, or permission rule he cannot verify.",
-      "easyEnglish": "Tom should say he is unsure, give the safest next step, and invite the user to save the question for a trainer. Ask a trusted local helper or trainer if you are not sure.",
+      "question": "What should Toshi do when he is unsure?",
+      "answer": "Toshi should say he is unsure, give the safest next step, and invite the user to save the question for a trainer. He should not pretend to know a field, language, or permission rule he cannot verify.",
+      "easyEnglish": "Toshi should say he is unsure, give the safest next step, and invite the user to save the question for a trainer. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
       "tags": [
         "uncertainty",
-        "tom help"
+        "Toshi help"
       ],
       "related": [],
       "caution": "",
-      "sourceHint": "Tailender Tom UX improvement."
+      "sourceHint": "Tailender Toshi UX improvement."
     },
     {
-      "id": "tomqa_0128",
+      "id": "Toshiqa_0128",
       "type": "qa",
       "stage": "Research",
       "category": "Before language choice",
@@ -2611,7 +2611,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0129",
+      "id": "Toshiqa_0129",
       "type": "qa",
       "stage": "Research",
       "category": "Interview questions",
@@ -2629,7 +2629,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0130",
+      "id": "Toshiqa_0130",
       "type": "qa",
       "stage": "Research",
       "category": "Wrong dialect",
@@ -2647,7 +2647,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0131",
+      "id": "Toshiqa_0131",
       "type": "qa",
       "stage": "Research",
       "category": "Rumors",
@@ -2665,7 +2665,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0132",
+      "id": "Toshiqa_0132",
       "type": "qa",
       "stage": "Research",
       "category": "Prior ministry",
@@ -2683,7 +2683,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0133",
+      "id": "Toshiqa_0133",
       "type": "qa",
       "stage": "Research",
       "category": "Ministry opportunity",
@@ -2701,7 +2701,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0134",
+      "id": "Toshiqa_0134",
       "type": "qa",
       "stage": "Research",
       "category": "Multiple names",
@@ -2719,7 +2719,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0135",
+      "id": "Toshiqa_0135",
       "type": "qa",
       "stage": "Research",
       "category": "Multilingual community",
@@ -2737,7 +2737,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0136",
+      "id": "Toshiqa_0136",
       "type": "qa",
       "stage": "Research",
       "category": "Word lists",
@@ -2755,7 +2755,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0137",
+      "id": "Toshiqa_0137",
       "type": "qa",
       "stage": "Research",
       "category": "Language shame",
@@ -2773,7 +2773,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking."
     },
     {
-      "id": "tomqa_0138",
+      "id": "Toshiqa_0138",
       "type": "qa",
       "stage": "Plan",
       "category": "Research to plan",
@@ -2791,7 +2791,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0139",
+      "id": "Toshiqa_0139",
       "type": "qa",
       "stage": "Plan",
       "category": "Provisional plan",
@@ -2809,7 +2809,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0140",
+      "id": "Toshiqa_0140",
       "type": "qa",
       "stage": "Plan",
       "category": "Script choice",
@@ -2827,7 +2827,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0141",
+      "id": "Toshiqa_0141",
       "type": "qa",
       "stage": "Plan",
       "category": "Oral listeners",
@@ -2845,7 +2845,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0142",
+      "id": "Toshiqa_0142",
       "type": "qa",
       "stage": "Plan",
       "category": "Script too long",
@@ -2863,7 +2863,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0143",
+      "id": "Toshiqa_0143",
       "type": "qa",
       "stage": "Plan",
       "category": "No local word",
@@ -2881,14 +2881,14 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0144",
+      "id": "Toshiqa_0144",
       "type": "qa",
       "stage": "Plan",
       "category": "Theology uncertainty",
       "intent": "theology_uncertainty",
-      "question": "How should Tom handle theological uncertainty?",
-      "answer": "Tom should not settle doctrine. He should flag the issue, preserve the question, and direct the team to theological reviewers, Scripture references, and trusted local church partners.",
-      "easyEnglish": "Tom should not settle doctrine. Ask a trusted local helper or trainer if you are not sure.",
+      "question": "How should Toshi handle theological uncertainty?",
+      "answer": "Toshi should not settle doctrine. He should flag the issue, preserve the question, and direct the team to theological reviewers, Scripture references, and trusted local church partners.",
+      "easyEnglish": "Toshi should not settle doctrine. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
       "tags": [
         "theology uncertainty",
@@ -2899,7 +2899,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0145",
+      "id": "Toshiqa_0145",
       "type": "qa",
       "stage": "Plan",
       "category": "Testimony vs story",
@@ -2917,7 +2917,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0146",
+      "id": "Toshiqa_0146",
       "type": "qa",
       "stage": "Plan",
       "category": "Partner agreement",
@@ -2935,7 +2935,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0147",
+      "id": "Toshiqa_0147",
       "type": "qa",
       "stage": "Plan",
       "category": "Speaker care planning",
@@ -2953,7 +2953,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0148",
+      "id": "Toshiqa_0148",
       "type": "qa",
       "stage": "Plan",
       "category": "Non-reader speaker",
@@ -2971,7 +2971,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0149",
+      "id": "Toshiqa_0149",
       "type": "qa",
       "stage": "Plan",
       "category": "Location planning",
@@ -2989,7 +2989,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0150",
+      "id": "Toshiqa_0150",
       "type": "qa",
       "stage": "Record",
       "category": "Slate",
@@ -3007,7 +3007,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0151",
+      "id": "Toshiqa_0151",
       "type": "qa",
       "stage": "Record",
       "category": "Headphone listen",
@@ -3025,7 +3025,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0152",
+      "id": "Toshiqa_0152",
       "type": "qa",
       "stage": "Record",
       "category": "Natural speech",
@@ -3043,7 +3043,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0153",
+      "id": "Toshiqa_0153",
       "type": "qa",
       "stage": "Record",
       "category": "Mic distance",
@@ -3061,7 +3061,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0154",
+      "id": "Toshiqa_0154",
       "type": "qa",
       "stage": "Record",
       "category": "Interruptions",
@@ -3079,7 +3079,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0155",
+      "id": "Toshiqa_0155",
       "type": "qa",
       "stage": "Record",
       "category": "Generator noise",
@@ -3097,7 +3097,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0156",
+      "id": "Toshiqa_0156",
       "type": "qa",
       "stage": "Record",
       "category": "Fast speaker",
@@ -3115,7 +3115,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0157",
+      "id": "Toshiqa_0157",
       "type": "qa",
       "stage": "Record",
       "category": "Monitoring",
@@ -3133,7 +3133,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0158",
+      "id": "Toshiqa_0158",
       "type": "qa",
       "stage": "Record",
       "category": "Retake now",
@@ -3151,7 +3151,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0159",
+      "id": "Toshiqa_0159",
       "type": "qa",
       "stage": "Record",
       "category": "Many takes",
@@ -3169,7 +3169,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0160",
+      "id": "Toshiqa_0160",
       "type": "qa",
       "stage": "Record",
       "category": "End session",
@@ -3187,7 +3187,7 @@
       "sourceHint": "ARTC2018/curriculum: equipment care, recording methods, language helpers, script/culture, file management, audio quality, editing, uploading."
     },
     {
-      "id": "tomqa_0161",
+      "id": "Toshiqa_0161",
       "type": "qa",
       "stage": "Program",
       "category": "File types",
@@ -3205,7 +3205,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0162",
+      "id": "Toshiqa_0162",
       "type": "qa",
       "stage": "Program",
       "category": "Folders",
@@ -3223,7 +3223,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0163",
+      "id": "Toshiqa_0163",
       "type": "qa",
       "stage": "Program",
       "category": "README",
@@ -3241,7 +3241,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0164",
+      "id": "Toshiqa_0164",
       "type": "qa",
       "stage": "Program",
       "category": "Mismatch",
@@ -3259,7 +3259,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0165",
+      "id": "Toshiqa_0165",
       "type": "qa",
       "stage": "Program",
       "category": "Bad takes",
@@ -3277,7 +3277,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0166",
+      "id": "Toshiqa_0166",
       "type": "qa",
       "stage": "Program",
       "category": "Future reuse",
@@ -3295,7 +3295,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0167",
+      "id": "Toshiqa_0167",
       "type": "qa",
       "stage": "Program",
       "category": "Second checker",
@@ -3313,7 +3313,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0168",
+      "id": "Toshiqa_0168",
       "type": "qa",
       "stage": "Program",
       "category": "QC",
@@ -3331,14 +3331,14 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0169",
+      "id": "Toshiqa_0169",
       "type": "qa",
       "stage": "Submit",
       "category": "Status help",
       "intent": "status_help",
-      "question": "How should Tom help with submission status?",
-      "answer": "Tom should help users mark Draft, Ready, Submitted, Needs Correction, Approved, Published, or Archived, and remind them to write who has the package now.",
-      "easyEnglish": "Tom should help users mark Draft, Ready, Submitted, Needs Correction, Approved, Published, or Archived, and remind them to write who has the package now. Ask a trusted local helper or trainer if you are not sure.",
+      "question": "How should Toshi help with submission status?",
+      "answer": "Toshi should help users mark Draft, Ready, Submitted, Needs Correction, Approved, Published, or Archived, and remind them to write who has the package now.",
+      "easyEnglish": "Toshi should help users mark Draft, Ready, Submitted, Needs Correction, Approved, Published, or Archived, and remind them to write who has the package now. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
       "tags": [
         "status help",
@@ -3349,7 +3349,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0170",
+      "id": "Toshiqa_0170",
       "type": "qa",
       "stage": "Submit",
       "category": "Reviewer friendly",
@@ -3367,7 +3367,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0171",
+      "id": "Toshiqa_0171",
       "type": "qa",
       "stage": "Submit",
       "category": "After handoff",
@@ -3385,7 +3385,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0172",
+      "id": "Toshiqa_0172",
       "type": "qa",
       "stage": "Submit",
       "category": "Duplicate submit",
@@ -3403,7 +3403,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0173",
+      "id": "Toshiqa_0173",
       "type": "qa",
       "stage": "Submit",
       "category": "Error after submit",
@@ -3421,7 +3421,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0174",
+      "id": "Toshiqa_0174",
       "type": "qa",
       "stage": "Submit",
       "category": "Missing form",
@@ -3439,7 +3439,7 @@
       "sourceHint": "Rekordo lifecycle: Research, Plan, Record, Program, Submit; forms, naming, uploader, status tracking. Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0175",
+      "id": "Toshiqa_0175",
       "type": "qa",
       "stage": "Share",
       "category": "Best method",
@@ -3457,7 +3457,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0176",
+      "id": "Toshiqa_0176",
       "type": "qa",
       "stage": "Share",
       "category": "QR not enough",
@@ -3475,7 +3475,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0177",
+      "id": "Toshiqa_0177",
       "type": "qa",
       "stage": "Share",
       "category": "Listening group leader",
@@ -3493,7 +3493,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0178",
+      "id": "Toshiqa_0178",
       "type": "qa",
       "stage": "Share",
       "category": "File dump",
@@ -3511,7 +3511,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0179",
+      "id": "Toshiqa_0179",
       "type": "qa",
       "stage": "Share",
       "category": "After listening",
@@ -3529,7 +3529,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0180",
+      "id": "Toshiqa_0180",
       "type": "qa",
       "stage": "Share",
       "category": "Accent rejected",
@@ -3547,7 +3547,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0181",
+      "id": "Toshiqa_0181",
       "type": "qa",
       "stage": "Share",
       "category": "Discipleship",
@@ -3565,7 +3565,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0182",
+      "id": "Toshiqa_0182",
       "type": "qa",
       "stage": "Share",
       "category": "Church planting",
@@ -3583,7 +3583,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0183",
+      "id": "Toshiqa_0183",
       "type": "qa",
       "stage": "Share",
       "category": "Stop sharing",
@@ -3601,7 +3601,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0184",
+      "id": "Toshiqa_0184",
       "type": "qa",
       "stage": "Training",
       "category": "Beginner path",
@@ -3619,12 +3619,12 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0185",
+      "id": "Toshiqa_0185",
       "type": "qa",
       "stage": "Training",
       "category": "Teaching method",
       "intent": "teaching_method",
-      "question": "How should a trainer teach Tom’s content?",
+      "question": "How should a trainer teach Toshi’s content?",
       "answer": "Use show, try, review, repeat. Keep lessons short, use real field examples, let learners practice, and ask them to explain the steps back from memory.",
       "easyEnglish": "Use show, try, review, repeat. Ask a trusted local helper or trainer if you are not sure.",
       "actions": [],
@@ -3637,7 +3637,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0186",
+      "id": "Toshiqa_0186",
       "type": "qa",
       "stage": "Training",
       "category": "Evaluate readiness",
@@ -3655,7 +3655,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0187",
+      "id": "Toshiqa_0187",
       "type": "qa",
       "stage": "Training",
       "category": "Veterans",
@@ -3673,7 +3673,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution."
     },
     {
-      "id": "tomqa_0188",
+      "id": "Toshiqa_0188",
       "type": "qa",
       "stage": "Offline",
       "category": "Database use",
@@ -3691,7 +3691,7 @@
       "sourceHint": "Field Manual v5: short modules, offline kits, team roles, workflow, field readiness, GRID, submission/distribution. Training Master Plan: heart language checklist, offline alternatives, cultural bridge, PLECK adaptation, room tone, USB Academy."
     },
     {
-      "id": "tomqa_0189",
+      "id": "Toshiqa_0189",
       "type": "qa",
       "stage": "Offline",
       "category": "Systems training",
@@ -3711,7 +3711,7 @@
   ],
   "trainingCards": [
     {
-      "id": "tomcard_0001",
+      "id": "Toshicard_0001",
       "type": "training_card",
       "stage": "Research",
       "title": "Confirm the Heart Language",
@@ -3732,7 +3732,7 @@
       "easyEnglish": "Learn this one job: Trainee can explain which language or dialect should be recorded and why."
     },
     {
-      "id": "tomcard_0002",
+      "id": "Toshicard_0002",
       "type": "training_card",
       "stage": "Research",
       "title": "Find Cultural Bridges",
@@ -3752,7 +3752,7 @@
       "easyEnglish": "Learn this one job: Trainee can identify local bridges that may help a script communicate clearly."
     },
     {
-      "id": "tomcard_0003",
+      "id": "Toshicard_0003",
       "type": "training_card",
       "stage": "Plan",
       "title": "Adapt a Script Naturally",
@@ -3773,7 +3773,7 @@
       "easyEnglish": "Learn this one job: Trainee can adapt a script for natural speech while protecting meaning."
     },
     {
-      "id": "tomcard_0004",
+      "id": "Toshicard_0004",
       "type": "training_card",
       "stage": "Plan",
       "title": "Prepare Permissions and Consent",
@@ -3794,7 +3794,7 @@
       "easyEnglish": "Learn this one job: Trainee can explain what permissions are needed before recording."
     },
     {
-      "id": "tomcard_0005",
+      "id": "Toshicard_0005",
       "type": "training_card",
       "stage": "Record",
       "title": "Record a Clean Test",
@@ -3816,7 +3816,7 @@
       "easyEnglish": "Learn this one job: Trainee can set up, test, listen, adjust, and retest before a real session."
     },
     {
-      "id": "tomcard_0006",
+      "id": "Toshicard_0006",
       "type": "training_card",
       "stage": "Record",
       "title": "Protect the Speaker",
@@ -3837,7 +3837,7 @@
       "easyEnglish": "Learn this one job: Trainee can coach and correct a speaker without shame."
     },
     {
-      "id": "tomcard_0007",
+      "id": "Toshicard_0007",
       "type": "training_card",
       "stage": "Program",
       "title": "Build a Program Tracklist",
@@ -3860,7 +3860,7 @@
       "easyEnglish": "Learn this one job: Trainee can organize tracks into a complete, understandable program."
     },
     {
-      "id": "tomcard_0008",
+      "id": "Toshicard_0008",
       "type": "training_card",
       "stage": "Submit",
       "title": "Prepare a Complete Package",
@@ -3882,7 +3882,7 @@
       "easyEnglish": "Learn this one job: Trainee can make a package that another team can review without confusion."
     },
     {
-      "id": "tomcard_0009",
+      "id": "Toshicard_0009",
       "type": "training_card",
       "stage": "Share",
       "title": "Plan Listener Access",
@@ -3903,7 +3903,7 @@
       "easyEnglish": "Learn this one job: Trainee can choose sharing methods that fit the listeners."
     },
     {
-      "id": "tomcard_0010",
+      "id": "Toshicard_0010",
       "type": "training_card",
       "stage": "Teamwork",
       "title": "Use Team Roles Wisely",
@@ -3924,7 +3924,7 @@
       "easyEnglish": "Learn this one job: Trainee can assign workflow tasks to people, not just hope someone does them."
     },
     {
-      "id": "tomcard_0011",
+      "id": "Toshicard_0011",
       "type": "training_card",
       "stage": "Offline",
       "title": "Prepare a Rugged Offline Kit",
@@ -3945,7 +3945,7 @@
       "easyEnglish": "Learn this one job: Trainee can work when internet fails."
     },
     {
-      "id": "tomcard_0012",
+      "id": "Toshicard_0012",
       "type": "training_card",
       "stage": "Troubleshooting",
       "title": "Diagnose Bad Audio Quickly",
@@ -3966,7 +3966,7 @@
       "easyEnglish": "Learn this one job: Trainee can identify the top recording problems and first fixes."
     },
     {
-      "id": "tomcard_0013",
+      "id": "Toshicard_0013",
       "type": "training_card",
       "stage": "Research",
       "title": "Interview for Heart Language",
@@ -3987,7 +3987,7 @@
       "easyEnglish": "Learn this skill: Trainee can ask simple local questions that reveal mother tongue, trade language, dialect, and listener acceptance."
     },
     {
-      "id": "tomcard_0014",
+      "id": "Toshicard_0014",
       "type": "training_card",
       "stage": "Plan",
       "title": "Choose Content for Oral Listeners",
@@ -4008,7 +4008,7 @@
       "easyEnglish": "Learn this skill: Trainee can choose and shape content for listeners who prefer spoken communication."
     },
     {
-      "id": "tomcard_0015",
+      "id": "Toshicard_0015",
       "type": "training_card",
       "stage": "Record",
       "title": "Run a Clean Field Session",
@@ -4032,7 +4032,7 @@
       "easyEnglish": "Learn this skill: Trainee can run a simple session from setup through backup."
     },
     {
-      "id": "tomcard_0016",
+      "id": "Toshicard_0016",
       "type": "training_card",
       "stage": "Program",
       "title": "Name Files So Others Understand",
@@ -4054,7 +4054,7 @@
       "easyEnglish": "Learn this skill: Trainee can create names that help future workers find and trust files."
     },
     {
-      "id": "tomcard_0017",
+      "id": "Toshicard_0017",
       "type": "training_card",
       "stage": "Submit",
       "title": "Do a Reviewer-Friendly Handoff",
@@ -4076,7 +4076,7 @@
       "easyEnglish": "Learn this skill: Trainee can hand off files so a reviewer does not have to guess."
     },
     {
-      "id": "tomcard_0018",
+      "id": "Toshicard_0018",
       "type": "training_card",
       "stage": "Share",
       "title": "Collect Useful Feedback",
@@ -4098,7 +4098,7 @@
       "easyEnglish": "Learn this skill: Trainee can learn whether the recording actually helped listeners."
     },
     {
-      "id": "tomcard_0019",
+      "id": "Toshicard_0019",
       "type": "training_card",
       "stage": "Teamwork",
       "title": "Map Handoffs Before Work Starts",
@@ -4119,17 +4119,17 @@
       "easyEnglish": "Learn this skill: Trainee can see where projects usually stall."
     },
     {
-      "id": "tomcard_0020",
+      "id": "Toshicard_0020",
       "type": "training_card",
-      "stage": "Tom Help",
-      "title": "Improve Tailender Tom Answers",
+      "stage": "Toshi Help",
+      "title": "Improve Tailender Toshi Answers",
       "goal": "User can add better Q&A safely after field learning.",
       "steps": [
         "Save unanswered questions.",
         "Ask a trainer or reviewer.",
         "Write a short approved answer.",
         "Add tags and stage.",
-        "Test the question in Tom.",
+        "Test the question in Toshi.",
         "Keep old versions backed up."
       ],
       "commonMistakes": [
@@ -4143,7 +4143,7 @@
   ],
   "troubleshootingFlows": [
     {
-      "id": "tomflow_0001",
+      "id": "Toshiflow_0001",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Distorted or clipped audio",
@@ -4160,7 +4160,7 @@
       "stopWhen": "Stop when a clean retake is captured."
     },
     {
-      "id": "tomflow_0002",
+      "id": "Toshiflow_0002",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Too much background noise",
@@ -4176,7 +4176,7 @@
       "stopWhen": "Stop when the test sounds clear enough for ministry use."
     },
     {
-      "id": "tomflow_0003",
+      "id": "Toshiflow_0003",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Wind noise",
@@ -4192,7 +4192,7 @@
       "stopWhen": "Stop when wind no longer distracts from the voice."
     },
     {
-      "id": "tomflow_0004",
+      "id": "Toshiflow_0004",
       "type": "troubleshooting_flow",
       "stage": "Record",
       "title": "Nervous speaker",
@@ -4208,7 +4208,7 @@
       "stopWhen": "Stop when the speaker can continue calmly."
     },
     {
-      "id": "tomflow_0005",
+      "id": "Toshiflow_0005",
       "type": "troubleshooting_flow",
       "stage": "Research",
       "title": "Dialect uncertainty",
@@ -4223,7 +4223,7 @@
       "stopWhen": "Stop when the team has a confirmed or documented decision."
     },
     {
-      "id": "tomflow_0006",
+      "id": "Toshiflow_0006",
       "type": "troubleshooting_flow",
       "stage": "Submit",
       "title": "Upload failure",
@@ -4239,7 +4239,7 @@
       "stopWhen": "Stop when the package is safely transferred or assigned for transfer."
     },
     {
-      "id": "tomflow_0007",
+      "id": "Toshiflow_0007",
       "type": "troubleshooting_flow",
       "stage": "Share",
       "title": "Unsafe public sharing",
@@ -4255,11 +4255,11 @@
       "stopWhen": "Stop when a safer sharing method is chosen."
     },
     {
-      "id": "tomflow_0008",
+      "id": "Toshiflow_0008",
       "type": "troubleshooting_flow",
       "stage": "PWA",
-      "title": "Tailender Tom cannot answer",
-      "trigger": "Tom says he does not know or gives weak answers.",
+      "title": "Tailender Toshi cannot answer",
+      "trigger": "Toshi says he does not know or gives weak answers.",
       "steps": [
         "Ask a shorter question with key words.",
         "Use the stage filter.",
@@ -4271,7 +4271,7 @@
       "stopWhen": "Stop when the question is answered or saved for review."
     },
     {
-      "id": "tomflow_0009",
+      "id": "Toshiflow_0009",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Fix clipping fast",
@@ -4288,7 +4288,7 @@
       "stopWhen": "A clean retake is captured."
     },
     {
-      "id": "tomflow_0010",
+      "id": "Toshiflow_0010",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Make an echoey room usable",
@@ -4304,7 +4304,7 @@
       "stopWhen": "The voice sounds clear and close enough."
     },
     {
-      "id": "tomflow_0011",
+      "id": "Toshiflow_0011",
       "type": "troubleshooting_flow",
       "stage": "Audio Quality",
       "title": "Handle mouth clicks and lip noise",
@@ -4319,7 +4319,7 @@
       "stopWhen": "Clicks no longer distract from the message."
     },
     {
-      "id": "tomflow_0012",
+      "id": "Toshiflow_0012",
       "type": "troubleshooting_flow",
       "stage": "Record",
       "title": "Recover after forgetting room tone",
@@ -4334,7 +4334,7 @@
       "stopWhen": "A usable room tone file is saved."
     },
     {
-      "id": "tomflow_0013",
+      "id": "Toshiflow_0013",
       "type": "troubleshooting_flow",
       "stage": "Research",
       "title": "Verify dialect acceptability",
@@ -4349,7 +4349,7 @@
       "stopWhen": "Local listeners confirm acceptability or a new plan is made."
     },
     {
-      "id": "tomflow_0014",
+      "id": "Toshiflow_0014",
       "type": "troubleshooting_flow",
       "stage": "Program",
       "title": "Package review drill",
@@ -4366,7 +4366,7 @@
       "stopWhen": "A second person can understand the package."
     },
     {
-      "id": "tomflow_0015",
+      "id": "Toshiflow_0015",
       "type": "troubleshooting_flow",
       "stage": "Share",
       "title": "Plan a listening group",
@@ -4383,7 +4383,7 @@
       "stopWhen": "The listening group has an owner and follow-up plan."
     },
     {
-      "id": "tomflow_0016",
+      "id": "Toshiflow_0016",
       "type": "troubleshooting_flow",
       "stage": "Training",
       "title": "Run a 30-minute practice lab",
@@ -4401,7 +4401,7 @@
   ],
   "glossary": [
     {
-      "id": "tomterm_0001",
+      "id": "Toshiterm_0001",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Heart language",
@@ -4409,7 +4409,7 @@
       "easyEnglish": "The language variety people understand deeply and naturally, often used at home and for important life matters."
     },
     {
-      "id": "tomterm_0002",
+      "id": "Toshiterm_0002",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Trade language",
@@ -4417,7 +4417,7 @@
       "easyEnglish": "A language used for business, school, government, or communication with outsiders."
     },
     {
-      "id": "tomterm_0003",
+      "id": "Toshiterm_0003",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Dialect",
@@ -4425,7 +4425,7 @@
       "easyEnglish": "A speech variety within a language that may differ by region, community, or social group."
     },
     {
-      "id": "tomterm_0004",
+      "id": "Toshiterm_0004",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Word list",
@@ -4433,7 +4433,7 @@
       "easyEnglish": "A short set of recorded words used to compare speech varieties and pronunciation."
     },
     {
-      "id": "tomterm_0005",
+      "id": "Toshiterm_0005",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Cultural bridge",
@@ -4441,7 +4441,7 @@
       "easyEnglish": "A local idea, object, story, or practice that helps explain a message clearly."
     },
     {
-      "id": "tomterm_0006",
+      "id": "Toshiterm_0006",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Back-translation",
@@ -4449,7 +4449,7 @@
       "easyEnglish": "A translation of the target-language script back into a review language to check meaning."
     },
     {
-      "id": "tomterm_0007",
+      "id": "Toshiterm_0007",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Consent",
@@ -4457,7 +4457,7 @@
       "easyEnglish": "Clear agreement from a person about recording and how their voice/name/photo may be used."
     },
     {
-      "id": "tomterm_0008",
+      "id": "Toshiterm_0008",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Permission",
@@ -4465,7 +4465,7 @@
       "easyEnglish": "Approval to use content, music, script, song, photo, or other material owned by someone else."
     },
     {
-      "id": "tomterm_0009",
+      "id": "Toshiterm_0009",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Room tone",
@@ -4473,7 +4473,7 @@
       "easyEnglish": "A short recording of the quiet room or location background sound."
     },
     {
-      "id": "tomterm_0010",
+      "id": "Toshiterm_0010",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Clipping",
@@ -4481,7 +4481,7 @@
       "easyEnglish": "Distortion caused when audio is recorded too loud."
     },
     {
-      "id": "tomterm_0011",
+      "id": "Toshiterm_0011",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Take",
@@ -4489,7 +4489,7 @@
       "easyEnglish": "One recorded attempt of a script section, song, or line."
     },
     {
-      "id": "tomterm_0012",
+      "id": "Toshiterm_0012",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Best take",
@@ -4497,7 +4497,7 @@
       "easyEnglish": "The take chosen as the best usable recording."
     },
     {
-      "id": "tomterm_0013",
+      "id": "Toshiterm_0013",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Metadata",
@@ -4505,7 +4505,7 @@
       "easyEnglish": "Information about the audio, such as language, speaker, title, track order, and Scripture."
     },
     {
-      "id": "tomterm_0014",
+      "id": "Toshiterm_0014",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Program",
@@ -4513,7 +4513,7 @@
       "easyEnglish": "An organized final set of tracks prepared for submission or sharing."
     },
     {
-      "id": "tomterm_0015",
+      "id": "Toshiterm_0015",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Submission package",
@@ -4521,7 +4521,7 @@
       "easyEnglish": "The complete set of audio, forms, scripts, metadata, permissions, and notes handed off for review or publishing."
     },
     {
-      "id": "tomterm_0016",
+      "id": "Toshiterm_0016",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Distribution",
@@ -4529,7 +4529,7 @@
       "easyEnglish": "The process of helping recordings reach listeners."
     },
     {
-      "id": "tomterm_0017",
+      "id": "Toshiterm_0017",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Listening group",
@@ -4537,7 +4537,7 @@
       "easyEnglish": "A group that gathers to hear audio and discuss or respond."
     },
     {
-      "id": "tomterm_0018",
+      "id": "Toshiterm_0018",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Offline kit",
@@ -4545,7 +4545,7 @@
       "easyEnglish": "A USB, SD card, device folder, or local package with training and project materials that work without internet."
     },
     {
-      "id": "tomterm_0019",
+      "id": "Toshiterm_0019",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Recording Team",
@@ -4553,7 +4553,7 @@
       "easyEnglish": "People who share recording ministry tasks according to strengths and roles."
     },
     {
-      "id": "tomterm_0020",
+      "id": "Toshiterm_0020",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Handoff",
@@ -4561,7 +4561,7 @@
       "easyEnglish": "The transfer of responsibility from one person or stage to the next."
     },
     {
-      "id": "tomterm_0021",
+      "id": "Toshiterm_0021",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Orality",
@@ -4569,7 +4569,7 @@
       "easyEnglish": "Communication style where spoken stories, songs, memory, and group listening may be more natural than printed text."
     },
     {
-      "id": "tomterm_0022",
+      "id": "Toshiterm_0022",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Mother-tongue test",
@@ -4577,7 +4577,7 @@
       "easyEnglish": "A practical check asking how the idea would be said naturally by family or elders in the local language."
     },
     {
-      "id": "tomterm_0023",
+      "id": "Toshiterm_0023",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Local verification",
@@ -4585,7 +4585,7 @@
       "easyEnglish": "Checking important facts with people from the target community rather than relying only on outside sources."
     },
     {
-      "id": "tomterm_0024",
+      "id": "Toshiterm_0024",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Acceptability",
@@ -4593,7 +4593,7 @@
       "easyEnglish": "Whether listeners trust and receive a speaker, dialect, accent, or content as appropriate for them."
     },
     {
-      "id": "tomterm_0025",
+      "id": "Toshiterm_0025",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Provisional plan",
@@ -4601,7 +4601,7 @@
       "easyEnglish": "A working plan that guides the project but can change as the team learns more."
     },
     {
-      "id": "tomterm_0026",
+      "id": "Toshiterm_0026",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Quality control",
@@ -4609,7 +4609,7 @@
       "easyEnglish": "The process of checking files and documentation before they are submitted or shared."
     },
     {
-      "id": "tomterm_0027",
+      "id": "Toshiterm_0027",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Field readiness",
@@ -4617,7 +4617,7 @@
       "easyEnglish": "The point where a trainee or team can work safely and competently with normal support."
     },
     {
-      "id": "tomterm_0028",
+      "id": "Toshiterm_0028",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Local database",
@@ -4625,7 +4625,7 @@
       "easyEnglish": "A saved copy of needed data that can be used away from internet connection."
     },
     {
-      "id": "tomterm_0029",
+      "id": "Toshiterm_0029",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Submission status",
@@ -4633,7 +4633,7 @@
       "easyEnglish": "A label that shows where a package is in the handoff process, such as Draft, Submitted, Needs Correction, or Approved."
     },
     {
-      "id": "tomterm_0030",
+      "id": "Toshiterm_0030",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Package README",
@@ -4641,7 +4641,7 @@
       "easyEnglish": "A short text file explaining what is inside the submission package and what the reviewer should know."
     },
     {
-      "id": "tomterm_0031",
+      "id": "Toshiterm_0031",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Listener access",
@@ -4649,7 +4649,7 @@
       "easyEnglish": "The practical ability of the intended audience to actually receive, play, understand, and reuse the recording."
     },
     {
-      "id": "tomterm_0032",
+      "id": "Toshiterm_0032",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Field hack",
@@ -4657,7 +4657,7 @@
       "easyEnglish": "A practical tip learned from experience in real recording situations."
     },
     {
-      "id": "tomterm_0033",
+      "id": "Toshiterm_0033",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Natural speech",
@@ -4665,7 +4665,7 @@
       "easyEnglish": "Speech that sounds like a real local person talking, not stiff reading or foreign wording."
     },
     {
-      "id": "tomterm_0034",
+      "id": "Toshiterm_0034",
       "type": "glossary",
       "stage": "Glossary",
       "term": "Speaker dignity",

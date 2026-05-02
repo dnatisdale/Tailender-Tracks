@@ -167,7 +167,7 @@ function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
         <p>Offline field recording workflow</p>
       </div>
 
-      <button className="btn btn-primary" onClick={onCreateProject} style={{ marginbottom: 24, padding: 16 }}>
+      <button className="btn btn-primary" onClick={onCreateProject} style={{ marginBottom: 24, padding: 16 }}>
         <Plus size={20} /> Create New Project
       </button>
 
@@ -394,7 +394,7 @@ function StageRecord({ project, update, formsManifest }: any) {
       <StageForms stage="Record" forms={formsManifest} />
 
       <div className="card" style={{ textAlign: 'center' }}>
-        <Mic size={48} color="var(--accent-color)" style={{ marginbottom: 16 }} />
+        <Mic size={48} color="var(--accent-color)" style={{ marginBottom: 16 }} />
         <h3 style={{ margin: '0 0 16px 0' }}>Recording Session</h3>
         <FieldInput label="Session Title" value={d.sessionTitle} onChange={(v:any) => setD('sessionTitle', v)} />
         <FieldInput label="Speaker" value={d.speaker} onChange={(v:any) => setD('speaker', v)} />
@@ -482,8 +482,8 @@ function StageProgram({ project, update, formsManifest }: any) {
         {tracks.length === 0 && <p style={{ color: 'var(--text-secondary)', textAlign: 'center' }}>No tracks added yet.</p>}
 
         {tracks.map((t:any, i:number) => (
-          <div key={t.id} style={{ border: '1px solid var(--border-color)', borderRadius: 8, padding: 12, marginbottom: 12, backgroundColor: 'var(--bg-color)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginbottom: 12 }}>
+          <div key={t.id} style={{ border: '1px solid var(--border-color)', borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: 'var(--bg-color)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
               <strong>Track {i + 1}</strong>
               <div style={{ display: 'flex', gap: 8 }}>
                 <button onClick={() => moveTrack(i, -1)} disabled={i===0}>↑</button>
@@ -502,7 +502,7 @@ function StageProgram({ project, update, formsManifest }: any) {
         ))}
       </div>
       
-      <button className="btn btn-primary" style={{ marginbottom: 24 }}>
+      <button className="btn btn-primary" style={{ marginBottom: 24 }}>
         <Download size={18} /> Export Tracklist
       </button>
     </div>
@@ -538,7 +538,7 @@ function StageSubmit({ project, update, formsManifest }: any) {
       <div className="card">
         <h3 className="card-title">Package ZIP Preview</h3>
         <div style={{ textAlign: 'center', padding: '24px 0', border: '2px dashed var(--border-color)', borderRadius: 8 }}>
-          <Folder size={32} color="var(--text-secondary)" style={{ marginbottom: 8 }} />
+          <Folder size={32} color="var(--text-secondary)" style={{ marginBottom: 8 }} />
           <div><strong>{project.languageName.substring(0,3).toUpperCase()}_Package.zip</strong></div>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Ready to assemble from selected files.</p>
         </div>
@@ -632,15 +632,15 @@ function TrainingView() {
       <div className="card">
         <h3 className="card-title">Team Roles</h3>
         <ul style={{ paddingLeft: 20, margin: 0, color: 'var(--text-secondary)' }}>
-          <li style={{ marginbottom: 8 }}><strong>Research lead:</strong> Verifies heart language.</li>
-          <li style={{ marginbottom: 8 }}><strong>Script lead:</strong> Adapts & translates scripts.</li>
-          <li style={{ marginbottom: 8 }}><strong>Speaker care:</strong> Supports local speakers.</li>
-          <li style={{ marginbottom: 8 }}><strong>Recorder operator:</strong> Handles audio capture.</li>
-          <li style={{ marginbottom: 8 }}><strong>Backup person:</strong> Manages SD cards and files.</li>
-          <li style={{ marginbottom: 8 }}><strong>Editor:</strong> Cleans and tops/tails audio.</li>
-          <li style={{ marginbottom: 8 }}><strong>Reviewer:</strong> Theology and language check.</li>
-          <li style={{ marginbottom: 8 }}><strong>Submitter:</strong> Prepares the final package.</li>
-          <li style={{ marginbottom: 8 }}><strong>Distribution lead:</strong> Shares the finished work.</li>
+          <li style={{ marginBottom: 8 }}><strong>Research lead:</strong> Verifies heart language.</li>
+          <li style={{ marginBottom: 8 }}><strong>Script lead:</strong> Adapts & translates scripts.</li>
+          <li style={{ marginBottom: 8 }}><strong>Speaker care:</strong> Supports local speakers.</li>
+          <li style={{ marginBottom: 8 }}><strong>Recorder operator:</strong> Handles audio capture.</li>
+          <li style={{ marginBottom: 8 }}><strong>Backup person:</strong> Manages SD cards and files.</li>
+          <li style={{ marginBottom: 8 }}><strong>Editor:</strong> Cleans and tops/tails audio.</li>
+          <li style={{ marginBottom: 8 }}><strong>Reviewer:</strong> Theology and language check.</li>
+          <li style={{ marginBottom: 8 }}><strong>Submitter:</strong> Prepares the final package.</li>
+          <li style={{ marginBottom: 8 }}><strong>Distribution lead:</strong> Shares the finished work.</li>
         </ul>
       </div>
 
@@ -653,7 +653,7 @@ function TrainingView() {
         { t: '6. Share', d: 'How to share recordings wisely.' }
       ].map((card, i) => (
         <div key={i} className="card" style={{ padding: 16 }}>
-          <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginbottom: 4 }}>{card.t}</div>
+          <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: 4 }}>{card.t}</div>
           <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{card.d}</div>
         </div>
       ))}
@@ -954,6 +954,21 @@ export default function App() {
       </main>
 
       {/* bottom NAV */}
+      {showInstallBanner && (
+        <div className="install-banner-overlay">
+          <div className="install-banner">
+            <div className="install-banner-content">
+              <h3>Install Tailender Tracks</h3>
+              <p>Add to your home screen for offline field recording and faster access.</p>
+            </div>
+            <div className="install-banner-actions">
+              <button className="btn btn--secondary" onClick={() => setShowInstallBanner(false)}>Later</button>
+              <button className="btn btn-primary" style={{ margin: 0, width: 'auto' }} onClick={handleInstallClick}>Install Now</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <nav className="bottom-nav">
 
       {/* TAILENDER Toshi FAB - bottom left */}
@@ -1003,7 +1018,7 @@ export default function App() {
         } onClose={() => setShowToshiDialog(false)}>
           <div style={{ height: 420, display: 'flex', flexDirection: 'column' }}>
             <div style={{
-              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginbottom: 12,
+              flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12,
               border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12
             }}>
               {ToshiMessages.map((msg, i) => (
@@ -1018,7 +1033,7 @@ export default function App() {
                     color: msg.sender === 'user' ? '#fff' : 'var(--text-primary)',
                     padding: '8px 12px', borderRadius: 12, fontSize: '0.88rem', lineHeight: 1.5,
                     border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
-                    marginbottom: 4, whiteSpace: 'pre-wrap'
+                    marginBottom: 4, whiteSpace: 'pre-wrap'
                   }}>
                     {ToshiEasyEnglish[i] && msg.easyEnglish ? msg.easyEnglish : msg.text}
                   </div>
@@ -1029,7 +1044,7 @@ export default function App() {
                       style={{
                         background: 'none', border: '1px solid var(--border-color)', borderRadius: 8,
                         padding: '2px 8px', fontSize: '0.7rem', cursor: 'pointer',
-                        color: 'var(--text-secondary)', marginbottom: 4, alignSelf: 'flex-start'
+                        color: 'var(--text-secondary)', marginBottom: 4, alignSelf: 'flex-start'
                       }}
                     >
                       {ToshiEasyEnglish[i] ? '📖 Full answer' : '🟢 Easy English'}
@@ -1037,13 +1052,13 @@ export default function App() {
                   )}
                   {/* Action buttons */}
                   {msg.actions && msg.actions.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginbottom: 4 }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 4 }}>
                       {msg.actions.map((action: string, j: number) => (
                         <button 
                           key={j} 
                           className="btn" 
                           onClick={() => handleToshiAction(action)}
-                          style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginbottom: 0, fontWeight: 'normal' }}
+                          style={{ padding: '4px 8px', fontSize: '0.72rem', width: 'auto', marginBottom: 0, fontWeight: 'normal' }}
                         >
                           {action}
                         </button>
@@ -1070,7 +1085,7 @@ export default function App() {
 
             {/* Suggested Questions for current stage */}
             {ToshiMessages.length < 3 && (
-              <div style={{ marginbottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
+              <div style={{ marginBottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', marginLeft: 4 }}>Try asking:</span>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                   {getSuggestedToshiQuestions(ToshiFilter).slice(0, 3).map((q, i) => (
@@ -1090,7 +1105,7 @@ export default function App() {
               </div>
             )}
 
-            <div className="input-group" style={{ marginbottom: 0, display: 'flex', gap: 8 }}>
+            <div className="input-group" style={{ marginBottom: 0, display: 'flex', gap: 8 }}>
               <input
                 type="text"
                 placeholder="Ask Toshi a question..."
