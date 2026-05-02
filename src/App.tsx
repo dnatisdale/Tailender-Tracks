@@ -887,8 +887,8 @@ export default function App() {
           </div>
           <img src={`${import.meta.env.BASE_URL}icons/tailender-tom-badge.png`} alt="Logo" className="splash-logo" />
           <div className="dymo-label-stack splash-dymo">
-            <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--splash" />
             <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="dymo-label dymo-label--splash" />
+            <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--splash dymo-label--red" />
           </div>
         </div>
       )}
@@ -915,8 +915,8 @@ export default function App() {
           <span>
             {isProjectView ? (activeView === 'ProjectDetail' ? 'Project Details' : activeView) : (
               <div className="dymo-label-stack">
-                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label" />
                 <img src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`} alt="TAILENDER" className="dymo-label" />
+                <img src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TRACK.png`} alt="TRACK" className="dymo-label dymo-label--red" />
               </div>
             )}
           </span>
