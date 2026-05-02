@@ -201,11 +201,11 @@ body {
 
 .walking-boot {
   position: absolute;
-  background-image: url('/Tailender-Tracks/icons/hiking-boots-trail.png');
+  background-image: url('/icons/Boot1.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   opacity: 0;
   animation: boot-walk 15s linear infinite;
   filter: brightness(0.9) contrast(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
@@ -232,8 +232,8 @@ body {
 }
 
 .splash-boot-trail .walking-boot {
-  width: 140px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   animation: boot-walk-splash 12s linear infinite;
 }
 
