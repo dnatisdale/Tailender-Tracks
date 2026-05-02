@@ -99,7 +99,7 @@ body {
 }
 
 .dymo-label {
-  height: 32px;
+  height: 15px;
   width: auto;
   display: inline-block;
   position: relative;
