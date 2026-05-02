@@ -189,13 +189,18 @@ body {
 /* Header Walking Boots */
 .header-boot-trail {
   position: absolute;
-  top: 60px; /* Positioned between the labels */
+  top: 40px; /* Positioned higher up */
   left: 0;
   width: 100%;
   height: 40px;
   pointer-events: none;
   z-index: 10; /* Between the labels */
   overflow: hidden;
+}
+
+.header-boot-trail .walking-boot {
+  width: 40px;
+  height: 40px;
 }
 
 .walking-boot {
@@ -216,11 +221,11 @@ body {
 
 /* Stagger the steps for header */
 .header-boot-trail .walking-boot:nth-child(1) { animation-delay: 0s; }
-.header-boot-trail .walking-boot:nth-child(2) { animation-delay: 0.6s; margin-top: 15px; }
+.header-boot-trail .walking-boot:nth-child(2) { animation-delay: 0.6s; margin-top: 10px; }
 .header-boot-trail .walking-boot:nth-child(3) { animation-delay: 1.2s; }
-.header-boot-trail .walking-boot:nth-child(4) { animation-delay: 1.8s; margin-top: 15px; }
+.header-boot-trail .walking-boot:nth-child(4) { animation-delay: 1.8s; margin-top: 10px; }
 .header-boot-trail .walking-boot:nth-child(5) { animation-delay: 2.4s; }
-.header-boot-trail .walking-boot:nth-child(6) { animation-delay: 3.0s; margin-top: 15px; }
+.header-boot-trail .walking-boot:nth-child(6) { animation-delay: 3.0s; margin-top: 10px; }
 
 /* Splash Boot Trail */
 .splash-boot-trail {
