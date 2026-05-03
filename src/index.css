@@ -8,6 +8,14 @@
   --border-color: rgba(0, 0, 0, 0.1);
   --nav-height: 70px;
   --header-height: 140px;
+
+  /* Image size tokens — change here to resize everywhere */
+  --splash-logo-height: clamp(120px, 28vw, 260px);
+  --splash-dymo-height: clamp(42px, 9vw, 90px);
+  --header-logo-height: clamp(52px, 9vw, 90px);
+  --header-dymo-height: clamp(12px, 2.2vw, 24px);
+  --toshi-fab-width: clamp(54px, 10vw, 76px);
+  --toshi-fab-height: clamp(64px, 12vw, 88px);
 }
 
 body.dark-theme {
@@ -77,8 +85,10 @@ body {
 }
 
 .splash-logo {
-  height: 350px;
+  height: var(--splash-logo-height);
   width: auto;
+  max-width: 86vw;
+  object-fit: contain;
   display: block;
   margin: 0 auto 10px auto;
   animation: logo-entrance 1s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -87,8 +97,10 @@ body {
 }
 
 .header-title img {
-  height: 70px; /* Restored and scaled down to avoid dominating */
+  height: var(--header-logo-height);
   width: auto;
+  max-width: 42vw;
+  object-fit: contain;
   filter: drop-shadow(0 6px 15px rgba(0,0,0,0.3));
   margin-right: 20px;
   position: relative;
@@ -157,7 +169,8 @@ body {
 
 /* Splash screen labels - Proportional to the 25% smaller logo */
 .dymo-label--splash {
-  height: 90px;
+  height: var(--splash-dymo-height);
+  max-width: 80vw;
   opacity: 0;
   animation: splash-dymo-float 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -201,7 +214,7 @@ body {
 /* Header DYMO title labels — separate from splash, static and intentional */
 .header-dymo-stack {
   display: flex;
-  height: 145px;
+  height: auto;
   flex-direction: column;
   gap: 4px;
   align-items: flex-start;
@@ -209,7 +222,8 @@ body {
 }
 
 .header-dymo-label {
-  height: 12px;
+  height: var(--header-dymo-height);
+  max-width: 32vw;
   width: auto;
   display: block;
   filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.35));
@@ -537,14 +551,14 @@ body {
   transform: scale(1.05);
 }
 
-/* Tailender Toshi floating button - bottom right */
+/* Tailender Toshi floating button */
 .toshi-fab {
   position: fixed;
   bottom: calc(var(--nav-height) + 16px);
   right: 20px;
   left: auto;
-  width: 70px;
-  height: 82px;
+  width: var(--toshi-fab-width);
+  height: var(--toshi-fab-height);
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -554,14 +568,6 @@ body {
   z-index: 200;
   border: none;
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.toshi-fab:hover {
-  transform: scale(1.1) translateY(-5px);
-  filter: brightness(1.1);
-}
-
-.toshi-fab {
   animation: toshi-nudge 10s ease-in-out infinite;
 }
 

@@ -662,7 +662,7 @@ function TrainingView() {
 }
 
 // SETTINGS VIEW
-function SettingsView() {
+function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any; onInstallClick: () => void }) {
   return (
     <div>
       <div className="view-header">
@@ -680,14 +680,32 @@ function SettingsView() {
       </div>
 
       <div className="card">
-        <h3 className="card-title">Data & Storage</h3>
+        <h3 className="card-title">Data &amp; Storage</h3>
         <button className="btn"><Save size={18} /> Storage Manager (Placeholder)</button>
         <button className="btn"><Download size={18} /> Backup / Export Projects (Placeholder)</button>
         <button className="btn"><CheckSquare size={18} /> Import Project (Placeholder)</button>
       </div>
-      
+
+      <div className="card">
+        <h3 className="card-title">Install App</h3>
+        {deferredPrompt ? (
+          <>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: 12 }}>
+              Install Tailender Tracks on your device for offline field recording access.
+            </p>
+            <button className="btn btn-primary" style={{ width: 'auto' }} onClick={onInstallClick}>
+              Install App
+            </button>
+          </>
+        ) : (
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            Install is available from the browser menu once the PWA passes Chrome's install checks. Make sure you are using HTTPS and the app has been open for at least 30 seconds.
+          </p>
+        )}
+      </div>
+
       <div style={{ textAlign: 'center', marginTop: 32, opacity: 0.5 }}>
-        <img src={`${import.meta.env.BASE_URL}icons/Toshi-wave-with-buckle.png`} alt="Logo" style={{ height: 40 }} />
+        <img src={`${import.meta.env.BASE_URL}icons/Boot3.png`} alt="Logo" style={{ height: 40 }} />
         <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78 RPM Series</p>
       </div>
     </div>
@@ -882,7 +900,7 @@ export default function App() {
     if (activeView === 'Home') return <HomeView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} goView={setActiveView} />;
     if (activeView === 'Projects') return <ProjectsView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} />;
     if (activeView === 'Training') return <TrainingView />;
-    if (activeView === 'Settings') return <SettingsView />;
+    if (activeView === 'Settings') return <SettingsView deferredPrompt={deferredPrompt} onInstallClick={handleInstallClick} />;
     
     // Project specific views
     if (!currentProject) return <div style={{padding: 24}}>Project not found.</div>;
@@ -918,7 +936,7 @@ export default function App() {
                 <ChevronLeft size={24} />
               </button>
             ) : (
-              <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Tailender Toshi and Boots" />
+              <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI BOOTS.png`} alt="Tailender Toshi and Boots" />
             )}
             {!isProjectView && (
               <div className="header-dymo-stack">
