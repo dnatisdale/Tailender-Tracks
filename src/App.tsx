@@ -863,16 +863,82 @@ function TrainingView() {
       </div>
 
       {[
-        { t: '1. Research', d: 'How to confirm the heart language.' },
-        { t: '2. Plan', d: 'How to prepare a script and care for speakers.' },
-        { t: '3. Record', d: 'How to record clean audio.' },
-        { t: '4. Program', d: 'How to organize a program.' },
-        { t: '5. Submit', d: 'How to submit a complete package.' },
-        { t: '6. Share', d: 'How to share recordings wisely.' }
+        { 
+          t: '1. Research', 
+          p: 'Confirm the right people, place, and heart language.',
+          l: 'How to use the Heart Language Checklist and verify ISO codes/dialects.',
+          q: 'Who is the target group? What is their first language? Are there multiple dialects?',
+          a: 'Interview a local person to find their "language of the heart."',
+          c: 'You have a confirmed Language Name and a specific target audience.'
+        },
+        { 
+          t: '2. Plan', 
+          p: 'Prepare the message, people, forms, and recording day.',
+          l: 'Script preparation, speaker selection, and obtaining Consent Forms.',
+          q: 'Is the script translated correctly? Do we have a quiet place to record? Are speakers comfortable?',
+          a: 'Draft a simple script and practice reading it with a teammate.',
+          c: 'Script is ready, speakers are chosen, and a recording location is found.'
+        },
+        { 
+          t: '3. Record', 
+          p: 'Capture clean, usable original audio.',
+          l: 'Microphone technique, recorder settings, and monitoring audio with headphones.',
+          q: 'Is the levels meter peaking? Do I hear wind or background noise? Are the batteries full?',
+          a: 'Record 30 seconds of speech and listen for "pops" or background hums.',
+          c: 'You have high-quality, undistorted audio files saved safely.'
+        },
+        { 
+          t: '4. Program', 
+          p: 'Edit, organize, name, and check the audio.',
+          l: 'File naming conventions, basic editing (tops and tails), and sequence checking.',
+          q: 'Are the files named correctly? Is the sequence logical? Are there long silences?',
+          a: 'Rename a set of files according to the project standard.',
+          c: 'The audio is clean, ordered, and properly named for distribution.'
+        },
+        { 
+          t: '5. Submit', 
+          p: 'Send a complete package for review, publishing, or archiving.',
+          l: 'How to bundle files, metadata, and consent forms for submission.',
+          q: 'Are all forms attached? Is the metadata accurate? Who needs to receive this?',
+          a: 'Practice filling out the Final Submission checklist.',
+          c: 'The complete project package is delivered to the review team.'
+        },
+        { 
+          t: '6. Share', 
+          p: 'Help the message actually reach listeners wisely.',
+          l: 'Bluetooth sharing, SD card copying, and using local audio players.',
+          q: 'What is the safest way to share here? How will people listen? Is it easy to copy?',
+          a: 'Practice sharing a file from one phone to another via Bluetooth.',
+          c: 'The community has access to the recordings on their own devices.'
+        }
       ].map((card, i) => (
-        <div key={i} className="card" style={{ padding: 16 }}>
-          <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: 4 }}>{card.t}</div>
-          <div style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{card.d}</div>
+        <div key={i} className="card" style={{ padding: 20 }}>
+          <h3 style={{ margin: '0 0 12px 0', color: 'var(--accent-color)' }}>{card.t}</h3>
+          
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Purpose</strong>
+            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.p}</p>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>What you learn</strong>
+            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.l}</p>
+          </div>
+
+          <div style={{ marginBottom: 12, padding: '10px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
+            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Field Questions</strong>
+            <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontStyle: 'italic' }}>{card.q}</p>
+          </div>
+
+          <div style={{ marginBottom: 12 }}>
+            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Training Activity</strong>
+            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.a}</p>
+          </div>
+
+          <div style={{ paddingTop: 12, borderTop: '1px solid var(--border-color)' }}>
+            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--accent-color)' }}>Ready to move on?</strong>
+            <p style={{ margin: '4px 0 0', fontSize: '0.95rem', fontWeight: 500 }}>{card.c}</p>
+          </div>
         </div>
       ))}
     </div>
