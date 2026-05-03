@@ -677,6 +677,108 @@ body {
   to { opacity: 1; }
 }
 
+/* Training Accordion */
+.training-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.training-accordion-card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.training-accordion-header {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: inherit;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.training-accordion-header:hover {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.training-accordion-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.training-accordion-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: block;
+}
+
+.training-accordion-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--text-secondary);
+}
+
+.training-accordion-icon.open {
+  transform: rotate(180deg);
+  color: var(--accent-color);
+}
+
+.training-accordion-body {
+  border-top: 1px solid var(--border-color);
+  padding: 16px 20px 20px;
+  background-color: rgba(0,0,0,0.01);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.training-accordion-body h4 {
+  margin: 16px 0 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.training-accordion-body h4:first-child {
+  margin-top: 0;
+}
+
+.training-accordion-body p {
+  margin: 0 0 12px;
+  color: var(--text-primary);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.training-accordion-body .ready-check {
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.training-accordion-body .ready-check h4 {
+  color: var(--accent-color);
+}
+
+.training-accordion-body .field-questions {
+  padding: 12px;
+  background: rgba(0,0,0,0.03);
+  border-radius: 8px;
+  font-style: italic;
+}
+
 /* Forms library and stage form guidance */
 .card-help {
   color: var(--text-secondary);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { 
-  Home, Folder, Settings, BookOpen, ChevronLeft, Plus, Save, Play,
+  Home, Folder, Settings, BookOpen, ChevronLeft, ChevronDown, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
   Share2, Sun, Moon, User, X
 } from 'lucide-react';
@@ -840,14 +840,83 @@ function FormsView({ formsManifest }: any) {
 
 // TRAINING VIEW
 function TrainingView() {
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+
+  const toggleSection = (key: string) => {
+    setOpenSections(prev => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const trainingSections = [
+    { 
+      key: 'research',
+      t: '1. Research', 
+      s: 'Confirm people, place, and heart language.',
+      p: 'Confirm the right people, place, and heart language.',
+      l: 'How to use the Heart Language Checklist and verify ISO codes/dialects.',
+      q: 'Who is the target group? What is their first language? Are there multiple dialects?',
+      a: 'Interview a local person to find their "language of the heart."',
+      c: 'You have a confirmed Language Name and a specific target audience.'
+    },
+    { 
+      key: 'plan',
+      t: '2. Plan', 
+      s: 'Prepare scripts, speakers, and consent.',
+      p: 'Prepare the message, people, forms, and recording day.',
+      l: 'Script preparation, speaker selection, and obtaining Consent Forms.',
+      q: 'Is the script translated correctly? Do we have a quiet place to record? Are speakers comfortable?',
+      a: 'Draft a simple script and practice reading it with a teammate.',
+      c: 'Script is ready, speakers are chosen, and a recording location is found.'
+    },
+    { 
+      key: 'record',
+      t: '3. Record', 
+      s: 'Capture clean, usable original audio.',
+      p: 'Capture clean, usable original audio.',
+      l: 'Microphone technique, recorder settings, and monitoring audio with headphones.',
+      q: 'Is the levels meter peaking? Do I hear wind or background noise? Are the batteries full?',
+      a: 'Record 30 seconds of speech and listen for "pops" or background hums.',
+      c: 'You have high-quality, undistorted audio files saved safely.'
+    },
+    { 
+      key: 'program',
+      t: '4. Program', 
+      s: 'Edit, organize, and check the audio.',
+      p: 'Edit, organize, name, and check the audio.',
+      l: 'File naming conventions, basic editing (tops and tails), and sequence checking.',
+      q: 'Are the files named correctly? Is the sequence logical? Are there long silences?',
+      a: 'Rename a set of files according to the project standard.',
+      c: 'The audio is clean, ordered, and properly named for distribution.'
+    },
+    { 
+      key: 'submit',
+      t: '5. Submit', 
+      s: 'Bundle package for review and archive.',
+      p: 'Send a complete package for review, publishing, or archiving.',
+      l: 'How to bundle files, metadata, and consent forms for submission.',
+      q: 'Are all forms attached? Is the metadata accurate? Who needs to receive this?',
+      a: 'Practice filling out the Final Submission checklist.',
+      c: 'The complete project package is delivered to the review team.'
+    },
+    { 
+      key: 'share',
+      t: '6. Share', 
+      s: 'Help the message reach listeners wisely.',
+      p: 'Help the message actually reach listeners wisely.',
+      l: 'Bluetooth sharing, SD card copying, and using local audio players.',
+      q: 'What is the safest way to share here? How will people listen? Is it easy to copy?',
+      a: 'Practice sharing a file from one phone to another via Bluetooth.',
+      c: 'The community has access to the recordings on their own devices.'
+    }
+  ];
+
   return (
-    <div>
+    <div className="view-container">
       <div className="view-header">
         <h1>Training</h1>
         <p>Learn the 6-Stage Christian Workflow</p>
       </div>
 
-      <div className="card">
+      <div className="card" style={{ marginBottom: 20 }}>
         <h3 className="card-title">Team Roles</h3>
         <ul style={{ paddingLeft: 20, margin: 0, color: 'var(--text-secondary)' }}>
           <li style={{ marginBottom: 8 }}><strong>Research lead:</strong> Verifies heart language.</li>
@@ -862,85 +931,49 @@ function TrainingView() {
         </ul>
       </div>
 
-      {[
-        { 
-          t: '1. Research', 
-          p: 'Confirm the right people, place, and heart language.',
-          l: 'How to use the Heart Language Checklist and verify ISO codes/dialects.',
-          q: 'Who is the target group? What is their first language? Are there multiple dialects?',
-          a: 'Interview a local person to find their "language of the heart."',
-          c: 'You have a confirmed Language Name and a specific target audience.'
-        },
-        { 
-          t: '2. Plan', 
-          p: 'Prepare the message, people, forms, and recording day.',
-          l: 'Script preparation, speaker selection, and obtaining Consent Forms.',
-          q: 'Is the script translated correctly? Do we have a quiet place to record? Are speakers comfortable?',
-          a: 'Draft a simple script and practice reading it with a teammate.',
-          c: 'Script is ready, speakers are chosen, and a recording location is found.'
-        },
-        { 
-          t: '3. Record', 
-          p: 'Capture clean, usable original audio.',
-          l: 'Microphone technique, recorder settings, and monitoring audio with headphones.',
-          q: 'Is the levels meter peaking? Do I hear wind or background noise? Are the batteries full?',
-          a: 'Record 30 seconds of speech and listen for "pops" or background hums.',
-          c: 'You have high-quality, undistorted audio files saved safely.'
-        },
-        { 
-          t: '4. Program', 
-          p: 'Edit, organize, name, and check the audio.',
-          l: 'File naming conventions, basic editing (tops and tails), and sequence checking.',
-          q: 'Are the files named correctly? Is the sequence logical? Are there long silences?',
-          a: 'Rename a set of files according to the project standard.',
-          c: 'The audio is clean, ordered, and properly named for distribution.'
-        },
-        { 
-          t: '5. Submit', 
-          p: 'Send a complete package for review, publishing, or archiving.',
-          l: 'How to bundle files, metadata, and consent forms for submission.',
-          q: 'Are all forms attached? Is the metadata accurate? Who needs to receive this?',
-          a: 'Practice filling out the Final Submission checklist.',
-          c: 'The complete project package is delivered to the review team.'
-        },
-        { 
-          t: '6. Share', 
-          p: 'Help the message actually reach listeners wisely.',
-          l: 'Bluetooth sharing, SD card copying, and using local audio players.',
-          q: 'What is the safest way to share here? How will people listen? Is it easy to copy?',
-          a: 'Practice sharing a file from one phone to another via Bluetooth.',
-          c: 'The community has access to the recordings on their own devices.'
-        }
-      ].map((card, i) => (
-        <div key={i} className="card" style={{ padding: 20 }}>
-          <h3 style={{ margin: '0 0 12px 0', color: 'var(--accent-color)' }}>{card.t}</h3>
-          
-          <div style={{ marginBottom: 12 }}>
-            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Purpose</strong>
-            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.p}</p>
-          </div>
+      <div className="training-accordion">
+        {trainingSections.map((section) => {
+          const isOpen = !!openSections[section.key];
+          return (
+            <div key={section.key} className="training-accordion-card">
+              <button 
+                className="training-accordion-header" 
+                onClick={() => toggleSection(section.key)}
+                aria-expanded={isOpen}
+              >
+                <div>
+                  <span className="training-accordion-title">{section.t}</span>
+                  <span className="training-accordion-subtitle">{section.s}</span>
+                </div>
+                <ChevronDown className={`training-accordion-icon ${isOpen ? 'open' : ''}`} size={20} />
+              </button>
+              
+              {isOpen && (
+                <div className="training-accordion-body">
+                  <h4>Purpose</h4>
+                  <p>{section.p}</p>
 
-          <div style={{ marginBottom: 12 }}>
-            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>What you learn</strong>
-            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.l}</p>
-          </div>
+                  <h4>What you learn</h4>
+                  <p>{section.l}</p>
 
-          <div style={{ marginBottom: 12, padding: '10px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
-            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Field Questions</strong>
-            <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontStyle: 'italic' }}>{card.q}</p>
-          </div>
+                  <div className="field-questions">
+                    <h4>Field Questions</h4>
+                    <p>{section.q}</p>
+                  </div>
 
-          <div style={{ marginBottom: 12 }}>
-            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Training Activity</strong>
-            <p style={{ margin: '4px 0 0', fontSize: '0.95rem' }}>{card.a}</p>
-          </div>
+                  <h4>Training Activity</h4>
+                  <p>{section.a}</p>
 
-          <div style={{ paddingTop: 12, borderTop: '1px solid var(--border-color)' }}>
-            <strong style={{ display: 'block', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--accent-color)' }}>Ready to move on?</strong>
-            <p style={{ margin: '4px 0 0', fontSize: '0.95rem', fontWeight: 500 }}>{card.c}</p>
-          </div>
-        </div>
-      ))}
+                  <div className="ready-check">
+                    <h4>Ready to move on?</h4>
+                    <p style={{ fontWeight: 600 }}>{section.c}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
