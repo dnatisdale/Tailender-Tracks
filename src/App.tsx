@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, ChevronDown, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
-  Share2, Sun, Moon, User, X, Languages, Type, Volume2, VolumeX
+  Share2, Sun, Moon, User, X, Type, Volume2, VolumeX
 } from 'lucide-react';
 import { 
   askTailenderToshi, 
@@ -11,6 +11,81 @@ import {
   getToshiBrainStats 
 } from './data/tailenderToshiBrain';
 import './index.css';
+
+const uiText: any = {
+  en: {
+    home: "Home",
+    projects: "Projects",
+    forms: "Forms",
+    training: "Training",
+    settings: "Settings",
+    welcome: "Welcome",
+    offlineWorkflow: "Offline field recording workflow",
+    createNewProject: "Create New Project",
+    continueLastProject: "Continue Last Project",
+    projectDetails: "Project Details",
+    projectSummary: "Project Summary",
+    saveProject: "Save Project",
+    saved: "Saved!",
+    projectTitle: "Project Title",
+    languageName: "Language Name",
+    dialect: "Dialect / Speech Variety",
+    countryRegion: "Country / Region",
+    targetListeners: "Target Listeners",
+    ministryPurpose: "Ministry Purpose",
+    biblicalTheme: "Biblical Theme",
+    scriptureReferences: "Scripture References",
+    localChurchPartner: "Local Church / Partner",
+    projectNotes: "Project Notes",
+    workflowStages: "Workflow Stages",
+    research: "Research",
+    plan: "Plan",
+    record: "Record",
+    program: "Program",
+    submit: "Submit",
+    share: "Share",
+    interfaceLanguage: "Interface Language",
+    easyReadMode: "Easy Read Mode",
+    installApp: "Install App",
+    installTailenderTracks: "Install Tailender Tracks"
+  },
+  th: {
+    home: "หน้าแรก",
+    projects: "โครงการ",
+    forms: "แบบฟอร์ม",
+    training: "การฝึกอบรม",
+    settings: "ตั้งค่า",
+    welcome: "ยินดีต้อนรับ",
+    offlineWorkflow: "ขั้นตอนงานบันทึกเสียงภาคสนามแบบออฟไลน์",
+    createNewProject: "สร้างโครงการใหม่",
+    continueLastProject: "ทำโครงการล่าสุดต่อ",
+    projectDetails: "รายละเอียดโครงการ",
+    projectSummary: "สรุปโครงการ",
+    saveProject: "บันทึกโครงการ",
+    saved: "บันทึกแล้ว!",
+    projectTitle: "ชื่อโครงการ",
+    languageName: "ชื่อภาษา",
+    dialect: "สำเนียง / กลุ่มคำพูด",
+    countryRegion: "ประเทศ / ภูมิภาค",
+    targetListeners: "กลุ่มผู้ฟังเป้าหมาย",
+    ministryPurpose: "วัตถุประสงค์ของพันธกิจ",
+    biblicalTheme: "หัวข้อพระคัมภีร์",
+    scriptureReferences: "ข้อพระคัมภีร์อ้างอิง",
+    localChurchPartner: "คริสตจักร / ผู้ร่วมงานในพื้นที่",
+    projectNotes: "บันทึกเกี่ยวกับโครงการ",
+    workflowStages: "ขั้นตอนการทำงาน",
+    research: "สำรวจข้อมูล",
+    plan: "วางแผน",
+    record: "บันทึกเสียง",
+    program: "จัดทำรายการเสียง",
+    submit: "ส่งงาน",
+    share: "แบ่งปัน",
+    interfaceLanguage: "ภาษาในแอป",
+    easyReadMode: "โหมดอ่านง่าย",
+    installApp: "ติดตั้งแอป",
+    installTailenderTracks: "ติดตั้ง Tailender Tracks"
+  }
+};
 
 declare global {
   interface Window {
@@ -227,16 +302,12 @@ const getFormGuide = (title: string) => FORM_GUIDES.find(f => f.title === title)
 // ==========================================
 
 const Modal = ({ title, onClose, children }: any) => (
-  <div style={{
-    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, 
-    backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000,
-    display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16
-  }}>
-    <div className="card" style={{ width: '100%', maxWidth: 400, margin: 0, position: 'relative' }}>
-      <button onClick={onClose} style={{ position: 'absolute', top: 12, right: 12, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}>
+  <div className="modal-overlay">
+    <div className="modal-card">
+      <button onClick={onClose} className="modal-close">
         <X size={20} />
       </button>
-      <h3 className="card-title" style={{ marginTop: 0 }}>{title}</h3>
+      <h3 className="modal-title">{title}</h3>
       {children}
     </div>
   </div>
@@ -283,23 +354,23 @@ function StageForms({ stage, forms }: any) {
   );
 }
 
-function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
+function HomeView({ projects, onOpenProject, onCreateProject, goView, t }: any) {
   const recentProject = projects.length > 0 ? [...projects].sort((a,b) => b.updatedAt - a.updatedAt)[0] : null;
 
   return (
     <div>
       <div className="view-header">
-        <h1>Welcome</h1>
-        <p>Offline field recording workflow</p>
+        <h1>{t.welcome}</h1>
+        <p>{t.offlineWorkflow}</p>
       </div>
 
       <button className="btn btn-primary" onClick={onCreateProject} style={{ marginBottom: 24, padding: 16 }}>
-        <Plus size={20} /> Create New Project
+        <Plus size={20} /> {t.createNewProject}
       </button>
 
       {recentProject && (
         <div className="card" onClick={() => onOpenProject(recentProject.id)} style={{ cursor: 'pointer' }}>
-          <h3 className="card-title"><Play size={18} /> Continue Last Project</h3>
+          <h3 className="card-title"><Play size={18} /> {t.continueLastProject}</h3>
           <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{recentProject.title}</div>
           <p style={{ margin: '4px 0 0 0', color: 'var(--text-secondary)' }}>
             Stage: <span className="badge active">{recentProject.currentStage}</span>
@@ -342,7 +413,7 @@ function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
   );
 }
 
-function ProjectsView({ projects, onOpenProject, onCreateProject }: any) {
+function ProjectsView({ projects, onOpenProject, onCreateProject, t }: any) {
   const [search, setSearch] = useState('');
   
   const filtered = projects.filter((p: Project) => 
@@ -353,94 +424,123 @@ function ProjectsView({ projects, onOpenProject, onCreateProject }: any) {
   return (
     <div>
       <div className="view-header">
-        <h1>Projects</h1>
-        <p>Manage your recording programs</p>
+        <h1>{t.projects}</h1>
       </div>
 
-      <div className="input-group">
-        <div style={{ position: 'relative' }}>
-          <Search size={18} style={{ position: 'absolute', left: 12, top: 14, color: 'var(--text-secondary)' }} />
-          <input 
-            type="text" 
-            placeholder="Search projects or languages..." 
-            value={search} 
-            onChange={e => setSearch(e.target.value)}
-            style={{ paddingLeft: 40 }}
-          />
+      <div className="card" style={{ marginBottom: 16 }}>
+        <div className="input-group" style={{ marginBottom: 0 }}>
+          <div style={{ position: 'relative' }}>
+            <Search size={18} style={{ position: 'absolute', left: 12, top: 14, color: 'var(--text-secondary)' }} />
+            <input 
+              type="text" 
+              placeholder="Search projects..." 
+              style={{ paddingLeft: 40 }} 
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+          </div>
         </div>
       </div>
 
-      <button className="btn" onClick={onCreateProject}>
-        <Plus size={18} /> New Project
-      </button>
-
-      <div className="mt-4">
+      <div className="card" style={{ padding: 0 }}>
         {filtered.length === 0 ? (
-          <p className="text-center" style={{ color: 'var(--text-secondary)' }}>No projects found.</p>
+          <p style={{ textAlign: 'center', padding: '32px 0', color: 'var(--text-secondary)' }}>No projects found.</p>
         ) : (
-          filtered.map((p: Project) => (
-            <div key={p.id} className="card" onClick={() => onOpenProject(p.id)} style={{ cursor: 'pointer', padding: 12 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                  <div style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{p.title}</div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{p.languageName || 'No Language'} • {new Date(p.updatedAt).toLocaleDateString()}</div>
-                </div>
-                <div className="badge active">{p.currentStage}</div>
+          filtered.sort((a: any, b: any) => b.updatedAt - a.updatedAt).map((p: any) => (
+            <div key={p.id} className="list-item" onClick={() => onOpenProject(p.id)}>
+              <div className="list-item-content">
+                <h4>{p.title}</h4>
+                <p>{p.languageName || 'No language'} • {p.currentStage} • {new Date(p.updatedAt).toLocaleDateString()}</p>
               </div>
+              <ChevronLeft size={20} style={{ transform: 'rotate(180deg)', opacity: 0.5 }} />
             </div>
           ))
         )}
       </div>
+
+      <button className="btn btn-primary" onClick={onCreateProject} style={{ marginTop: 8 }}>
+        <Plus size={18} /> {t.createNewProject}
+      </button>
     </div>
   );
 }
 
-function ProjectDetailView({ project, updateProject, goStage, onSave }: any) {
-  const [showSaved, setShowSaved] = useState(false);
-  if(!project) return null;
-  const stages: Stage[] = ['Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'];
+function ProjectDetailView({ project, updateProject, goStage, onSave, t }: any) {
+  const [saveStatus, setSaveStatus] = useState<string | null>(null);
 
-  const handleSave = () => {
+  const handleManualSave = () => {
     onSave();
-    setShowSaved(true);
-    setTimeout(() => setShowSaved(false), 2000);
+    setSaveStatus(t.saved);
+    setTimeout(() => setSaveStatus(null), 3000);
   };
 
   return (
     <div>
-      <div className="card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-          <h3 className="card-title" style={{ margin: 0 }}><Edit3 size={18} /> Project Summary</h3>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            {showSaved && <span style={{ color: 'var(--accent-color)', fontWeight: 'bold', animation: 'fadeIn 0.3s' }}>Saved!</span>}
-            <button className="btn btn-primary" onClick={handleSave} style={{ width: 'auto', margin: 0 }}>
-              <Save size={16} /> Save Project
-            </button>
-          </div>
-        </div>
-        <FieldInput label="Project Title" value={project.title} onChange={(v:any) => updateProject({title: v})} />
-        <FieldInput label="Language Name" value={project.languageName} onChange={(v:any) => updateProject({languageName: v})} />
-        <FieldInput label="Dialect / Speech Variety" value={project.dialect} onChange={(v:any) => updateProject({dialect: v})} />
-        <FieldInput label="Country / Region" value={project.countryRegion} onChange={(v:any) => updateProject({countryRegion: v})} />
-        <FieldInput label="Target Listeners" value={project.targetListeners} onChange={(v:any) => updateProject({targetListeners: v})} />
-        <FieldInput label="Ministry Purpose" value={project.ministryPurpose} onChange={(v:any) => updateProject({ministryPurpose: v})} />
-        <FieldInput label="Biblical Theme" value={project.biblicalTheme} onChange={(v:any) => updateProject({biblicalTheme: v})} />
-        <FieldInput label="Scripture References" value={project.scriptureReferences} onChange={(v:any) => updateProject({scriptureReferences: v})} />
-        <FieldInput label="Local Church / Partner" value={project.localChurchPartner} onChange={(v:any) => updateProject({localChurchPartner: v})} />
-        <FieldTextarea label="Project Notes" value={project.projectNotes} onChange={(v:any) => updateProject({projectNotes: v})} />
+      <div className="view-header">
+        <h1>{t.projectDetails}</h1>
+        <p>{t.projectSummary}</p>
+      </div>
+
+      <div style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
+        <button 
+          className="btn btn-primary" 
+          onClick={handleManualSave}
+          disabled={!!saveStatus}
+          style={{ margin: 0, flex: 1 }}
+        >
+          <Save size={18} /> {saveStatus || t.saveProject}
+        </button>
       </div>
 
       <div className="card">
-        <h3 className="card-title">Workflow Stages</h3>
+        <h3 className="card-title"><Edit3 size={18} /> Project Basics</h3>
+        <FieldInput label={t.projectTitle} value={project.title} onChange={(v:any) => updateProject({title: v})} />
+        <FieldInput label={t.languageName} value={project.languageName} onChange={(v:any) => updateProject({languageName: v})} />
+        <FieldInput label={t.dialect} value={project.dialect} onChange={(v:any) => updateProject({dialect: v})} />
+        <FieldInput label={t.countryRegion} value={project.countryRegion} onChange={(v:any) => updateProject({countryRegion: v})} />
+        <FieldTextarea label={t.targetListeners} value={project.targetListeners} onChange={(v:any) => updateProject({targetListeners: v})} />
+      </div>
+
+      <div className="card">
+        <h3 className="card-title"><BookOpen size={18} /> Bible & Ministry</h3>
+        <FieldTextarea label={t.ministryPurpose} value={project.ministryPurpose} onChange={(v:any) => updateProject({ministryPurpose: v})} />
+        <FieldInput label={t.biblicalTheme} value={project.biblicalTheme} onChange={(v:any) => updateProject({biblicalTheme: v})} />
+        <FieldInput label={t.scriptureReferences} value={project.scriptureReferences} onChange={(v:any) => updateProject({scriptureReferences: v})} />
+        <FieldInput label={t.localChurchPartner} value={project.localChurchPartner} onChange={(v:any) => updateProject({localChurchPartner: v})} />
+      </div>
+
+      <div className="card">
+        <h3 className="card-title"><FileText size={18} /> {t.projectNotes}</h3>
+        <FieldTextarea label={t.projectNotes} value={project.projectNotes} onChange={(v:any) => updateProject({projectNotes: v})} />
+      </div>
+
+      <div className="card">
+        <h3 className="card-title"><ChevronDown size={18} /> {t.workflowStages}</h3>
         <div className="stage-grid">
-          {stages.map(s => (
-            <div key={s} className={`stage-card ${project.currentStage === s ? 'active' : ''}`} onClick={() => {
-              updateProject({currentStage: s});
-              goStage(s);
-            }}>
-              <div>{s}</div>
-            </div>
-          ))}
+          <div className="stage-card" onClick={() => goStage('Research')}>
+            <Search size={24} />
+            <span>{t.research}</span>
+          </div>
+          <div className="stage-card" onClick={() => goStage('Plan')}>
+            <Plus size={24} />
+            <span>{t.plan}</span>
+          </div>
+          <div className="stage-card" onClick={() => goStage('Record')}>
+            <Mic size={24} />
+            <span>{t.record}</span>
+          </div>
+          <div className="stage-card" onClick={() => goStage('Program')}>
+            <Play size={24} />
+            <span>{t.program}</span>
+          </div>
+          <div className="stage-card" onClick={() => goStage('Submit')}>
+            <CheckCircle size={24} />
+            <span>{t.submit}</span>
+          </div>
+          <div className="stage-card" onClick={() => goStage('Share')}>
+            <Share2 size={24} />
+            <span>{t.share}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -769,13 +869,13 @@ function StageShare({ project, update, formsManifest }: any) {
 }
 
 // FORMS VIEW
-function FormsView({ formsManifest }: any) {
+function FormsView({ formsManifest, t }: any) {
   const stageOrder = ['Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'];
   return (
     <div>
       <div className="view-header">
-        <h1>Forms Library</h1>
-        <p>Fillable forms and simple field instructions for the whole recording workflow</p>
+        <h1>{t.forms}</h1>
+        <p>Project documentation and check-sheets</p>
       </div>
 
       <div className="card">
@@ -846,7 +946,7 @@ function FormsView({ formsManifest }: any) {
 }
 
 // TRAINING VIEW
-function TrainingView() {
+function TrainingView({ t }: any) {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
   const toggleSection = (key: string) => {
@@ -919,8 +1019,8 @@ function TrainingView() {
   return (
     <div className="view-container">
       <div className="view-header">
-        <h1>Training</h1>
-        <p>Learn the 6-Stage Christian Workflow</p>
+        <h1>{t.training}</h1>
+        <p>Field skills and recording guides</p>
       </div>
 
       <div className="card" style={{ marginBottom: 20 }}>
@@ -986,11 +1086,11 @@ function TrainingView() {
 }
 
 // SETTINGS VIEW
-function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting, dataHandlers }: any) {
+function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting, dataHandlers, t }: any) {
   return (
     <div>
       <div className="view-header">
-        <h1>Settings</h1>
+        <h1>{t.settings}</h1>
         <p>App preferences and data management</p>
       </div>
 
@@ -1011,17 +1111,17 @@ function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting,
         />
         <div style={{ marginBottom: 12 }}>
           <FieldSelect 
-            label="Interface Language" 
+            label={t.interfaceLanguage} 
             value={settings.interfaceLanguage} 
             onChange={(v:string) => updateSetting('interfaceLanguage', v)} 
-            options={['English', 'Thai']} 
+            options={['English', 'ไทย']} 
           />
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: -8 }}>
             More interface translation is coming later.
           </p>
         </div>
         <FieldCheckbox 
-          label="Easy Read Mode" 
+          label={t.easyReadMode} 
           checked={settings.fontStyle === 'easy'} 
           onChange={(checked: boolean) => updateSetting('fontStyle', checked ? 'easy' : 'default')} 
         />
@@ -1035,12 +1135,12 @@ function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting,
       </div>
 
       <div className="card">
-        <h3 className="card-title">Install App</h3>
+        <h3 className="card-title">{t.installApp}</h3>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 12 }}>
           Install Tailender Tracks so it can open like an app on this device for offline field recording access.
         </p>
         <button className="btn btn-primary" style={{ width: 'auto' }} onClick={onInstallClick}>
-          Install Tailender Tracks
+          {t.installTailenderTracks}
         </button>
         {!deferredPrompt && (
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: 12 }}>
@@ -1134,9 +1234,24 @@ export default function App() {
   const [fontSize, setFontSize] = useState(() => localStorage.getItem('tailender_font_size') || 'medium');
   const [isHighContrast, setIsHighContrast] = useState(() => localStorage.getItem('tailender_high_contrast') === 'true');
 
+  const handleReadPage = () => {
+    const mainContent = document.querySelector('.main-content');
+    const text = mainContent ? (mainContent as HTMLElement).innerText : '';
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = interfaceLanguage === 'ไทย' || interfaceLanguage === 'Thai' ? 'th-TH' : 'en-US';
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const handleStopReading = () => {
+    window.speechSynthesis.cancel();
+  };
+
   const [orgName, setOrgName] = useState(() => localStorage.getItem('tailender_org_name') || '');
   const [defaultRegion, setDefaultRegion] = useState(() => localStorage.getItem('tailender_default_region') || 'Global');
   const [interfaceLanguage, setInterfaceLanguage] = useState(() => localStorage.getItem('tailender_interface_language') || 'English');
+
+  const t = uiText[interfaceLanguage === 'ไทย' || interfaceLanguage === 'th' ? 'th' : 'en'];
 
   const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
 
@@ -1185,7 +1300,7 @@ export default function App() {
   const [ToshiEasyEnglish, setToshiEasyEnglish] = useState<Record<number, boolean>>({});
   const stats = getToshiBrainStats();
   const [ToshiMessages, setToshiMessages] = useState<any[]>([
-    { sender: 'Toshi', text: `Howdy! I am Tailender Toshi — your offline field recording guide. I have ${stats.total} items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!` }
+    { sender: 'Toshi', text: `Hello Friend! I am Tailender Toshi — your offline field recording guide. I have ${stats.total} items ready. Ask me anything about Research, Recording, Troubleshooting, Glossary terms, and more!` }
   ]);
   const [ToshiInput, setToshiInput] = useState('');
 
@@ -1345,10 +1460,10 @@ export default function App() {
   };
 
   const renderView = () => {
-    if (activeView === 'Home') return <HomeView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} goView={setActiveView} />;
-    if (activeView === 'Projects') return <ProjectsView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} />;
-    if (activeView === 'Training') return <TrainingView />;
-    if (activeView === 'Forms') return <FormsView formsManifest={formsManifest} />;
+    if (activeView === 'Home') return <HomeView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} goView={setActiveView} t={t} />;
+    if (activeView === 'Projects') return <ProjectsView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} t={t} />;
+    if (activeView === 'Training') return <TrainingView t={t} />;
+    if (activeView === 'Forms') return <FormsView formsManifest={formsManifest} t={t} />;
     if (activeView === 'Settings') return (
       <SettingsView 
         deferredPrompt={deferredPrompt} 
@@ -1365,19 +1480,20 @@ export default function App() {
           onExport: handleExport,
           onImport: handleImport
         }}
+        t={t}
       />
     );
     
     // Project specific views
     if (!currentProject) return <div style={{padding: 24}}>Project not found.</div>;
     
-    if (activeView === 'ProjectDetail') return <ProjectDetailView project={currentProject} updateProject={updateProjectLevel} goStage={setActiveView} onSave={saveProjectNow} />;
-    if (activeView === 'Research') return <StageResearch project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
-    if (activeView === 'Plan') return <StagePlan project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
-    if (activeView === 'Record') return <StageRecord project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
-    if (activeView === 'Program') return <StageProgram project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
-    if (activeView === 'Submit') return <StageSubmit project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
-    if (activeView === 'Share') return <StageShare project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
+    if (activeView === 'ProjectDetail') return <ProjectDetailView project={currentProject} updateProject={updateProjectLevel} goStage={setActiveView} onSave={saveProjectNow} t={t} />;
+    if (activeView === 'Research') return <StageResearch project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
+    if (activeView === 'Plan') return <StagePlan project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
+    if (activeView === 'Record') return <StageRecord project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
+    if (activeView === 'Program') return <StageProgram project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
+    if (activeView === 'Submit') return <StageSubmit project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
+    if (activeView === 'Share') return <StageShare project={currentProject} update={updateProjectSection} formsManifest={formsManifest} t={t} />;
   };
 
   const isProjectView = ['ProjectDetail', 'Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'].includes(activeView);
@@ -1521,59 +1637,69 @@ export default function App() {
         </div>
       )}
 
-      <nav className="bottom-nav">
-
-      {/* TAILENDER Toshi FAB - bottom left */}
       <button
         className="toshi-fab"
         onClick={() => setShowToshiDialog(true)}
         title="Chat with Tailender Toshi"
       >
-        <img src={`${import.meta.env.BASE_URL}icons/Chat with Toshi.png`} alt="Chat with Toshi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        <img src={`${import.meta.env.BASE_URL}icons/Chat with Toshi.png`} alt="Chat with Toshi" />
       </button>
+
+      <nav className="bottom-nav">
         <div className={`nav-item ${activeView === 'Home' ? 'active' : ''}`} onClick={() => setActiveView('Home')}>
           <Home size={24} />
-          <span>Home</span>
+          <span>{t.home}</span>
         </div>
         <div className={`nav-item ${activeView === 'Projects' ? 'active' : ''}`} onClick={() => setActiveView('Projects')}>
           <Folder size={24} />
-          <span>Projects</span>
-        </div>
-        <div className={`nav-item ${activeView === 'Training' ? 'active' : ''}`} onClick={() => setActiveView('Training')}>
-          <BookOpen size={24} />
-          <span>Training</span>
+          <span>{t.projects}</span>
         </div>
         <div className={`nav-item ${activeView === 'Forms' ? 'active' : ''}`} onClick={() => setActiveView('Forms')}>
           <FileText size={24} />
-          <span>Forms</span>
+          <span>{t.forms}</span>
+        </div>
+        <div className={`nav-item ${activeView === 'Training' ? 'active' : ''}`} onClick={() => setActiveView('Training')}>
+          <BookOpen size={24} />
+          <span>{t.training}</span>
         </div>
         <div className={`nav-item ${activeView === 'Settings' ? 'active' : ''}`} onClick={() => setActiveView('Settings')}>
           <Settings size={24} />
-          <span>Settings</span>
+          <span>{t.settings}</span>
         </div>
       </nav>
 
       {/* MODALS */}
       {showToshiDialog && (
         <Modal title={
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-            <div className="dymo-label-stack" style={{ gap: 2 }}>
-              <span className="dymo-label" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TAILENDER</span>
-              <span className="dymo-label dymo-label--red" style={{ fontSize: '0.7rem', padding: '2px 8px', letterSpacing: '0.2em' }}>TOSHI</span>
+          <div className="toshi-chat-header">
+            <div className="toshi-chat-brand">
+              <img
+                src={`${import.meta.env.BASE_URL}icons/DYMO-Black-TAILENDER.png`}
+                alt="TAILENDER"
+                className="toshi-chat-dymo-label"
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}icons/DYMO-Red-TOSHI.png`}
+                alt="TOSHI"
+                className="toshi-chat-dymo-label toshi-chat-dymo-label--toshi"
+              />
             </div>
-            <select
-              value={ToshiFilter}
-              onChange={e => setToshiFilter(e.target.value)}
-              style={{ padding: '2px 8px', borderRadius: 4, width: 'auto', fontSize: '0.75rem', marginRight: 24, fontWeight: 'normal', backgroundColor: 'var(--bg-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)' }}
-            >
-              {getTailenderToshiCategories().map((f: string) => (
-                <option key={f} value={f}>{f}</option>
-              ))}
-            </select>
+            <div className="toshi-chat-filter-wrap">
+              <select
+                value={ToshiFilter}
+                onChange={e => setToshiFilter(e.target.value)}
+              >
+                {getTailenderToshiCategories().map((f: string) => (
+                  <option key={f} value={f}>{f}</option>
+                ))}
+              </select>
+            </div>
+            {/* Close button is handled by Modal component, but we ensure layout space */}
+            <div style={{ width: 24 }}></div>
           </div>
         } onClose={() => setShowToshiDialog(false)}>
-          <div style={{ height: 420, display: 'flex', flexDirection: 'column' }}>
-            <div style={{
+          <div className="toshi-chat-modal" style={{ height: 420, display: 'flex', flexDirection: 'column' }}>
+            <div className="toshi-chat-messages" style={{
               flex: 1, backgroundColor: 'var(--bg-color)', borderRadius: 8, padding: 12, marginBottom: 12,
               border: '1px solid var(--border-color)', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 12
             }}>
@@ -1587,10 +1713,12 @@ export default function App() {
                   <div style={{
                     backgroundColor: msg.sender === 'user' ? 'var(--accent-color)' : 'var(--surface-color)',
                     color: msg.sender === 'user' ? '#fff' : 'var(--text-primary)',
-                    padding: '8px 12px', borderRadius: 12, fontSize: '0.88rem', lineHeight: 1.5,
+                    padding: '8px 12px', borderRadius: 12, lineHeight: 1.45,
                     border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
                     marginBottom: 4, whiteSpace: 'pre-wrap'
-                  }}>
+                  }}
+                  className="toshi-message"
+                  >
                     {ToshiEasyEnglish[i] && msg.easyEnglish ? msg.easyEnglish : msg.text}
                   </div>
                   {/* Easy English toggle */}
@@ -1623,11 +1751,11 @@ export default function App() {
                   )}
                   {/* Related question chips */}
                   {msg.related && msg.related.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+                    <div className="toshi-suggestions" style={{ marginTop: 2 }}>
                       {msg.related.map((rel: any, j: number) => (
-                        <span key={j} onClick={() => handleSendToshiMessage(rel.label)} style={{
+                        <span key={j} onClick={() => handleSendToshiMessage(rel.label)} className="toshi-suggestion-chip" style={{
                           backgroundColor: 'rgba(122,10,10,0.08)', color: 'var(--accent-color)',
-                          padding: '3px 8px', borderRadius: 12, fontSize: '0.72rem', cursor: 'pointer',
+                          padding: '3px 8px', borderRadius: 12, cursor: 'pointer',
                           display: 'inline-block', border: '1px solid rgba(122,10,10,0.2)'
                         }}>
                           {rel.label}
@@ -1642,16 +1770,17 @@ export default function App() {
             {/* Suggested Questions for current stage */}
             {ToshiMessages.length < 3 && (
               <div style={{ marginBottom: 12, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', marginLeft: 4 }}>Try asking:</span>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginLeft: 4 }}>Try asking:</span>
+                <div className="toshi-suggestions">
                   {getSuggestedToshiQuestions(ToshiFilter).slice(0, 3).map((q, i) => (
                     <button 
                       key={i} 
                       onClick={() => handleSendToshiMessage(q)}
+                      className="toshi-suggestion-chip"
                       style={{ 
                         background: 'rgba(128,128,128,0.1)', border: '1px solid var(--border-color)', 
-                        borderRadius: 16, padding: '4px 10px', fontSize: '0.72rem', color: 'var(--text-primary)',
-                        cursor: 'pointer', whiteSpace: 'nowrap'
+                        borderRadius: 16, padding: '4px 10px', color: 'var(--text-primary)',
+                        cursor: 'pointer'
                       }}
                     >
                       {q}

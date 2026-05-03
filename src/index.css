@@ -10,12 +10,15 @@
   --header-height: 140px;
 
   /* Image size tokens — change here to resize everywhere */
-  --splash-logo-height: clamp(120px, 28vw, 260px);
+  --splash-logo-height: clamp(150px, 30vw, 300px);
   --splash-dymo-height: clamp(42px, 9vw, 90px);
+
   --header-logo-height: clamp(52px, 9vw, 90px);
-  --header-dymo-height: clamp(12px, 2.2vw, 24px);
-  --toshi-fab-width: clamp(54px, 10vw, 76px);
-  --toshi-fab-height: clamp(64px, 12vw, 88px);
+  --header-dymo-height: clamp(16px, 2.7vw, 30px);
+
+  --toshi-fab-width: clamp(68px, 13vw, 92px);
+  --toshi-fab-height: clamp(78px, 15vw, 106px);
+  --toshi-fab-bottom: clamp(50px, 8vh, 74px);
 }
 
 body.dark-theme {
@@ -86,8 +89,8 @@ body {
 
 .splash-logo {
   height: var(--splash-logo-height);
-  width: auto;
   max-width: 86vw;
+  width: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto 10px auto;
@@ -205,19 +208,20 @@ body {
 /* Header DYMO title labels — separate from splash, static and intentional */
 .header-dymo-stack {
   height: auto;
-  max-height: 120px;
+  max-height: clamp(46px, 8vw, 76px);
   display: flex;
   flex-direction: column;
   gap: 2px;
   align-items: flex-start;
   justify-content: center;
   overflow: visible;
+  flex-shrink: 0;
 }
 
 .header-dymo-label {
-  height: clamp(10px, 2vw, 22px);
+  height: var(--header-dymo-height);
   width: auto;
-  max-width: min(160px, 28vw);
+  max-width: min(190px, 34vw);
   object-fit: contain;
   display: block;
   filter: drop-shadow(2px 3px 5px rgba(0,0,0,0.35));
@@ -547,9 +551,8 @@ body {
 /* Tailender Toshi floating button */
 .toshi-fab {
   position: fixed;
-  bottom: calc(var(--nav-height) + 16px);
-  right: 20px;
-  left: auto;
+  bottom: calc(var(--nav-height) + 4px);
+  right: clamp(10px, 3vw, 20px);
   width: var(--toshi-fab-width);
   height: var(--toshi-fab-height);
   background-color: transparent;
@@ -560,8 +563,20 @@ body {
   cursor: pointer;
   z-index: 200;
   border: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, filter 0.2s;
   animation: toshi-nudge 10s ease-in-out infinite;
+}
+
+.toshi-fab img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.toshi-fab:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
 }
 
 @keyframes toshi-nudge {
@@ -681,6 +696,11 @@ body {
   to { opacity: 1; }
 }
 
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 /* Responsive Header Stacking */
 @media (max-width: 600px) {
   .header {
@@ -715,6 +735,43 @@ body {
     margin-left: 0;
   }
 }
+
+@media (max-width: 480px) {
+  :root {
+    --header-dymo-height: clamp(14px, 4.2vw, 22px);
+    --toshi-fab-width: clamp(64px, 18vw, 78px);
+    --toshi-fab-height: clamp(74px, 21vw, 90px);
+  }
+
+  .header-dymo-label {
+    max-width: 36vw;
+  }
+
+  .toshi-fab {
+    right: 8px;
+    bottom: calc(var(--nav-height) + 2px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  :root {
+    --splash-logo-height: clamp(100px, 28vh, 150px);
+    --splash-dymo-height: clamp(28px, 8vh, 44px);
+    --toshi-fab-width: clamp(54px, 12vh, 70px);
+    --toshi-fab-height: clamp(64px, 14vh, 82px);
+    --header-dymo-height: clamp(12px, 4vh, 20px);
+  }
+
+  .toshi-fab {
+    bottom: calc(var(--nav-height) + 2px);
+  }
+
+  .splash-screen {
+    padding: 12px;
+  }
+}
+
+
 
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
@@ -968,4 +1025,159 @@ body {
 /* Modal tweaks for Accessibility */
 .install-banner-actions .btn {
   margin: 0;
+}
+
+/* Base Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  position: relative;
+  padding: 24px 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.modal-title {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.toshi-chat-modal, .toshi-dialog {
+  font-size: 1.05rem;
+}
+
+.toshi-message, .chat-message {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.toshi-chat-header {
+  display: grid;
+  grid-template-columns: 1fr auto 40px;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.toshi-chat-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 92px;
+}
+
+.toshi-chat-dymo-label {
+  height: clamp(15px, 3.2vw, 24px);
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.25));
+  transform: rotate(-4deg);
+  transform-origin: left center;
+}
+
+.toshi-chat-dymo-label--toshi {
+  transform: rotate(3deg);
+  margin-left: 2px;
+}
+
+.toshi-chat-filter-wrap {
+  justify-self: center;
+  width: min(190px, 38vw);
+}
+
+.toshi-chat-filter-wrap select {
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+
+.toshi-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.toshi-suggestion-chip {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 520px) {
+  .toshi-chat-header {
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+  }
+
+  .toshi-chat-brand {
+    min-width: 78px;
+  }
+
+  .toshi-chat-filter-wrap {
+    width: min(165px, 42vw);
+  }
+
+  .toshi-suggestion-chip {
+    flex: 1 1 100%;
+  }
+
+  .modal-card:has(.toshi-chat-modal) {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+  }
 }
