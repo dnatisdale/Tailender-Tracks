@@ -99,7 +99,7 @@ body {
 .header-hero-logo {
   height: clamp(48px, 8vw, 82px);
   width: auto;
-  max-width: min(500px, 42vw);
+  max-width: min(50px, 42vw);
   object-fit: contain;
   filter: drop-shadow(0 6px 15px rgba(0,0,0,0.25));
   flex-shrink: 0;
