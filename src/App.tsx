@@ -1537,7 +1537,7 @@ export default function App() {
             <button className="icon-btn" onClick={handleShare} title="Share App">
               <Share2 size={20} />
             </button>
-            <button className="icon-btn" onClick={() => setShowAccessibilityModal(true)} title="Accessibility Settings">
+            <button className="icon-btn" onClick={() => setShowAccessibilityModal(true)} title="Accessibility, language, and reader tools">
               <Type size={20} />
             </button>
             <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
@@ -1563,11 +1563,20 @@ export default function App() {
                 <div className="accessibility-button-group">
                   <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')}>Default</button>
                   <button className={`btn ${fontStyle === 'easy' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('easy')}>Easy Read</button>
+                  <button className={`btn ${fontStyle === 'dyslexia' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('dyslexia')}>Dyslexia Friendly</button>
                   <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')}>Thai / English</button>
                 </div>
                 <p className="accessibility-note">
-                  “Easy Read uses spacing and simple fonts to help struggling readers. Thai / English uses a font stack better suited for mixed Thai and English text.”
+                  “Easy Read and Dyslexia Friendly use spacing and familiar fonts to help readers. Thai / English is optimized for mixed text.”
                 </p>
+              </div>
+
+              <div className="accessibility-section">
+                <h4 className="accessibility-section-title">INTERFACE LANGUAGE</h4>
+                <div className="accessibility-button-group">
+                  <button className={`btn ${interfaceLanguage === 'English' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('English')}>English</button>
+                  <button className={`btn ${interfaceLanguage === 'ไทย' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('ไทย')}>ไทย</button>
+                </div>
               </div>
 
               <div className="accessibility-section">
@@ -1602,17 +1611,19 @@ export default function App() {
                   </p>
                 ) : (
                   <>
+                    <button className="btn btn--secondary" style={{ width: 'auto', marginBottom: 12 }} onClick={() => {
+                      if (window.googleTranslateElementInit) window.googleTranslateElementInit();
+                    }}>
+                      Open Google Translate
+                    </button>
                     <div className="translate-widget-box">
                       <div id="google_translate_element"></div>
                     </div>
                     <p className="translate-panel-note" style={{ fontSize: '0.75rem', marginTop: 8 }}>
-                      If the language selector does not appear, refresh the page and check whether browser extensions are blocking translate.google.com.
+                      Google Translate requires internet access. Bible and ministry terms should be checked by a human.
                     </p>
                   </>
                 )}
-                <p className="accessibility-note" style={{ fontStyle: 'italic', margin: '8px 0 0' }}>
-                  Translation uses Google Translate. Some ministry or Bible terms may need human review.
-                </p>
               </div>
 
               <button className="btn btn-primary" onClick={() => setShowAccessibilityModal(false)}>Close</button>

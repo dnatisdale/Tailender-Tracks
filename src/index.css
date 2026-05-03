@@ -1207,6 +1207,30 @@ body {
   }
 }
 
+.app-font-default {
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app-font-easy {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  word-spacing: 0.08em;
+}
+
+.app-font-dyslexia {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+}
+
+.app-font-thai-english {
+  font-family: "Noto Sans Thai", "Noto Sans", Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
 .toshi-chat-modal, .toshi-dialog {
   font-size: 1.05rem;
 }
