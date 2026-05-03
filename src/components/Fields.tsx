@@ -25,7 +25,11 @@ export const FieldSelect = ({ label, value, onChange, options }: any) => (
     <label>{label}</label>
     <select value={value || ''} onChange={e => onChange(e.target.value)}>
       <option value="">Select...</option>
-      {options.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
+      {options.map((opt: any) => {
+        const optionValue = typeof opt === 'string' ? opt : opt.value;
+        const optionLabel = typeof opt === 'string' ? opt : opt.label;
+        return <option key={optionValue} value={optionValue}>{optionLabel}</option>;
+      })}
     </select>
   </div>
 );

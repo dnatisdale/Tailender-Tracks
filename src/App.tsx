@@ -842,12 +842,21 @@ function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting,
             More interface translation is coming later.
           </p>
         </div>
-        <FieldSelect 
-          label={t.fontNoto} 
-          value={settings.fontStyle} 
-          onChange={(v:string) => updateSetting('fontStyle', v)} 
-          options={['default', 'dyslexia', 'thaiEnglish']} 
-        />
+        <div style={{ marginBottom: 12 }}>
+          <FieldSelect 
+            label={t.fontStyle} 
+            value={settings.fontStyle} 
+            onChange={(v:string) => updateSetting('fontStyle', v)} 
+            options={[
+              { label: t.fontNoto, value: 'default' },
+              { label: t.fontDyslexia, value: 'dyslexia' },
+              { label: t.fontThaiEnglish, value: 'thaiEnglish' }
+            ]} 
+          />
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: -8 }}>
+            {t.fontHelperNote}
+          </p>
+        </div>
       </div>
 
       <div className="card">
