@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, ChevronDown, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
-  Share2, Sun, Moon, User, X, Languages
+  Share2, Sun, Moon, User, X, Languages, Type, Volume2, VolumeX
 } from 'lucide-react';
 import { 
   askTailenderToshi, 
@@ -979,7 +979,7 @@ function TrainingView() {
 }
 
 // SETTINGS VIEW
-function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any; onInstallClick: () => void }) {
+function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting, dataHandlers }: any) {
   return (
     <div>
       <div className="view-header">
@@ -990,17 +990,41 @@ function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any;
       <div className="card">
         <h3 className="card-title">App Configuration</h3>
         <FieldInput label="App Name" value="Tailender Tracks" onChange={()=>{}} />
-        <FieldInput label="Ministry / Organization Name" value="" onChange={()=>{}} placeholder="Your Organization..." />
-        <FieldSelect label="Default Country / Region" value="" onChange={()=>{}} options={['Global', 'Africa', 'Asia', 'Americas']} />
-        <FieldSelect label="Interface Language (Placeholder)" value="English" onChange={()=>{}} options={['English']} />
-        <FieldCheckbox label="Easy English Mode (Placeholder)" checked={false} onChange={()=>{}} />
+        <FieldInput 
+          label="Ministry / Organization Name" 
+          value={settings.orgName} 
+          onChange={(v:string) => updateSetting('orgName', v)} 
+          placeholder="Your Organization..." 
+        />
+        <FieldSelect 
+          label="Default Country / Region" 
+          value={settings.defaultRegion} 
+          onChange={(v:string) => updateSetting('defaultRegion', v)} 
+          options={['Global', 'Africa', 'Asia', 'Americas']} 
+        />
+        <div style={{ marginBottom: 12 }}>
+          <FieldSelect 
+            label="Interface Language" 
+            value={settings.interfaceLanguage} 
+            onChange={(v:string) => updateSetting('interfaceLanguage', v)} 
+            options={['English', 'Thai']} 
+          />
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: -8 }}>
+            More interface translation is coming later.
+          </p>
+        </div>
+        <FieldCheckbox 
+          label="Easy Read Mode" 
+          checked={settings.fontStyle === 'easy'} 
+          onChange={(checked: boolean) => updateSetting('fontStyle', checked ? 'easy' : 'default')} 
+        />
       </div>
 
       <div className="card">
         <h3 className="card-title">Data &amp; Storage</h3>
-        <button className="btn"><Save size={18} /> Storage Manager (Placeholder)</button>
-        <button className="btn"><Download size={18} /> Backup / Export Projects (Placeholder)</button>
-        <button className="btn"><CheckSquare size={18} /> Import Project (Placeholder)</button>
+        <button className="btn" onClick={dataHandlers.onStorage}><BookOpen size={18} /> Storage Manager</button>
+        <button className="btn" onClick={dataHandlers.onExport}><Download size={18} /> Backup / Export Projects</button>
+        <button className="btn" onClick={dataHandlers.onImport}><CheckSquare size={18} /> Import Project Backup</button>
       </div>
 
       <div className="card">
@@ -1097,8 +1121,42 @@ export default function App() {
     setShowInstallBanner(false);
   };
   const [showSignIn, setShowSignIn] = useState(false);
-  const [showTranslateModal, setShowTranslateModal] = useState(false);
+  const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
+  
+  const [fontStyle, setFontStyle] = useState(() => localStorage.getItem('tailender_font_style') || 'default');
+  const [fontSize, setFontSize] = useState(() => localStorage.getItem('tailender_font_size') || 'medium');
+  const [isHighContrast, setIsHighContrast] = useState(() => localStorage.getItem('tailender_high_contrast') === 'true');
+
+  const [orgName, setOrgName] = useState(() => localStorage.getItem('tailender_org_name') || '');
+  const [defaultRegion, setDefaultRegion] = useState(() => localStorage.getItem('tailender_default_region') || 'Global');
+  const [interfaceLanguage, setInterfaceLanguage] = useState(() => localStorage.getItem('tailender_interface_language') || 'English');
+
   const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
+
+  useEffect(() => {
+    // Apply accessibility classes to body
+    const body = document.body;
+    body.classList.remove('app-font-default', 'app-font-easy', 'app-font-thai-english', 'app-easy-read');
+    
+    if (fontStyle === 'easy') {
+      body.classList.add('app-easy-read');
+    } else {
+      body.classList.add(`app-font-${fontStyle}`);
+    }
+
+    body.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
+    body.classList.add(`font-size-${fontSize}`);
+
+    if (isHighContrast) body.classList.add('high-contrast');
+    else body.classList.remove('high-contrast');
+
+    localStorage.setItem('tailender_font_style', fontStyle);
+    localStorage.setItem('tailender_font_size', fontSize);
+    localStorage.setItem('tailender_high_contrast', String(isHighContrast));
+    localStorage.setItem('tailender_org_name', orgName);
+    localStorage.setItem('tailender_default_region', defaultRegion);
+    localStorage.setItem('tailender_interface_language', interfaceLanguage);
+  }, [fontStyle, fontSize, isHighContrast, orgName, defaultRegion, interfaceLanguage]);
 
   // Toshi Chat State
   const [ToshiFilter, setToshiFilter] = useState('All');
@@ -1169,6 +1227,46 @@ export default function App() {
     }
   };
 
+  const handleExport = () => {
+    const dataStr = JSON.stringify(projects, null, 2);
+    const blob = new Blob([dataStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `tailender_backup_${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleImport = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e: any) => {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (re: any) => {
+        try {
+          const imported = JSON.parse(re.target.result);
+          if (Array.isArray(imported)) {
+            setProjects(imported);
+            alert('Projects imported successfully!');
+          }
+        } catch(err) {
+          alert('Failed to import project backup. Invalid file format.');
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  };
+
+  const handleStorageManager = () => {
+    const bytes = new Blob([JSON.stringify(projects)]).size;
+    alert(`Storage Status:\n\nKey: tailender_projects_v2\nProjects: ${projects.length}\nEstimated Size: ${(bytes / 1024).toFixed(2)} KB\n\nLocal storage is restricted to this browser. Use Export for backups.`);
+  };
+
   const saveProjectNow = () => {
     setProjects(prev => {
       const updated = activeProjectId 
@@ -1229,7 +1327,24 @@ export default function App() {
     if (activeView === 'Projects') return <ProjectsView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} />;
     if (activeView === 'Training') return <TrainingView />;
     if (activeView === 'Forms') return <FormsView formsManifest={formsManifest} />;
-    if (activeView === 'Settings') return <SettingsView deferredPrompt={deferredPrompt} onInstallClick={handleInstallClick} />;
+    if (activeView === 'Settings') return (
+      <SettingsView 
+        deferredPrompt={deferredPrompt} 
+        onInstallClick={handleInstallClick} 
+        settings={{ orgName, defaultRegion, interfaceLanguage, fontStyle }}
+        updateSetting={(key: string, val: any) => {
+          if (key === 'orgName') setOrgName(val);
+          if (key === 'defaultRegion') setDefaultRegion(val);
+          if (key === 'interfaceLanguage') setInterfaceLanguage(val);
+          if (key === 'fontStyle') setFontStyle(val);
+        }}
+        dataHandlers={{
+          onStorage: handleStorageManager,
+          onExport: handleExport,
+          onImport: handleImport
+        }}
+      />
+    );
     
     // Project specific views
     if (!currentProject) return <div style={{padding: 24}}>Project not found.</div>;
@@ -1284,8 +1399,8 @@ export default function App() {
             <button className="icon-btn" onClick={handleShare} title="Share App">
               <Share2 size={20} />
             </button>
-            <button className="icon-btn" onClick={() => setShowTranslateModal(true)} title="Translate App">
-              <Languages size={20} />
+            <button className="icon-btn" onClick={() => setShowAccessibilityModal(true)} title="Accessibility Settings">
+              <Type size={20} />
             </button>
             <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
               <User size={20} />
@@ -1299,28 +1414,64 @@ export default function App() {
       </main>
 
       {/* bottom NAV */}
-      {showTranslateModal && (
-        <div className="install-banner-overlay" onClick={() => setShowTranslateModal(false)}>
-          <div className="install-banner" onClick={e => e.stopPropagation()}>
+      {showAccessibilityModal && (
+        <div className="install-banner-overlay" onClick={() => setShowAccessibilityModal(false)}>
+          <div className="install-banner" onClick={e => e.stopPropagation()} style={{ maxWidth: 450 }}>
             <div className="install-banner-content">
-              <h3>Translate App</h3>
-              {!navigator.onLine ? (
-                <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
-                  Google Translate needs internet access. Translation is unavailable while offline.
+              <h3>Accessibility & Translation</h3>
+              
+              <div style={{ marginBottom: 20 }}>
+                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>FONT STYLE</h4>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')} style={{ width: 'auto' }}>Default</button>
+                  <button className={`btn ${fontStyle === 'easy' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('easy')} style={{ width: 'auto' }}>Easy Read</button>
+                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')} style={{ width: 'auto' }}>Thai / English</button>
+                </div>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 8 }}>
+                  “Easy Read uses spacing and simple fonts to help struggling readers. Thai / English uses a font stack better suited for mixed Thai and English text.”
                 </p>
-              ) : (
-                <>
-                  <div className="translate-widget-box">
-                    <div id="google_translate_element"></div>
-                  </div>
-                  <p className="translate-panel-note">
-                    Translation uses Google Translate and requires internet access. Some ministry or Bible terms may need human review.
+              </div>
+
+              <div style={{ marginBottom: 20 }}>
+                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>TEXT SIZE</h4>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <button className={`btn ${fontSize === 'small' ? 'btn-primary' : ''}`} onClick={() => setFontSize('small')} style={{ width: 'auto', flex: 1 }}>A-</button>
+                  <button className={`btn ${fontSize === 'medium' ? 'btn-primary' : ''}`} onClick={() => setFontSize('medium')} style={{ width: 'auto', flex: 1 }}>A</button>
+                  <button className={`btn ${fontSize === 'large' ? 'btn-primary' : ''}`} onClick={() => setFontSize('large')} style={{ width: 'auto', flex: 1 }}>A+</button>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: 20 }}>
+                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>HIGH CONTRAST</h4>
+                <button className={`btn ${isHighContrast ? 'btn-primary' : ''}`} onClick={() => setIsHighContrast(!isHighContrast)} style={{ width: 'auto' }}>
+                  {isHighContrast ? 'Turn Off' : 'Turn On'}
+                </button>
+              </div>
+
+              <div style={{ marginBottom: 20 }}>
+                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>SCREEN READER</h4>
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <button className="btn" onClick={handleReadPage} style={{ width: 'auto', flex: 1 }}><Volume2 size={16} /> Read Page</button>
+                  <button className="btn" onClick={handleStopReading} style={{ width: 'auto', flex: 1 }}><VolumeX size={16} /> Stop</button>
+                </div>
+              </div>
+
+              <div style={{ padding: '12px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
+                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>GOOGLE TRANSLATE</h4>
+                {!navigator.onLine ? (
+                  <p style={{ color: 'var(--accent-color)', fontWeight: 'bold', margin: 0 }}>
+                    Requires internet access. Unavailable while offline.
                   </p>
-                </>
-              )}
+                ) : (
+                  <div id="google_translate_element"></div>
+                )}
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 8, fontStyle: 'italic', margin: '8px 0 0' }}>
+                  Translation uses Google Translate. Some ministry or Bible terms may need human review.
+                </p>
+              </div>
             </div>
             <div className="install-banner-actions">
-              <button className="btn btn-primary" onClick={() => setShowTranslateModal(false)}>Close</button>
+              <button className="btn btn-primary" onClick={() => setShowAccessibilityModal(false)}>Close</button>
             </div>
           </div>
         </div>

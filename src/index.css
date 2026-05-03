@@ -922,3 +922,40 @@ body {
     flex: 0 0 62px;
   }
 }
+
+/* Accessibility Styles */
+.app-font-default {
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app-font-easy, .app-easy-read {
+  font-family: Verdana, Tahoma, Arial, sans-serif !important;
+  letter-spacing: 0.03em;
+  word-spacing: 0.08em;
+  line-height: 1.65 !important;
+}
+
+.app-font-thai-english {
+  font-family: "Noto Sans Thai", "Noto Sans", Tahoma, Arial, sans-serif !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.01em;
+}
+
+.high-contrast {
+  --bg-color: #000000 !important;
+  --surface-color: #111111 !important;
+  --text-primary: #ffffff !important;
+  --text-secondary: #ffff00 !important;
+  --accent-color: #00ffff !important;
+  --border-color: #ffffff !important;
+  --card-bg: #111111 !important;
+}
+
+.font-size-small { font-size: 0.85rem !important; }
+.font-size-medium { font-size: 1rem !important; }
+.font-size-large { font-size: 1.25rem !important; }
+
+/* Modal tweaks for Accessibility */
+.install-banner-actions .btn {
+  margin: 0;
+}
