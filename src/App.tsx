@@ -702,7 +702,7 @@ function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any;
       </div>
 
       <div style={{ textAlign: 'center', marginTop: 32, opacity: 1.0 }}>
-        <img src={`${import.meta.env.BASE_URL}icons/Boot3.png`} alt="Logo" style={{ height: 20 }} />
+        <img src={`${import.meta.env.BASE_URL}icons/Boot3.png`} alt="Logo" style={{ height: 40 }} />
         <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78 RPM Series</p>
       </div>
     </div>
