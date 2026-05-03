@@ -621,6 +621,45 @@ body {
   font-size: 0.95rem;
 }
 
+.translate-widget-box {
+  margin: 20px 0;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.translate-panel-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary) !important;
+  font-style: italic;
+  margin-top: 16px !important;
+}
+
+/* Fix Google Translate widget appearance */
+#google_translate_element {
+  width: 100%;
+}
+
+.goog-te-gadget-simple {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-family: inherit !important;
+}
+
+.goog-te-menu-value span {
+  color: var(--text-primary) !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
 .install-banner-actions {
   display: flex;
   justify-content: flex-end;

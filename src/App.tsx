@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, ChevronDown, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
-  Share2, Sun, Moon, User, X
+  Share2, Sun, Moon, User, X, Languages
 } from 'lucide-react';
 import { 
   askTailenderToshi, 
@@ -1097,6 +1097,7 @@ export default function App() {
     setShowInstallBanner(false);
   };
   const [showSignIn, setShowSignIn] = useState(false);
+  const [showTranslateModal, setShowTranslateModal] = useState(false);
   const [splashState, setSplashState] = useState<'visible' | 'fading' | 'hidden'>('visible');
 
   // Toshi Chat State
@@ -1283,6 +1284,9 @@ export default function App() {
             <button className="icon-btn" onClick={handleShare} title="Share App">
               <Share2 size={20} />
             </button>
+            <button className="icon-btn" onClick={() => setShowTranslateModal(true)} title="Translate App">
+              <Languages size={20} />
+            </button>
             <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
               <User size={20} />
             </button>
@@ -1295,6 +1299,33 @@ export default function App() {
       </main>
 
       {/* bottom NAV */}
+      {showTranslateModal && (
+        <div className="install-banner-overlay" onClick={() => setShowTranslateModal(false)}>
+          <div className="install-banner" onClick={e => e.stopPropagation()}>
+            <div className="install-banner-content">
+              <h3>Translate App</h3>
+              {!navigator.onLine ? (
+                <p style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
+                  Google Translate needs internet access. Translation is unavailable while offline.
+                </p>
+              ) : (
+                <>
+                  <div className="translate-widget-box">
+                    <div id="google_translate_element"></div>
+                  </div>
+                  <p className="translate-panel-note">
+                    Translation uses Google Translate and requires internet access. Some ministry or Bible terms may need human review.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="install-banner-actions">
+              <button className="btn btn-primary" onClick={() => setShowTranslateModal(false)}>Close</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {showInstallBanner && (
         <div className="install-banner-overlay">
           <div className="install-banner">
