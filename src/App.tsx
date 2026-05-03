@@ -12,6 +12,13 @@ import {
 } from './data/tailenderToshiBrain';
 import './index.css';
 
+declare global {
+  interface Window {
+    googleTranslateElementInit?: () => void;
+    google?: any;
+  }
+}
+
 // ==========================================
 // TYPES & DATA STRUCTURES
 // ==========================================
@@ -1158,6 +1165,21 @@ export default function App() {
     localStorage.setItem('tailender_interface_language', interfaceLanguage);
   }, [fontStyle, fontSize, isHighContrast, orgName, defaultRegion, interfaceLanguage]);
 
+  useEffect(() => {
+    if (!showAccessibilityModal) return;
+
+    const timer = window.setTimeout(() => {
+      const el = document.getElementById("google_translate_element");
+      if (!el) return;
+
+      if (el.childElementCount === 0 && window.googleTranslateElementInit) {
+        window.googleTranslateElementInit();
+      }
+    }, 300);
+
+    return () => window.clearTimeout(timer);
+  }, [showAccessibilityModal]);
+
   // Toshi Chat State
   const [ToshiFilter, setToshiFilter] = useState('All');
   const [ToshiEasyEnglish, setToshiEasyEnglish] = useState<Record<number, boolean>>({});
@@ -1460,10 +1482,17 @@ export default function App() {
                 <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>GOOGLE TRANSLATE</h4>
                 {!navigator.onLine ? (
                   <p style={{ color: 'var(--accent-color)', fontWeight: 'bold', margin: 0 }}>
-                    Requires internet access. Unavailable while offline.
+                    Google Translate needs internet access.
                   </p>
                 ) : (
-                  <div id="google_translate_element"></div>
+                  <>
+                    <div className="translate-widget-box">
+                      <div id="google_translate_element"></div>
+                    </div>
+                    <p className="translate-panel-note" style={{ fontSize: '0.75rem', marginTop: 8 }}>
+                      If the language selector does not appear, refresh the page and check whether browser extensions are blocking translate.google.com.
+                    </p>
+                  </>
                 )}
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 8, fontStyle: 'italic', margin: '8px 0 0' }}>
                   Translation uses Google Translate. Some ministry or Bible terms may need human review.

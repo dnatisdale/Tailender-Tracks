@@ -622,17 +622,27 @@ body {
 }
 
 .translate-widget-box {
-  margin: 20px 0;
-  min-height: 40px;
+  margin: 18px 0;
+  min-height: 44px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+
+.translate-widget-box select,
+.goog-te-combo {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-family: inherit;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
 }
 
 .translate-panel-note {
-  font-size: 0.85rem;
-  color: var(--text-secondary) !important;
-  font-style: italic;
-  margin-top: 16px !important;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* Fix Google Translate widget appearance */
