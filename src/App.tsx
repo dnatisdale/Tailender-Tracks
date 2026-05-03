@@ -688,18 +688,15 @@ function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any;
 
       <div className="card">
         <h3 className="card-title">Install App</h3>
-        {deferredPrompt ? (
-          <>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: 12 }}>
-              Install Tailender Tracks on your device for offline field recording access.
-            </p>
-            <button className="btn btn-primary" style={{ width: 'auto' }} onClick={onInstallClick}>
-              Install App
-            </button>
-          </>
-        ) : (
-          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Install is available from the browser menu once the PWA passes Chrome's install checks. Make sure you are using HTTPS and the app has been open for at least 30 seconds.
+        <p style={{ color: 'var(--text-secondary)', marginBottom: 12 }}>
+          Install Tailender Tracks so it can open like an app on this device for offline field recording access.
+        </p>
+        <button className="btn btn-primary" style={{ width: 'auto' }} onClick={onInstallClick}>
+          Install Tailender Tracks
+        </button>
+        {!deferredPrompt && (
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: 12 }}>
+            If the install button does not open a prompt, check Chrome DevTools > Application > Manifest.
           </p>
         )}
       </div>
@@ -770,12 +767,15 @@ export default function App() {
   }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) {
+      alert('Install is available from the browser menu once the PWA passes Chrome\'s install checks.');
+      return;
+    }
+
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    }
+    console.log(`Install prompt result: ${outcome}`);
+
     setDeferredPrompt(null);
     setShowInstallBanner(false);
   };
