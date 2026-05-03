@@ -936,7 +936,7 @@ export default function App() {
                 <ChevronLeft size={24} />
               </button>
             ) : (
-              <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI BOOTS.png`} alt="Tailender Toshi and Boots" />
+              <img src={`${import.meta.env.BASE_URL}icons/HEADER4TOSHI-BOOTS.png`} alt="Tailender Toshi and Boots" className="header-hero-logo" />
             )}
             {!isProjectView && (
               <div className="header-dymo-stack">
