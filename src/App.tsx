@@ -517,27 +517,27 @@ function ProjectDetailView({ project, updateProject, goStage, onSave, t }: any) 
       <div className="card">
         <h3 className="card-title"><ChevronDown size={18} /> {t.workflowStages}</h3>
         <div className="stage-grid">
-          <div className="stage-card" onClick={() => goStage('Research')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Research' }); goStage('Research'); }}>
             <Search size={24} />
             <span>{t.research}</span>
           </div>
-          <div className="stage-card" onClick={() => goStage('Plan')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Plan' }); goStage('Plan'); }}>
             <Plus size={24} />
             <span>{t.plan}</span>
           </div>
-          <div className="stage-card" onClick={() => goStage('Record')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Record' }); goStage('Record'); }}>
             <Mic size={24} />
             <span>{t.record}</span>
           </div>
-          <div className="stage-card" onClick={() => goStage('Program')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Program' }); goStage('Program'); }}>
             <Play size={24} />
             <span>{t.program}</span>
           </div>
-          <div className="stage-card" onClick={() => goStage('Submit')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Submit' }); goStage('Submit'); }}>
             <CheckCircle size={24} />
             <span>{t.submit}</span>
           </div>
-          <div className="stage-card" onClick={() => goStage('Share')}>
+          <div className="stage-card" onClick={() => { updateProject({ currentStage: 'Share' }); goStage('Share'); }}>
             <Share2 size={24} />
             <span>{t.share}</span>
           </div>
@@ -1553,49 +1553,49 @@ export default function App() {
 
       {/* bottom NAV */}
       {showAccessibilityModal && (
-        <div className="install-banner-overlay" onClick={() => setShowAccessibilityModal(false)}>
-          <div className="install-banner" onClick={e => e.stopPropagation()} style={{ maxWidth: 450 }}>
-            <div className="install-banner-content">
+        <div className="modal-overlay" onClick={() => setShowAccessibilityModal(false)}>
+          <div className="modal-card accessibility-panel" onClick={e => e.stopPropagation()}>
+            <div className="accessibility-content">
               <h3>Accessibility & Translation</h3>
               
-              <div style={{ marginBottom: 20 }}>
-                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>FONT STYLE</h4>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')} style={{ width: 'auto' }}>Default</button>
-                  <button className={`btn ${fontStyle === 'easy' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('easy')} style={{ width: 'auto' }}>Easy Read</button>
-                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')} style={{ width: 'auto' }}>Thai / English</button>
+              <div className="accessibility-section">
+                <h4 className="accessibility-section-title">FONT STYLE</h4>
+                <div className="accessibility-button-group">
+                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')}>Default</button>
+                  <button className={`btn ${fontStyle === 'easy' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('easy')}>Easy Read</button>
+                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')}>Thai / English</button>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 8 }}>
+                <p className="accessibility-note">
                   “Easy Read uses spacing and simple fonts to help struggling readers. Thai / English uses a font stack better suited for mixed Thai and English text.”
                 </p>
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>TEXT SIZE</h4>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <button className={`btn ${fontSize === 'small' ? 'btn-primary' : ''}`} onClick={() => setFontSize('small')} style={{ width: 'auto', flex: 1 }}>A-</button>
-                  <button className={`btn ${fontSize === 'medium' ? 'btn-primary' : ''}`} onClick={() => setFontSize('medium')} style={{ width: 'auto', flex: 1 }}>A</button>
-                  <button className={`btn ${fontSize === 'large' ? 'btn-primary' : ''}`} onClick={() => setFontSize('large')} style={{ width: 'auto', flex: 1 }}>A+</button>
+              <div className="accessibility-section">
+                <h4 className="accessibility-section-title">TEXT SIZE</h4>
+                <div className="accessibility-button-group">
+                  <button className={`btn ${fontSize === 'small' ? 'btn-primary' : ''}`} onClick={() => setFontSize('small')}>A-</button>
+                  <button className={`btn ${fontSize === 'medium' ? 'btn-primary' : ''}`} onClick={() => setFontSize('medium')}>A</button>
+                  <button className={`btn ${fontSize === 'large' ? 'btn-primary' : ''}`} onClick={() => setFontSize('large')}>A+</button>
                 </div>
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>HIGH CONTRAST</h4>
-                <button className={`btn ${isHighContrast ? 'btn-primary' : ''}`} onClick={() => setIsHighContrast(!isHighContrast)} style={{ width: 'auto' }}>
+              <div className="accessibility-section">
+                <h4 className="accessibility-section-title">HIGH CONTRAST</h4>
+                <button className={`btn ${isHighContrast ? 'btn-primary' : ''}`} onClick={() => setIsHighContrast(!isHighContrast)}>
                   {isHighContrast ? 'Turn Off' : 'Turn On'}
                 </button>
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>SCREEN READER</h4>
-                <div style={{ display: 'flex', gap: 8 }}>
-                  <button className="btn" onClick={handleReadPage} style={{ width: 'auto', flex: 1 }}><Volume2 size={16} /> Read Page</button>
-                  <button className="btn" onClick={handleStopReading} style={{ width: 'auto', flex: 1 }}><VolumeX size={16} /> Stop</button>
+              <div className="accessibility-section">
+                <h4 className="accessibility-section-title">SCREEN READER</h4>
+                <div className="accessibility-button-group">
+                  <button className="btn" onClick={handleReadPage}><Volume2 size={16} /> Read Page</button>
+                  <button className="btn" onClick={handleStopReading}><VolumeX size={16} /> Stop</button>
                 </div>
               </div>
 
-              <div style={{ padding: '12px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
-                <h4 style={{ fontSize: '0.9rem', marginBottom: 8, color: 'var(--text-secondary)' }}>GOOGLE TRANSLATE</h4>
+              <div className="accessibility-section" style={{ padding: '12px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
+                <h4 className="accessibility-section-title">GOOGLE TRANSLATE</h4>
                 {!navigator.onLine ? (
                   <p style={{ color: 'var(--accent-color)', fontWeight: 'bold', margin: 0 }}>
                     Google Translate needs internet access.
@@ -1610,12 +1610,11 @@ export default function App() {
                     </p>
                   </>
                 )}
-                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: 8, fontStyle: 'italic', margin: '8px 0 0' }}>
+                <p className="accessibility-note" style={{ fontStyle: 'italic', margin: '8px 0 0' }}>
                   Translation uses Google Translate. Some ministry or Bible terms may need human review.
                 </p>
               </div>
-            </div>
-            <div className="install-banner-actions">
+
               <button className="btn btn-primary" onClick={() => setShowAccessibilityModal(false)}>Close</button>
             </div>
           </div>
@@ -1806,18 +1805,15 @@ export default function App() {
       )}
 
       {showSignIn && (
-        <Modal title="Sign In" onClose={() => setShowSignIn(false)}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className="input-group">
-              <label>Email / Username</label>
-              <input type="text" placeholder="Enter email..." />
-            </div>
-            <div className="input-group">
-              <label>Password</label>
-              <input type="password" placeholder="Enter password..." />
-            </div>
-            <button className="btn btn-primary" onClick={() => setShowSignIn(false)}>Sign In</button>
-            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: 16, cursor: 'pointer' }}>Create an account</p>
+        <Modal title="Sign In / Security" onClose={() => setShowSignIn(false)}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <p style={{ lineHeight: 1.5, color: 'var(--text-primary)' }}>
+              “Sign-in is planned because some field recording projects may contain sensitive people, place, language, or ministry information.”
+            </p>
+            <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+              Security features are coming in a future update to help protect project data.
+            </p>
+            <button className="btn btn-primary" onClick={() => setShowSignIn(false)}>Close</button>
           </div>
         </Modal>
       )}
