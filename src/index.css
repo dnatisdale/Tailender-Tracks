@@ -205,7 +205,7 @@ body {
 /* Header DYMO title labels — separate from splash, static and intentional */
 .header-dymo-stack {
   height: auto;
-  max-height: 60px;
+  max-height: 120px;
   display: flex;
   flex-direction: column;
   gap: 2px;
