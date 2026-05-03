@@ -696,14 +696,14 @@ function SettingsView({ deferredPrompt, onInstallClick }: { deferredPrompt: any;
         </button>
         {!deferredPrompt && (
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: 12 }}>
-            If the install button does not open a prompt, check Chrome DevTools > Application > Manifest.
+            If the install button does not open a prompt, check Chrome DevTools &gt; Application &gt; Manifest.
           </p>
         )}
       </div>
 
       <div style={{ textAlign: 'center', marginTop: 32, opacity: 0.3 }}>
         <img src={`${import.meta.env.BASE_URL}icons/Boot3.png`} alt="Logo" style={{ height: 30 }} />
-        <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78 RPM Series</p>
+        <p style={{ margin: '8px 0 0', fontSize: '0.8rem' }}>Tailender Tracks v1.0.0<br/>78RPM Series</p>
       </div>
     </div>
   );
