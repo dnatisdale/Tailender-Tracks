@@ -4,7 +4,9 @@ const APP_SHELL = [
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './forms/forms_manifest_for_pwa.json'
+  './forms/forms_manifest_for_pwa.json',
+  './fonts/OpenDyslexic-Regular.woff2',
+  './fonts/OpenDyslexic-Bold.woff2'
 ];
 
 self.addEventListener('install', (event) => {

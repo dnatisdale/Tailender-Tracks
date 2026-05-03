@@ -1207,28 +1207,47 @@ body {
   }
 }
 
-.app-font-default {
-  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("./fonts/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.app-font-easy {
-  font-family: Verdana, Tahoma, Arial, sans-serif;
-  line-height: 1.65;
-  letter-spacing: 0.03em;
-  word-spacing: 0.08em;
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("./fonts/OpenDyslexic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Noto Sans Thai", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--app-text-scale, 100%);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.app-font-default {
+  font-family: "Noto Sans Thai", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
 .app-font-dyslexia {
-  font-family: Verdana, Tahoma, Arial, sans-serif;
+  font-family: "OpenDyslexic", Verdana, Tahoma, Arial, sans-serif;
   line-height: 1.75;
-  letter-spacing: 0.05em;
-  word-spacing: 0.12em;
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
 }
 
 .app-font-thai-english {
   font-family: "Noto Sans Thai", "Noto Sans", Tahoma, Arial, sans-serif;
   line-height: 1.7;
-  letter-spacing: 0.01em;
 }
 
 .toshi-chat-modal, .toshi-dialog {
@@ -1327,3 +1346,4 @@ body {
     max-width: calc(100vw - 24px);
   }
 }
+

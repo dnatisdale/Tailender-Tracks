@@ -45,9 +45,51 @@ const uiText: any = {
     submit: "Submit",
     share: "Share",
     interfaceLanguage: "Interface Language",
-    easyReadMode: "Easy Read Mode",
+    easyReadMode: "Dyslexia Friendly Mode",
     installApp: "Install App",
-    installTailenderTracks: "Install Tailender Tracks"
+    installTailenderTracks: "Install Tailender Tracks",
+    todaysNextSteps: "Today's Next Steps",
+    reviewActiveProjects: "Review Active Projects",
+    activeProjectsCount: (count: number) => `You have ${count} active projects`,
+    checkTrainingGuide: "Check Training Guide",
+    reviewWorkflow: "Review the 6-stage workflow",
+    openFormsLibrary: "Open Forms Library",
+    formsLibraryDesc: "Use the fillable PDF forms for each workflow stage",
+    offlineReady: "App is ready for offline use",
+    searchProjects: "Search projects",
+    noProjectsFound: "No projects found",
+    noLanguage: "No language",
+    formsPacketDesc: "Project documentation and check-sheets",
+    completeFormsPacket: "Complete Forms Packet",
+    openCombinedPdf: "Open Combined Fillable PDF",
+    openPdf: "Open PDF",
+    requiredForms: "Required Forms",
+    whenToUse: "When to use",
+    showKeyFields: "Show key fields",
+    toshiTip: "Toshi Tip",
+    afterShare: "After Share",
+    trainingGuideDesc: "Field skills and recording guides",
+    teamRoles: "Team Roles",
+    purpose: "Purpose",
+    whatYouLearn: "What you learn",
+    fieldQuestions: "Field Questions",
+    trainingActivity: "Training Activity",
+    readyToMoveOn: "Ready to move on?",
+    settingsDesc: "App preferences and data management",
+    appConfiguration: "App Configuration",
+    appName: "App Name",
+    orgName: "Ministry / Organization Name",
+    dataStorage: "Data & Storage",
+    storageManager: "Storage Manager",
+    backupExport: "Backup / Export Projects",
+    importBackup: "Import Project Backup",
+    fontNoto: "Default Noto",
+    fontDyslexia: "OpenDyslexic",
+    fontThaiEnglish: "Thai / English",
+    textSize: "Text Size",
+    googleTranslateDesc: "Google Translate requires internet access. Bible and ministry terms should be checked by a human.",
+    openGoogleTranslate: "Open Google Translate",
+    translateError: "Google Translate did not load. It may be blocked, offline, or unavailable for this site."
   },
   th: {
     home: "หน้าแรก",
@@ -81,9 +123,51 @@ const uiText: any = {
     submit: "ส่งงาน",
     share: "แบ่งปัน",
     interfaceLanguage: "ภาษาในแอป",
-    easyReadMode: "โหมดอ่านง่าย",
+    easyReadMode: "โหมดสำหรับผู้มีปัญหาการอ่าน",
     installApp: "ติดตั้งแอป",
-    installTailenderTracks: "ติดตั้ง Tailender Tracks"
+    installTailenderTracks: "ติดตั้ง Tailender Tracks",
+    todaysNextSteps: "ขั้นตอนถัดไปสำหรับวันนี้",
+    reviewActiveProjects: "ตรวจสอบโครงการที่กำลังดำเนินการ",
+    activeProjectsCount: (count: number) => `คุณมีโครงการที่กำลังดำเนินการอยู่ ${count} โครงการ`,
+    checkTrainingGuide: "ตรวจสอบคู่มือการฝึกอบรม",
+    reviewWorkflow: "ตรวจสอบขั้นตอนการทำงาน 6 ขั้นตอน",
+    openFormsLibrary: "เปิดคลังแบบฟอร์ม",
+    formsLibraryDesc: "ใช้แบบฟอร์ม PDF ที่กรอกข้อมูลได้สำหรับแต่ละขั้นตอนการทำงาน",
+    offlineReady: "แอปพร้อมใช้งานแบบออฟไลน์แล้ว",
+    searchProjects: "ค้นหาโครงการ",
+    noProjectsFound: "ไม่พบโครงการ",
+    noLanguage: "ไม่ระบุภาษา",
+    formsPacketDesc: "เอกสารโครงการและแผ่นตรวจสอบ",
+    completeFormsPacket: "ชุดแบบฟอร์มที่สมบูรณ์",
+    openCombinedPdf: "เปิด PDF แบบรวมที่กรอกได้",
+    openPdf: "เปิด PDF",
+    requiredForms: "แบบฟอร์มที่จำเป็น",
+    whenToUse: "เมื่อใดควรใช้",
+    showKeyFields: "แสดงฟิลด์หลัก",
+    toshiTip: "คำแนะนำจาก Toshi",
+    afterShare: "หลังจากแบ่งปัน",
+    trainingGuideDesc: "ทักษะภาคสนามและคู่มือการบันทึกเสียง",
+    teamRoles: "บทบาทในทีม",
+    purpose: "วัตถุประสงค์",
+    whatYouLearn: "สิ่งที่คุณจะได้เรียนรู้",
+    fieldQuestions: "คำถามภาคสนาม",
+    trainingActivity: "กิจกรรมการฝึกอบรม",
+    readyToMoveOn: "พร้อมที่จะไปต่อหรือยัง?",
+    settingsDesc: "การตั้งค่าแอปและการจัดการข้อมูล",
+    appConfiguration: "การกำหนดค่าแอป",
+    appName: "ชื่อแอป",
+    orgName: "ชื่อหน่วยงาน / องค์กร",
+    dataStorage: "ข้อมูลและที่เก็บข้อมูล",
+    storageManager: "ตัวจัดการที่เก็บข้อมูล",
+    backupExport: "สำรองข้อมูล / ส่งออกโครงการ",
+    importBackup: "นำเข้าข้อมูลสำรองของโครงการ",
+    fontNoto: "Noto มาตรฐาน",
+    fontDyslexia: "OpenDyslexic (สำหรับผู้มีปัญหาการอ่าน)",
+    fontThaiEnglish: "ไทย / อังกฤษ",
+    textSize: "ขนาดตัวอักษร",
+    googleTranslateDesc: "Google Translate ต้องใช้อินเทอร์เน็ตในการเข้าถึง ควรตรวจสอบคำศัพท์ทางศาสนาและพันธกิจโดยเจ้าหน้าที่",
+    openGoogleTranslate: "เปิด Google Translate",
+    translateError: "Google Translate ไม่สามารถโหลดได้ อาจถูกบล็อก ออฟไลน์ หรือไม่สามารถใช้งานได้สำหรับไซต์นี้"
   }
 };
 
@@ -1120,10 +1204,11 @@ function SettingsView({ deferredPrompt, onInstallClick, settings, updateSetting,
             More interface translation is coming later.
           </p>
         </div>
-        <FieldCheckbox 
-          label={t.easyReadMode} 
-          checked={settings.fontStyle === 'easy'} 
-          onChange={(checked: boolean) => updateSetting('fontStyle', checked ? 'easy' : 'default')} 
+        <FieldSelect 
+          label={t.fontNoto} 
+          value={settings.fontStyle} 
+          onChange={(v:string) => updateSetting('fontStyle', v)} 
+          options={['default', 'dyslexia', 'thaiEnglish']} 
         />
       </div>
 
@@ -1168,7 +1253,6 @@ export default function App() {
     fetch(`${import.meta.env.BASE_URL}forms/forms_manifest_for_pwa.json`)
       .then(r => r.json())
       .then(data => {
-        // Prepend BASE_URL to the file paths inside the manifest so forms link correctly on GitHub Pages
         const mappedData = data.map((d: any) => ({
           ...d,
           file: d.file.startsWith('/') ? `${import.meta.env.BASE_URL}${d.file.slice(1)}` : d.file
@@ -1231,8 +1315,7 @@ export default function App() {
   const [showAccessibilityModal, setShowAccessibilityModal] = useState(false);
   
   const [fontStyle, setFontStyle] = useState(() => localStorage.getItem('tailender_font_style') || 'default');
-  const [fontSize, setFontSize] = useState(() => localStorage.getItem('tailender_font_size') || 'medium');
-  const [isHighContrast, setIsHighContrast] = useState(() => localStorage.getItem('tailender_high_contrast') === 'true');
+  const [textScale, setTextScale] = useState(() => parseInt(localStorage.getItem('tailender_text_scale') || '100'));
 
   const handleReadPage = () => {
     const mainContent = document.querySelector('.main-content');
@@ -1258,27 +1341,22 @@ export default function App() {
   useEffect(() => {
     // Apply accessibility classes to body
     const body = document.body;
-    body.classList.remove('app-font-default', 'app-font-easy', 'app-font-thai-english', 'app-easy-read');
+    body.classList.remove('app-font-default', 'app-font-dyslexia', 'app-font-thai-english');
     
-    if (fontStyle === 'easy') {
-      body.classList.add('app-easy-read');
-    } else {
-      body.classList.add(`app-font-${fontStyle}`);
-    }
+    if (fontStyle === 'dyslexia') body.classList.add('app-font-dyslexia');
+    else if (fontStyle === 'thaiEnglish') body.classList.add('app-font-thai-english');
+    else body.classList.add('app-font-default');
 
-    body.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
-    body.classList.add(`font-size-${fontSize}`);
-
-    if (isHighContrast) body.classList.add('high-contrast');
-    else body.classList.remove('high-contrast');
+    body.style.setProperty("--app-text-scale", `${textScale}%`);
 
     localStorage.setItem('tailender_font_style', fontStyle);
-    localStorage.setItem('tailender_font_size', fontSize);
-    localStorage.setItem('tailender_high_contrast', String(isHighContrast));
+    localStorage.setItem('tailender_text_scale', String(textScale));
     localStorage.setItem('tailender_org_name', orgName);
     localStorage.setItem('tailender_default_region', defaultRegion);
     localStorage.setItem('tailender_interface_language', interfaceLanguage);
-  }, [fontStyle, fontSize, isHighContrast, orgName, defaultRegion, interfaceLanguage]);
+  }, [fontStyle, textScale, orgName, defaultRegion, interfaceLanguage]);
+
+  const [translateError, setTranslateError] = useState(false);
 
   useEffect(() => {
     if (!showAccessibilityModal) return;
@@ -1289,6 +1367,12 @@ export default function App() {
 
       if (el.childElementCount === 0 && window.googleTranslateElementInit) {
         window.googleTranslateElementInit();
+        
+        // Check if it actually loaded after a bit
+        setTimeout(() => {
+          if (el.childElementCount === 0) setTranslateError(true);
+          else setTranslateError(false);
+        }, 3000);
       }
     }, 300);
 
@@ -1559,20 +1643,16 @@ export default function App() {
               <h3>Accessibility & Translation</h3>
               
               <div className="accessibility-section">
-                <h4 className="accessibility-section-title">FONT STYLE</h4>
+                <h4 className="accessibility-section-title">{t.fontNoto} / {t.fontDyslexia}</h4>
                 <div className="accessibility-button-group">
-                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')}>Default</button>
-                  <button className={`btn ${fontStyle === 'easy' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('easy')}>Easy Read</button>
-                  <button className={`btn ${fontStyle === 'dyslexia' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('dyslexia')}>Dyslexia Friendly</button>
-                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')}>Thai / English</button>
+                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')}>{t.fontNoto}</button>
+                  <button className={`btn ${fontStyle === 'dyslexia' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('dyslexia')}>{t.fontDyslexia}</button>
+                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')}>{t.fontThaiEnglish}</button>
                 </div>
-                <p className="accessibility-note">
-                  “Easy Read and Dyslexia Friendly use spacing and familiar fonts to help readers. Thai / English is optimized for mixed text.”
-                </p>
               </div>
 
               <div className="accessibility-section">
-                <h4 className="accessibility-section-title">INTERFACE LANGUAGE</h4>
+                <h4 className="accessibility-section-title">{t.interfaceLanguage}</h4>
                 <div className="accessibility-button-group">
                   <button className={`btn ${interfaceLanguage === 'English' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('English')}>English</button>
                   <button className={`btn ${interfaceLanguage === 'ไทย' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('ไทย')}>ไทย</button>
@@ -1580,31 +1660,32 @@ export default function App() {
               </div>
 
               <div className="accessibility-section">
-                <h4 className="accessibility-section-title">TEXT SIZE</h4>
-                <div className="accessibility-button-group">
-                  <button className={`btn ${fontSize === 'small' ? 'btn-primary' : ''}`} onClick={() => setFontSize('small')}>A-</button>
-                  <button className={`btn ${fontSize === 'medium' ? 'btn-primary' : ''}`} onClick={() => setFontSize('medium')}>A</button>
-                  <button className={`btn ${fontSize === 'large' ? 'btn-primary' : ''}`} onClick={() => setFontSize('large')}>A+</button>
+                <h4 className="accessibility-section-title">{t.textSize} ({textScale}%)</h4>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ fontSize: '0.8rem' }}>90%</span>
+                  <input 
+                    type="range" 
+                    min="90" 
+                    max="130" 
+                    step="5" 
+                    value={textScale} 
+                    onChange={(e) => setTextScale(parseInt(e.target.value))}
+                    style={{ flex: 1 }}
+                  />
+                  <span style={{ fontSize: '0.8rem' }}>130%</span>
                 </div>
               </div>
 
               <div className="accessibility-section">
-                <h4 className="accessibility-section-title">HIGH CONTRAST</h4>
-                <button className={`btn ${isHighContrast ? 'btn-primary' : ''}`} onClick={() => setIsHighContrast(!isHighContrast)}>
-                  {isHighContrast ? 'Turn Off' : 'Turn On'}
-                </button>
-              </div>
-
-              <div className="accessibility-section">
-                <h4 className="accessibility-section-title">SCREEN READER</h4>
+                <h4 className="accessibility-section-title">{t.reader}</h4>
                 <div className="accessibility-button-group">
-                  <button className="btn" onClick={handleReadPage}><Volume2 size={16} /> Read Page</button>
-                  <button className="btn" onClick={handleStopReading}><VolumeX size={16} /> Stop</button>
+                  <button className="btn" onClick={handleReadPage}><Volume2 size={16} /> {t.readPage}</button>
+                  <button className="btn" onClick={handleStopReading}><VolumeX size={16} /> {t.stop}</button>
                 </div>
               </div>
 
               <div className="accessibility-section" style={{ padding: '12px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
-                <h4 className="accessibility-section-title">GOOGLE TRANSLATE</h4>
+                <h4 className="accessibility-section-title">{t.googleTranslate}</h4>
                 {!navigator.onLine ? (
                   <p style={{ color: 'var(--accent-color)', fontWeight: 'bold', margin: 0 }}>
                     Google Translate needs internet access.
@@ -1614,13 +1695,18 @@ export default function App() {
                     <button className="btn btn--secondary" style={{ width: 'auto', marginBottom: 12 }} onClick={() => {
                       if (window.googleTranslateElementInit) window.googleTranslateElementInit();
                     }}>
-                      Open Google Translate
+                      {t.openGoogleTranslate}
                     </button>
+                    {translateError && (
+                      <p style={{ color: 'var(--accent-color)', fontSize: '0.8rem', marginBottom: 8 }}>
+                        {t.translateError}
+                      </p>
+                    )}
                     <div className="translate-widget-box">
                       <div id="google_translate_element"></div>
                     </div>
                     <p className="translate-panel-note" style={{ fontSize: '0.75rem', marginTop: 8 }}>
-                      Google Translate requires internet access. Bible and ministry terms should be checked by a human.
+                      {t.googleTranslateDesc}
                     </p>
                   </>
                 )}
