@@ -1008,16 +1008,6 @@ body {
   letter-spacing: 0.01em;
 }
 
-.high-contrast {
-  --bg-color: #000000 !important;
-  --surface-color: #111111 !important;
-  --text-primary: #ffffff !important;
-  --text-secondary: #ffff00 !important;
-  --accent-color: #00ffff !important;
-  --border-color: #ffffff !important;
-  --card-bg: #111111 !important;
-}
-
 .font-size-small { font-size: 0.85rem !important; }
 .font-size-medium { font-size: 1rem !important; }
 .font-size-large { font-size: 1.25rem !important; }
@@ -1030,13 +1020,10 @@ body {
 /* Base Modal Styles */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1200;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1046,14 +1033,16 @@ body {
 
 .modal-card {
   background-color: var(--surface-color);
-  border-radius: 12px;
-  width: 100%;
-  max-width: 400px;
-  margin: 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  width: min(560px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
-  padding: 24px 20px;
+  padding: 24px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .modal-close {
@@ -1064,12 +1053,13 @@ body {
   border: none;
   cursor: pointer;
   color: var(--text-secondary);
-  padding: 4px;
+  padding: 8px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+  z-index: 5;
 }
 
 .modal-close:hover {
@@ -1078,39 +1068,11 @@ body {
 
 .modal-title {
   margin: 0 0 16px 0;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--accent-color);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 12px;
-}
-
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1200;
-  padding: 12px;
-}
-
-.modal-card {
-  background-color: var(--bg-color);
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  width: min(560px, calc(100vw - 24px));
-  max-width: calc(100vw - 24px);
-  max-height: calc(100vh - 24px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 24px;
 }
 
 .accessibility-panel, .accessibility-content {
@@ -1141,7 +1103,8 @@ body {
   max-width: 100%;
 }
 
-.accessibility-button-group .btn {
+.accessibility-button-group .btn,
+.accessibility-button-group button {
   flex: 1 1 130px;
   min-width: 0;
   max-width: 100%;
@@ -1150,6 +1113,10 @@ body {
   font-size: 0.88rem;
   padding: 8px 12px;
   width: auto;
+}
+
+.text-size-slider {
+  width: 100%;
 }
 
 .accessibility-note {

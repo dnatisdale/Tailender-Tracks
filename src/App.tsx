@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { 
   Home, Folder, Settings, BookOpen, ChevronLeft, ChevronDown, Plus, Save, Play,
   Download, CheckCircle, Search, Edit3, Mic, CheckSquare, FileText,
-  Share2, Sun, Moon, User, Type, Volume2, VolumeX
+  Share2, Sun, Moon, User, Type
 } from 'lucide-react';
 import { 
   askTailenderToshi, 
@@ -1259,8 +1259,13 @@ export default function App() {
             <button className="icon-btn" onClick={handleShare} title="Share App">
               <Share2 size={20} />
             </button>
-            <button className="icon-btn" onClick={() => setShowAccessibilityModal(true)} title="Accessibility, language, and reader tools">
-              <Type size={20} />
+            <button
+              className="icon-btn"
+              onClick={() => setShowAccessibilityModal(true)}
+              title="Accessibility, language, and reader tools"
+              aria-label="Accessibility, language, and reader tools"
+            >
+              <Type size={22} />
             </button>
             <button className="icon-btn" onClick={() => setShowSignIn(true)} title="Sign In">
               <User size={20} />
@@ -1275,85 +1280,117 @@ export default function App() {
 
       {/* bottom NAV */}
       {showAccessibilityModal && (
-        <div className="modal-overlay" onClick={() => setShowAccessibilityModal(false)}>
-          <div className="modal-card accessibility-panel" onClick={e => e.stopPropagation()}>
-            <div className="accessibility-content">
-              <h3>Accessibility & Translation</h3>
-              
-              <div className="accessibility-section">
-                <h4 className="accessibility-section-title">{t.fontNoto} / {t.fontDyslexia}</h4>
-                <div className="accessibility-button-group">
-                  <button className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('default')}>{t.fontNoto}</button>
-                  <button className={`btn ${fontStyle === 'dyslexia' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('dyslexia')}>{t.fontDyslexia}</button>
-                  <button className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} onClick={() => setFontStyle('thaiEnglish')}>{t.fontThaiEnglish}</button>
-                </div>
+        <Modal title="Accessibility & Language" onClose={() => setShowAccessibilityModal(false)}>
+          <div className="accessibility-panel">
+            
+            <div className="accessibility-section">
+              <h4 className="accessibility-section-title">Font</h4>
+              <div className="accessibility-button-group">
+                <button 
+                  className={`btn ${fontStyle === 'default' ? 'btn-primary' : ''}`} 
+                  onClick={() => setFontStyle('default')}
+                >
+                  Default Noto
+                </button>
+                <button 
+                  className={`btn ${fontStyle === 'dyslexia' ? 'btn-primary' : ''}`} 
+                  onClick={() => setFontStyle('dyslexia')}
+                >
+                  OpenDyslexic
+                </button>
+                <button 
+                  className={`btn ${fontStyle === 'thaiEnglish' ? 'btn-primary' : ''}`} 
+                  onClick={() => setFontStyle('thaiEnglish')}
+                >
+                  Thai / English
+                </button>
               </div>
-
-              <div className="accessibility-section">
-                <h4 className="accessibility-section-title">{t.interfaceLanguage}</h4>
-                <div className="accessibility-button-group">
-                  <button className={`btn ${interfaceLanguage === 'English' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('English')}>English</button>
-                  <button className={`btn ${interfaceLanguage === 'ไทย' ? 'btn-primary' : ''}`} onClick={() => setInterfaceLanguage('ไทย')}>ไทย</button>
-                </div>
-              </div>
-
-              <div className="accessibility-section">
-                <h4 className="accessibility-section-title">{t.textSize} ({textScale}%)</h4>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                  <span style={{ fontSize: '0.8rem' }}>90%</span>
-                  <input 
-                    type="range" 
-                    min="90" 
-                    max="130" 
-                    step="5" 
-                    value={textScale} 
-                    onChange={(e) => setTextScale(parseInt(e.target.value))}
-                    style={{ flex: 1 }}
-                  />
-                  <span style={{ fontSize: '0.8rem' }}>130%</span>
-                </div>
-              </div>
-
-              <div className="accessibility-section">
-                <h4 className="accessibility-section-title">{t.reader}</h4>
-                <div className="accessibility-button-group">
-                  <button className="btn" onClick={handleReadPage}><Volume2 size={16} /> {t.readPage}</button>
-                  <button className="btn" onClick={handleStopReading}><VolumeX size={16} /> {t.stop}</button>
-                </div>
-              </div>
-
-              <div className="accessibility-section" style={{ padding: '12px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px' }}>
-                <h4 className="accessibility-section-title">{t.googleTranslate}</h4>
-                {!navigator.onLine ? (
-                  <p style={{ color: 'var(--accent-color)', fontWeight: 'bold', margin: 0 }}>
-                    Google Translate needs internet access.
-                  </p>
-                ) : (
-                  <>
-                    <button className="btn btn--secondary" style={{ width: 'auto', marginBottom: 12 }} onClick={() => {
-                      if (window.googleTranslateElementInit) window.googleTranslateElementInit();
-                    }}>
-                      {t.openGoogleTranslate}
-                    </button>
-                    {translateError && (
-                      <p style={{ color: 'var(--accent-color)', fontSize: '0.8rem', marginBottom: 8 }}>
-                        {t.translateError}
-                      </p>
-                    )}
-                    <div className="translate-widget-box">
-                      <div id="google_translate_element"></div>
-                    </div>
-                    <p className="translate-panel-note" style={{ fontSize: '0.75rem', marginTop: 8 }}>
-                      {t.googleTranslateDesc}
-                    </p>
-                  </>
-                )}
-              </div>
-
-              <button className="btn btn-primary" onClick={() => setShowAccessibilityModal(false)}>Close</button>
             </div>
+
+            <div className="accessibility-section">
+              <h4 className="accessibility-section-title">Text Size</h4>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <input
+                  type="range"
+                  min="90"
+                  max="130"
+                  step="5"
+                  value={textScale}
+                  onChange={(e) => setTextScale(Number(e.target.value))}
+                  className="text-size-slider"
+                />
+                <span style={{ minWidth: '45px', fontWeight: 'bold' }}>{textScale}%</span>
+              </div>
+            </div>
+
+            <div className="accessibility-section">
+              <h4 className="accessibility-section-title">Interface Language</h4>
+              <div className="accessibility-button-group">
+                <button 
+                  className={`btn ${interfaceLanguage === 'English' ? 'btn-primary' : ''}`} 
+                  onClick={() => setInterfaceLanguage('English')}
+                >
+                  English
+                </button>
+                <button 
+                  className={`btn ${interfaceLanguage === 'ไทย' ? 'btn-primary' : ''}`} 
+                  onClick={() => setInterfaceLanguage('ไทย')}
+                >
+                  ไทย
+                </button>
+              </div>
+            </div>
+
+            <div className="accessibility-section">
+              <h4 className="accessibility-section-title">Reader</h4>
+              <div className="accessibility-button-group">
+                <button className="btn" onClick={() => {
+                  if (window.speechSynthesis) {
+                    handleReadPage();
+                  } else {
+                    alert("Reader is not available in this browser.");
+                  }
+                }}>
+                  Read Page
+                </button>
+                <button className="btn" onClick={handleStopReading}>
+                  Stop
+                </button>
+              </div>
+            </div>
+
+            <div className="accessibility-section">
+              <h4 className="accessibility-section-title">Google Translate</h4>
+              <button 
+                className="btn btn--secondary" 
+                style={{ width: 'auto', marginBottom: '12px' }} 
+                onClick={() => {
+                  if (window.googleTranslateElementInit) window.googleTranslateElementInit();
+                }}
+              >
+                Open Google Translate
+              </button>
+              
+              <div className="translate-widget-box">
+                <div id="google_translate_element"></div>
+              </div>
+
+              {translateError && (
+                <p style={{ color: 'var(--accent-color)', fontSize: '0.85rem', marginBottom: '8px' }}>
+                  Google Translate did not load. It may be blocked, offline, or unavailable for this site.
+                </p>
+              )}
+              
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                “Google Translate requires internet access. Bible and ministry terms should be checked by a human.”
+              </p>
+            </div>
+
+            <button className="btn btn-primary" style={{ marginTop: '16px' }} onClick={() => setShowAccessibilityModal(false)}>
+              Close
+            </button>
           </div>
-        </div>
+        </Modal>
       )}
 
       {showInstallBanner && (
