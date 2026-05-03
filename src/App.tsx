@@ -120,6 +120,101 @@ const FieldSelect = ({ label, value, onChange, options }: any) => (
   </div>
 );
 
+
+type FormGuide = {
+  stage: Stage | 'After Share';
+  title: string;
+  purpose: string;
+  useWhen: string;
+  keyFields: string[];
+  fieldTip: string;
+};
+
+const FORM_GUIDES: FormGuide[] = [
+  {
+    stage: 'Research',
+    title: 'Language & Community Profile',
+    purpose: 'Confirm the language, community, and audience before recording.',
+    useWhen: 'Use this before you plan the script so the team knows the right heart language, location, and listener group.',
+    keyFields: ['Project title', 'Language name', 'Local language names', 'Dialect / speech variety', 'ISO code if known', 'People group / community name', 'Country / region / villages', 'Target listeners', 'Literacy level', 'Religious background notes', 'Cultural notes', 'Existing Scripture/audio resources', 'Local verification notes', 'Community contacts', 'Word-list notes'],
+    fieldTip: 'Do not guess the language name. Verify it with mother-tongue speakers and local church/community contacts.'
+  },
+  {
+    stage: 'Plan',
+    title: 'Recording Project Plan',
+    purpose: 'Prepare the ministry purpose, content, people, equipment, location, and distribution plan.',
+    useWhen: 'Use this before recording day so the team is not scrambling at the last minute.',
+    keyFields: ['Ministry purpose', 'Target listeners', 'Content type', 'Biblical theme', 'Scripture references', 'Script source/status', 'Translation notes', 'Back-translation notes', 'Theological review status', 'Local church / partner approval', 'Speaker list', 'Helper list', 'Recording location', 'Equipment checklist', 'Backup plan', 'Distribution plan'],
+    fieldTip: 'A good plan protects the speaker, the reviewer, and the final listeners.'
+  },
+  {
+    stage: 'Plan',
+    title: 'Speaker & Helper Consent Form',
+    purpose: 'Document permission from speakers, singers, translators, checkers, reviewers, helpers, or guides.',
+    useWhen: 'Use this before or during recording whenever someone gives voice, translation, checking, music, or field help.',
+    keyFields: ['Person name or nickname', 'Role', 'Language / dialect', 'Village / community', 'Consent to record voice', 'Consent to share locally', 'Consent to share online', 'Consent to use name/photo if applicable', 'Restrictions or concerns', 'Date consent was given', 'Consent confirmed by', 'Witness/team member'],
+    fieldTip: 'If someone has restrictions, write them clearly before the recording is shared.'
+  },
+  {
+    stage: 'Plan',
+    title: 'Script & Content Approval Form',
+    purpose: 'Track script source, translation, back-translation, theological review, local review, and approval.',
+    useWhen: 'Use this when a message, story, lesson, testimony, or song needs approval before recording or publishing.',
+    keyFields: ['Script title', 'Content type', 'Source of script', 'Original language', 'Target language', 'Biblical references', 'Translator / adapter', 'Back-translator', 'Theological reviewer', 'Local reviewer', 'Cultural concerns', 'Sensitive words or concepts', 'Approval status', 'Approval date', 'Approved by', 'Reviewer notes'],
+    fieldTip: 'Keep review notes with the project so future teams know why decisions were made.'
+  },
+  {
+    stage: 'Plan',
+    title: 'Rights & Permissions Form',
+    purpose: 'Track permission for scripts, songs, music, translations, and other content.',
+    useWhen: 'Use this before using any content the team did not fully create themselves.',
+    keyFields: ['Content title', 'Content source', 'Author / creator', 'Translator / adapter', 'Music owner', 'Song owner', 'Permission needed', 'Permission received', 'Allowed uses', 'Restrictions', 'Permission document or note', 'Permission date', 'Permission confirmed by'],
+    fieldTip: 'When in doubt, mark permission as unknown until someone verifies it.'
+  },
+  {
+    stage: 'Record',
+    title: 'Recording Session Log',
+    purpose: 'Capture session details, takes, technical notes, playback checks, and backup status.',
+    useWhen: 'Use this during recording day so the editor can find the best takes and understand any problems.',
+    keyFields: ['Session title', 'Project', 'Date', 'Location', 'Recorder operator', 'Speaker / singer / helper', 'Script section', 'Equipment used', 'Microphone used', 'Room tone captured', 'Test recording completed', 'Battery/storage/headphones checked', 'File names', 'Take numbers', 'Best take', 'Retake notes', 'Noise notes', 'Problems encountered', 'Playback check completed', 'Backup made'],
+    fieldTip: 'Write down file names and best takes immediately. Memory gets fuzzy after a long recording day.'
+  },
+  {
+    stage: 'Program',
+    title: 'Audio Program Form',
+    purpose: 'Organize final track order, titles, speakers, script names, duration, and final program notes.',
+    useWhen: 'Use this when the recordings are becoming a finished program or package.',
+    keyFields: ['Program title', 'Project', 'Language / dialect', 'Program number', 'Target listeners', 'Program purpose', 'Scripture references', 'Track order', 'Track titles', 'Speaker / singer', 'Script names', 'Duration notes', 'Intro/outro notes', 'Music/song notes', 'Missing information warnings', 'Smart file naming preview', 'Final program notes'],
+    fieldTip: 'Track order and titles should be clear enough that a reviewer can understand the whole program quickly.'
+  },
+  {
+    stage: 'Submit',
+    title: 'Submission Package Checklist',
+    purpose: 'Confirm the recording package is complete before sending it to a reviewer, media team, database, studio, or ministry office.',
+    useWhen: 'Use this right before submission so nothing important is missing.',
+    keyFields: ['Audio files included', 'Original recordings if needed', 'Edited files included', 'Scripts included', 'Translations included', 'Back-translations included', 'Consent forms complete', 'Permissions complete', 'Theological review complete', 'Local partner approval complete', 'Program form complete', 'Tracklist complete', 'Metadata complete', 'File names checked', 'Backup complete', 'Package ZIP created', 'Submitted to', 'Submission date/status', 'Reviewer notes', 'Follow-up actions'],
+    fieldTip: 'This is the final “did we forget anything?” check before handing it off.'
+  },
+  {
+    stage: 'Share',
+    title: 'Sharing & Distribution Plan',
+    purpose: 'Plan how the finished message will reach listeners, churches, field workers, and communities.',
+    useWhen: 'Use this before distribution so the team knows who will receive the recordings and how follow-up will happen.',
+    keyFields: ['Target listeners', 'Local churches', 'Local believers', 'Missionaries / field workers', 'Community leaders', 'Online sharing link', 'QR code/link', 'Offline sharing method', 'SD card plan', 'Bluetooth sharing plan', 'WhatsApp / Signal / Telegram plan', 'Radio plan', 'Speaker box / listening group plan', 'Planned ministry uses', 'Follow-up contact', 'Testimony / response notes', 'Feedback notes'],
+    fieldTip: 'Sharing is not just delivery. Plan the follow-up person too.'
+  },
+  {
+    stage: 'After Share',
+    title: 'Field Feedback Form',
+    purpose: 'Collect listener response, understandability, cultural clarity, concerns, testimonies, and follow-up actions.',
+    useWhen: 'Use this after people listen so the team learns what helped, what confused people, and what needs fixing.',
+    keyFields: ['Where the recording was shared', 'Who listened', 'Approximate number of listeners', 'Feedback collected by', 'Feedback date', 'How people responded', 'Was the language understandable?', 'Was the content culturally clear?', 'Objections or concerns', 'Testimonies', 'Questions people asked', 'Requests for more content', 'Needed corrections', 'Follow-up actions'],
+    fieldTip: 'Feedback helps the next recording become clearer and more useful.'
+  }
+];
+
+const getFormGuide = (title: string) => FORM_GUIDES.find(f => f.title === title);
+
 // ==========================================
 // VIEWS
 // ==========================================
@@ -144,14 +239,38 @@ function StageForms({ stage, forms }: any) {
   const stageForms = forms.filter((f: any) => f.stage === stage);
   if (stageForms.length === 0) return null;
   return (
-    <div className="card">
-      <h3 className="card-title">Required Forms</h3>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        {stageForms.map((f: any, i: number) => (
-          <a key={i} href={f.file} target="_blank" rel="noopener noreferrer" className="btn" style={{ justifyContent: 'flex-start', margin: 0 }}>
-            <FileText size={18} /> {f.title}
-          </a>
-        ))}
+    <div className="card forms-card">
+      <h3 className="card-title"><FileText size={18} /> Required Forms for {stage}</h3>
+      <p className="card-help">Open the matching fillable PDF, then use the checklist below so you know what each form is for.</p>
+      <div className="form-link-list">
+        {stageForms.map((f: any, i: number) => {
+          const guide = getFormGuide(f.title);
+          return (
+            <div key={i} className="form-guide-card">
+              <div className="form-guide-topline">
+                <div>
+                  <h4>{f.title}</h4>
+                  {guide && <p>{guide.purpose}</p>}
+                </div>
+                <a href={f.file} target="_blank" rel="noopener noreferrer" className="btn form-open-btn">
+                  <FileText size={18} /> Open PDF
+                </a>
+              </div>
+              {guide && (
+                <>
+                  <div className="form-tip"><strong>When to use:</strong> {guide.useWhen}</div>
+                  <details className="form-fields-details">
+                    <summary>Show key fields</summary>
+                    <ul>
+                      {guide.keyFields.map(field => <li key={field}>{field}</li>)}
+                    </ul>
+                  </details>
+                  <div className="form-tip"><strong>Toshi tip:</strong> {guide.fieldTip}</div>
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -194,6 +313,13 @@ function HomeView({ projects, onOpenProject, onCreateProject, goView }: any) {
           <div className="list-item-content">
             <h4>Check Training Guide</h4>
             <p>Review the 6-stage workflow</p>
+          </div>
+          <ChevronLeft style={{ transform: 'rotate(180deg)', color: 'var(--text-secondary)' }} />
+        </div>
+        <div className="list-item" onClick={() => goView('Forms')}>
+          <div className="list-item-content">
+            <h4>Open Forms Library</h4>
+            <p>Use the fillable PDF forms for each workflow stage</p>
           </div>
           <ChevronLeft style={{ transform: 'rotate(180deg)', color: 'var(--text-secondary)' }} />
         </div>
@@ -262,14 +388,29 @@ function ProjectsView({ projects, onOpenProject, onCreateProject }: any) {
   );
 }
 
-function ProjectDetailView({ project, updateProject, goStage }: any) {
+function ProjectDetailView({ project, updateProject, goStage, onSave }: any) {
+  const [showSaved, setShowSaved] = useState(false);
   if(!project) return null;
   const stages: Stage[] = ['Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'];
+
+  const handleSave = () => {
+    onSave();
+    setShowSaved(true);
+    setTimeout(() => setShowSaved(false), 2000);
+  };
 
   return (
     <div>
       <div className="card">
-        <h3 className="card-title"><Edit3 size={18} /> Project Summary</h3>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+          <h3 className="card-title" style={{ margin: 0 }}><Edit3 size={18} /> Project Summary</h3>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            {showSaved && <span style={{ color: 'var(--accent-color)', fontWeight: 'bold', animation: 'fadeIn 0.3s' }}>Saved!</span>}
+            <button className="btn btn-primary" onClick={handleSave} style={{ width: 'auto', margin: 0 }}>
+              <Save size={16} /> Save Project
+            </button>
+          </div>
+        </div>
         <FieldInput label="Project Title" value={project.title} onChange={(v:any) => updateProject({title: v})} />
         <FieldInput label="Language Name" value={project.languageName} onChange={(v:any) => updateProject({languageName: v})} />
         <FieldInput label="Dialect / Speech Variety" value={project.dialect} onChange={(v:any) => updateProject({dialect: v})} />
@@ -620,6 +761,83 @@ function StageShare({ project, update, formsManifest }: any) {
   );
 }
 
+// FORMS VIEW
+function FormsView({ formsManifest }: any) {
+  const stageOrder = ['Research', 'Plan', 'Record', 'Program', 'Submit', 'Share'];
+  return (
+    <div>
+      <div className="view-header">
+        <h1>Forms Library</h1>
+        <p>Fillable forms and simple field instructions for the whole recording workflow</p>
+      </div>
+
+      <div className="card">
+        <h3 className="card-title"><FileText size={18} /> Complete Forms Packet</h3>
+        <p className="card-help">Use this if you want one combined PDF instead of opening each form one by one.</p>
+        <a className="btn btn-primary" href={`${import.meta.env.BASE_URL}forms/Tailender_Tracks_Neutral_Fillable_Forms_Combined.pdf`} target="_blank" rel="noopener noreferrer">
+          <Download size={18} /> Open Combined Fillable PDF
+        </a>
+      </div>
+
+      {stageOrder.map(stage => {
+        const formsForStage = formsManifest.filter((f: any) => f.stage === stage);
+        const guideOnly = FORM_GUIDES.filter(g => g.stage === stage && !formsForStage.some((f: any) => f.title === g.title));
+        return (
+          <div className="card" key={stage}>
+            <h3 className="card-title">{stage} Forms</h3>
+            {formsForStage.length === 0 && <p className="card-help">No PDFs are linked for this stage yet.</p>}
+            <div className="form-link-list">
+              {formsForStage.map((f: any) => {
+                const guide = getFormGuide(f.title);
+                return (
+                  <div className="form-guide-card" key={`${stage}-${f.title}`}>
+                    <div className="form-guide-topline">
+                      <div>
+                        <h4>{f.title}</h4>
+                        {guide && <p>{guide.purpose}</p>}
+                      </div>
+                      <a href={f.file} target="_blank" rel="noopener noreferrer" className="btn form-open-btn">
+                        <FileText size={18} /> Open PDF
+                      </a>
+                    </div>
+                    {guide && (
+                      <>
+                        <div className="form-tip"><strong>When to use:</strong> {guide.useWhen}</div>
+                        <details className="form-fields-details">
+                          <summary>Show key fields from this form</summary>
+                          <ul>{guide.keyFields.map(field => <li key={field}>{field}</li>)}</ul>
+                        </details>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
+              {guideOnly.map(guide => (
+                <div className="form-guide-card" key={`${stage}-${guide.title}`}>
+                  <h4>{guide.title}</h4>
+                  <p>{guide.purpose}</p>
+                  <div className="form-tip"><strong>Note:</strong> This guide is included, but no separate PDF is currently linked for this stage.</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+
+      <div className="card">
+        <h3 className="card-title">After Share</h3>
+        {FORM_GUIDES.filter(g => g.stage === 'After Share').map(guide => (
+          <div className="form-guide-card" key={guide.title}>
+            <h4>{guide.title}</h4>
+            <p>{guide.purpose}</p>
+            <div className="form-tip"><strong>When to use:</strong> {guide.useWhen}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // TRAINING VIEW
 function TrainingView() {
   return (
@@ -824,8 +1042,8 @@ export default function App() {
   };
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setSplashState('fading'), 1500);
-    const timer2 = setTimeout(() => setSplashState('hidden'), 1500);
+    const timer1 = setTimeout(() => setSplashState('fading'), 1900);
+    const timer2 = setTimeout(() => setSplashState('hidden'), 2600);
     return () => { clearTimeout(timer1); clearTimeout(timer2); };
   }, []);
 
@@ -849,6 +1067,16 @@ export default function App() {
     } else {
       alert('Sharing is not supported on this browser.');
     }
+  };
+
+  const saveProjectNow = () => {
+    setProjects(prev => {
+      const updated = activeProjectId 
+        ? prev.map(p => p.id === activeProjectId ? { ...p, updatedAt: Date.now() } : p)
+        : prev;
+      localStorage.setItem('tailender_projects_v2', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const currentProject = projects.find(p => p.id === activeProjectId);
@@ -900,12 +1128,13 @@ export default function App() {
     if (activeView === 'Home') return <HomeView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} goView={setActiveView} />;
     if (activeView === 'Projects') return <ProjectsView projects={projects} onOpenProject={handleOpenProject} onCreateProject={handleCreateProject} />;
     if (activeView === 'Training') return <TrainingView />;
+    if (activeView === 'Forms') return <FormsView formsManifest={formsManifest} />;
     if (activeView === 'Settings') return <SettingsView deferredPrompt={deferredPrompt} onInstallClick={handleInstallClick} />;
     
     // Project specific views
     if (!currentProject) return <div style={{padding: 24}}>Project not found.</div>;
     
-    if (activeView === 'ProjectDetail') return <ProjectDetailView project={currentProject} updateProject={updateProjectLevel} goStage={setActiveView} />;
+    if (activeView === 'ProjectDetail') return <ProjectDetailView project={currentProject} updateProject={updateProjectLevel} goStage={setActiveView} onSave={saveProjectNow} />;
     if (activeView === 'Research') return <StageResearch project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
     if (activeView === 'Plan') return <StagePlan project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
     if (activeView === 'Record') return <StageRecord project={currentProject} update={updateProjectSection} formsManifest={formsManifest} />;
@@ -1003,6 +1232,10 @@ export default function App() {
         <div className={`nav-item ${activeView === 'Training' ? 'active' : ''}`} onClick={() => setActiveView('Training')}>
           <BookOpen size={24} />
           <span>Training</span>
+        </div>
+        <div className={`nav-item ${activeView === 'Forms' ? 'active' : ''}`} onClick={() => setActiveView('Forms')}>
+          <FileText size={24} />
+          <span>Forms</span>
         </div>
         <div className={`nav-item ${activeView === 'Settings' ? 'active' : ''}`} onClick={() => setActiveView('Settings')}>
           <Settings size={24} />

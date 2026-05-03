@@ -1,10 +1,12 @@
 {
   "name": "Tailender Tracks",
   "short_name": "Tailender Tracks",
+  "description": "Offline field recording workflow, forms, and training guide for Tailender Tracks.",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#940414",
+  "background_color": "#f4ecd8",
+  "theme_color": "#aa1111",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -17,11 +19,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "icons/icon-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
     }
   ]
 }
